@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Route } from 'react-router-dom';
-import './App.css';
+import { Route, Switch } from 'react-router-dom';
+import './css/reset.css';
+import './css/App.css';
 
 import Landing from './components/Landing';
 import Projects from './components/Projects';
@@ -12,6 +13,7 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
 import content from './content';
+import ErrorPage from './components/404';
 
 function App(props) {
   const [state] = useState({
@@ -24,21 +26,25 @@ function App(props) {
   return (
     <div className='App'>
       {path !== '/' && <Navigation navigation={state.navigation} />}
-      <Route
-        exact
-        path='/'
-        render={props => (
-          <Landing
-            content={state.content.landing}
-            navigation={state.navigation}
-          />
-        )}
-      />
-      <Route path='/projects' render={props => <Projects />} />
-      <Route path='/services' render={props => <Services />} />
-      <Route path='/blog' render={props => <Blog />} />
-      <Route path='/about' render={props => <About />} />
-      <Route path='/contact' render={props => <Contact />} />
+
+      <Switch>
+        <Route
+          exact
+          path='/'
+          render={props => (
+            <Landing
+              content={state.content.landing}
+              navigation={state.navigation}
+            />
+          )}
+        />
+        <Route path='/projects' render={props => <Projects />} />
+        <Route path='/services' render={props => <Services />} />
+        <Route path='/blog' render={props => <Blog />} />
+        <Route path='/about' render={props => <About />} />
+        <Route path='/contact' render={props => <Contact />} />
+        <Route component={ErrorPage} />
+      </Switch>
       <Footer />
     </div>
   );

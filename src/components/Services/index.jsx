@@ -1,11 +1,19 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const Services = () => {
   return (
-    <div>
+    <Styles>
       <h1>SERVICES</h1>
-    </div>
+    </Styles>
   );
 };
 
 export default Services;
+
+const Styles = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 89vh;
+`;

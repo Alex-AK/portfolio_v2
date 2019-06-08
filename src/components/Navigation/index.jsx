@@ -1,14 +1,23 @@
 import React from 'react';
-import NavLink from './NavLink';
+import NavigationLink from './NavLink';
+import styled from 'styled-components';
 
 const Navigation = props => {
   return (
-    <div>
+    <Styles>
       {props.navigation.map(link_text => {
-        return <NavLink key={link_text} text={link_text} />;
+        return <NavigationLink key={link_text} text={link_text} />;
       })}
-    </div>
+    </Styles>
   );
 };
 
 export default Navigation;
+
+const Styles = styled.div`
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  margin: 0 auto;
+  border: 1px solid red;
+`;
