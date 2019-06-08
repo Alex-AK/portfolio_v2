@@ -3,7 +3,7 @@ const content = {
   landing: {
     title: "Hi, I'm Alex",
     sub_title:
-      "I'm a full stack developer with a love for coffee and intentional living."
+      "I'm a software developer with a love for coffee and intentional living."
   }
 };
 

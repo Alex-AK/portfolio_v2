@@ -16,7 +16,7 @@ const Styles = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 89vh;
+  height: 84.75vh;
 
   .err_num {
     border-right: 1px solid black;

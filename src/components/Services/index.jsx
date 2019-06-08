@@ -15,5 +15,5 @@ const Styles = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 89vh;
+  height: 87vh;
 `;

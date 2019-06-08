@@ -25,7 +25,7 @@ const Styles = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 94vh;
+  height: 93vh;
 
   .buttons {
     width: 90%;

@@ -7,9 +7,15 @@ import linkedIn from '../../assets/linkedin-50.png';
 const Footer = () => {
   return (
     <Styles>
-      <img src={github} alt='github icon' />
-      <img src={email} alt='email icon' />
-      <img src={linkedIn} alt='linkedIn icon' />
+      <a href='https://github.com/alex-ak' target='_blank'>
+        <img src={github} alt='github icon' />
+      </a>
+      <a href='mailto:hello@alex-ak.com' target='_blank'>
+        <img src={email} alt='email icon' />
+      </a>
+      <a href='https://linkedin.com/in/alex-ak' target='_blank'>
+        <img src={linkedIn} alt='linkedIn icon' />
+      </a>
     </Styles>
   );
 };
@@ -27,5 +33,9 @@ const Styles = styled.div`
   img {
     width: 25px;
     margin: 0 15px;
+  }
+
+  a {
+    text-decoration: none;
   }
 `;
