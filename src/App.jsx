@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import './css/reset.css';
-// import './css/App.css';
 
 import Landing from './components/Landing';
 import Projects from './components/Projects';
