@@ -19,8 +19,18 @@ export const Global = css`
     }
   }
 
-  .App {
-    text-align: left;
+  a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #282828;
+    padding: 0 3px 8px 3px;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+
+  .active {
+    border-bottom: 2px solid #282828;
+    padding-bottom: 6px;
   }
 
   h1 {

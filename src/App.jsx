@@ -4,15 +4,15 @@ import { Route, Switch } from 'react-router-dom';
 import Landing from './components/Landing';
 import Projects from './components/Projects';
 import Services from './components/Services';
-import Blog from './components/Blog';
+import Writing from './components/Writing';
 import About from './components/About';
 import Contact from './components/Contact';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-
-import content from './content';
 import ErrorPage from './components/404';
+
 import { GlobalStyles } from './styles';
+import content from './content';
 
 function App(props) {
   const [state] = useState({
@@ -41,7 +41,7 @@ function App(props) {
           />
           <Route path='/projects' render={props => <Projects />} />
           <Route path='/services' render={props => <Services />} />
-          <Route path='/blog' render={props => <Blog />} />
+          <Route path='/writing' render={props => <Writing />} />
           <Route path='/about' render={props => <About />} />
           <Route path='/contact' render={props => <Contact />} />
           <Route component={ErrorPage} />

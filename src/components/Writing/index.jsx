@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Blog = () => {
+const Writing = () => {
   return (
     <Styles>
-      <h1>BLOG</h1>
+      <h1>WRITING</h1>
     </Styles>
   );
 };
 
-export default Blog;
+export default Writing;
 
 const Styles = styled.div`
   display: flex;

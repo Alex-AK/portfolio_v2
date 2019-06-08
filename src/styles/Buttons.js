@@ -6,7 +6,7 @@ export const Buttons = css`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 15px;
+    margin-right: 20px;
 
     @media (max-width: 700px) {
       display: none;

@@ -1,5 +1,5 @@
 const content = {
-  navigation: ['projects', 'services', 'blog', 'about', 'contact'],
+  navigation: ['projects', 'services', 'writing', 'about', 'contact'],
   landing: {
     title: "Hi, I'm Alex.",
     sub_title:
