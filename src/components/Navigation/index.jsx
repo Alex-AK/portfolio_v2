@@ -32,6 +32,15 @@ const Styles = styled.div`
     width: 50%;
     margin-right: 20px;
 
+    a {
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .active {
+      color: red;
+    }
+
     @media (max-width: 800px) {
       width: 60%;
     }

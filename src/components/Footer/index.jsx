@@ -7,13 +7,22 @@ import linkedIn from '../../assets/linkedin-50.png';
 const Footer = () => {
   return (
     <Styles>
-      <a href='https://github.com/alex-ak' target='_blank'>
+      <a
+        href='https://github.com/alex-ak'
+        target='_blank'
+        rel='noopener noreferrer'>
         <img src={github} alt='github icon' />
       </a>
-      <a href='mailto:hello@alex-ak.com' target='_blank'>
+      <a
+        href='mailto:hello@alex-ak.com'
+        target='_blank'
+        rel='noopener noreferrer'>
         <img src={email} alt='email icon' />
       </a>
-      <a href='https://linkedin.com/in/alex-ak' target='_blank'>
+      <a
+        href='https://linkedin.com/in/alex-ak'
+        target='_blank'
+        rel='noopener noreferrer'>
         <img src={linkedIn} alt='linkedIn icon' />
       </a>
     </Styles>
