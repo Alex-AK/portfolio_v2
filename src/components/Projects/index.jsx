@@ -10,9 +10,7 @@ const Projects = () => {
 
   return (
     <Styles>
-      <div>
-        <h2>Client Projects</h2>
-      </div>
+      <h2 className='page-title'>Client Projects</h2>
       {state.projects.map(project => (
         <Project key={project.title} project={project} />
       ))}

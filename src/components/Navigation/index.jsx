@@ -32,7 +32,7 @@ const Styles = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 40%;
+    width: 50%;
     margin-right: 20px;
 
     a {
@@ -45,7 +45,7 @@ const Styles = styled.div`
     }
 
     @media (max-width: 800px) {
-      width: 60%;
+      width: 70%;
     }
     @media (max-width: 600px) {
       display: none;

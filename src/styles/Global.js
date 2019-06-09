@@ -40,7 +40,7 @@ export const Global = css`
 
   h2 {
     font-size: 24px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     text-transform: uppercase;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
 
@@ -58,6 +58,12 @@ export const Global = css`
     @media (max-width: 800px) {
       font-size: 16px;
     }
+  }
+
+  .page-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
   }
 
   p {

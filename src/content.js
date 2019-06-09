@@ -29,7 +29,7 @@ const content = {
       }
     },
     {
-      title: 'LINE - Home Goods Commerce ',
+      title: 'LINE',
       introduction:
         'Id consequat amet aute esse mollit incididunt excepteur. Sit exercitation sit est quis sit fugiat aliqua culpa do enim id Lorem proident adipisicing.',
       content: {
