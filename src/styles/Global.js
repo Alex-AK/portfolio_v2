@@ -93,6 +93,7 @@ export const Global = css`
   }
   .hyperlink {
     border-bottom: 2px solid #f4e4d4;
+    padding: 0 2px 1px 2px;
 
     &:hover {
       border-bottom: none;

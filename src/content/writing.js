@@ -17,7 +17,7 @@ const writing = [
     }
   },
   {
-    title: 'Project Overview - LINE',
+    title: 'Some Title Goes Here',
     content: {
       p_1:
         'Id sint cillum ut ullamco id et veniam duis mollit irure. Enim elit laboris et ea sunt laborum reprehenderit.',
@@ -28,7 +28,7 @@ const writing = [
     }
   },
   {
-    title: 'Some Title Goes Here',
+    title: 'Project Overview - ck tile co.',
     content: {
       p_1:
         'Id sint cillum ut ullamco id et veniam duis mollit irure. Enim elit laboris et ea sunt laborum reprehenderit.',
@@ -40,8 +40,8 @@ const writing = [
     testimonial: 'testimonial goes here.',
     link: null,
     links: {
-      github: 'https://github.com/alex-ak',
-      live_site: 'https://linebyhand.com/'
+      github: 'https://github.com/alex-ak/cktile.co',
+      live_site: 'https://cktile.co/'
     }
   }
 ];
