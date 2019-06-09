@@ -38,6 +38,7 @@ const Styles = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 50%;
+    max-width: 700px;
     margin-right: 20px;
 
     a {

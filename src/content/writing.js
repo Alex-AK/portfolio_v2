@@ -1,7 +1,6 @@
 const writing = [
   {
     title: 'Project Overview - LINE',
-    sub_title: 'sub-title text goes here',
     content: {
       p_1:
         'Id sint cillum ut ullamco id et veniam duis mollit irure. Enim elit laboris et ea sunt laborum reprehenderit.',
@@ -11,8 +10,7 @@ const writing = [
         'Id sint cillum ut ullamco id et veniam duis mollit irure. Enim elit laboris et ea sunt laborum reprehenderit.'
     },
     testimonial: 'testimonial goes here.',
-    link: '',
-    date: 'date goes here',
+    link: null,
     links: {
       github: 'https://github.com/alex-ak',
       live_site: 'https://linebyhand.com/'
@@ -20,7 +18,6 @@ const writing = [
   },
   {
     title: 'Project Overview - LINE',
-    sub_title: 'sub-title text goes here',
     content: {
       p_1:
         'Id sint cillum ut ullamco id et veniam duis mollit irure. Enim elit laboris et ea sunt laborum reprehenderit.',
@@ -32,7 +29,6 @@ const writing = [
   },
   {
     title: 'Some Title Goes Here',
-    sub_title: 'sub-title text goes here',
     content: {
       p_1:
         'Id sint cillum ut ullamco id et veniam duis mollit irure. Enim elit laboris et ea sunt laborum reprehenderit.',
@@ -42,8 +38,7 @@ const writing = [
         'Id sint cillum ut ullamco id et veniam duis mollit irure. Enim elit laboris et ea sunt laborum reprehenderit.'
     },
     testimonial: 'testimonial goes here.',
-    link: '',
-    date: 'date goes here',
+    link: null,
     links: {
       github: 'https://github.com/alex-ak',
       live_site: 'https://linebyhand.com/'

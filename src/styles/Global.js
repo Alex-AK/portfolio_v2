@@ -91,4 +91,11 @@ export const Global = css`
       margin: 20px auto;
     }
   }
+  .hyperlink {
+    border-bottom: 2px solid #f4e4d4;
+
+    &:hover {
+      border-bottom: none;
+    }
+  }
 `;
