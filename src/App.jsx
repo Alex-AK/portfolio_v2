@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 import ErrorPage from './components/404';
 
 import { GlobalStyles } from './styles';
-import content from './content';
+import content from './content/main';
 
 function App(props) {
   const [state] = useState({

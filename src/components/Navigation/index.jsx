@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import NavigationLink from './NavigationLink';
 import styled from 'styled-components';
 import Logo from './Logo';
-import content from '../../content';
+import content from '../../content/main';
 
 const Navigation = props => {
   const [navigation] = useState(content.navigation);
@@ -27,6 +27,11 @@ const Styles = styled.div`
   align-items: center;
   height: 60px;
   margin: 0 auto;
+  position: sticky;
+  top: 0;
+  background: #fcfcfa;
+  opacity: 0.95;
+  z-index: 2;
 
   .links {
     display: flex;

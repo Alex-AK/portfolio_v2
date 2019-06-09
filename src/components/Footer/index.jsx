@@ -37,10 +37,11 @@ const Styles = styled.div`
   align-items: center;
   height: 6vh;
   width: 350px;
-  margin: 0 auto;
+  margin: 20px auto 0 auto;
 
   @media (max-width: 600px) {
     width: 100%;
+    margin: 0 auto 0 auto;
   }
 
   img {
