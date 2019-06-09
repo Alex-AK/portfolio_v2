@@ -10,7 +10,7 @@ const Landing = props => {
       <div>
         <img src={coffee_menu} alt='coffee menu' />
         <h1>{props.content.title}</h1>
-        <h2>{props.content.sub_title}</h2>
+        <h3>{props.content.sub_title}</h3>
         <div className='buttons'>
           {props.navigation.map(title => (
             <Button key={title} title={title} />
@@ -30,6 +30,12 @@ const Styles = styled.div`
   height: 93vh;
   position: relative;
 
+  div {
+    @media (max-width: 600px) {
+      margin: 0 5%;
+    }
+  }
+
   img {
     position: fixed;
     z-index: -1;
@@ -47,16 +53,18 @@ const Styles = styled.div`
     }
   }
 
-  h2 {
+  h3 {
     width: 600px;
 
     @media (max-width: 600px) {
       width: 100%;
     }
   }
+
   .buttons {
     width: 90%;
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
   }
 `;

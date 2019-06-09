@@ -5,7 +5,7 @@ const Button = props => {
   return (
     <>
       <Link to={`${props.title}`}>
-        <div className='button'>
+        <div className='button nav'>
           <span>{props.title}</span>
           <svg>
             <polyline class='o1' points='0 0, 150 0, 150 55, 0 55, 0 0' />

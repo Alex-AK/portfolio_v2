@@ -35,8 +35,12 @@ const Styles = styled.div`
     width: 40%;
     margin-right: 20px;
 
+    a {
+      padding: 0 3px 8px 3px;
+    }
+
     a:hover {
-      border-bottom: 3px solid #ead7d3;
+      border-bottom: 3px solid #f4e4d4;
       padding-bottom: 5px;
     }
 
@@ -45,6 +49,11 @@ const Styles = styled.div`
     }
     @media (max-width: 600px) {
       display: none;
+    }
+
+    .active {
+      border-bottom: 3px solid #f4e4d4;
+      padding-bottom: 5px;
     }
   }
 `;

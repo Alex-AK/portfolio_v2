@@ -10,7 +10,9 @@ const Projects = () => {
 
   return (
     <Styles>
-      <h2>CLIENT PROJECTS</h2>
+      <div>
+        <h2>Client Projects</h2>
+      </div>
       {state.projects.map(project => (
         <Project key={project.title} project={project} />
       ))}
@@ -23,10 +25,6 @@ export default Projects;
 const Styles = styled.div`
   max-width: 1200px;
   margin: 0 auto;
-
-  h2 {
-    margin: 0 auto;
-  }
 
   &:last-child {
     margin-bottom: 80px;
