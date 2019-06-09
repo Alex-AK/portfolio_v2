@@ -20,5 +20,9 @@ const Styles = styled.div`
   }
   h1 {
     margin: 0 0 0 30px;
+
+    @media (max-width: 800px) {
+      margin: 0%;
+    }
   }
 `;

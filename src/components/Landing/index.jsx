@@ -33,13 +33,14 @@ const Styles = styled.div`
   img {
     position: fixed;
     z-index: -1;
-    opacity: 0.2;
+    opacity: 0.08;
     left: 15%;
     top: 7%;
     height: 600px;
 
     @media (max-width: 1600px) {
-      left: 3%;
+      top: 4%;
+      left: 4%;
     }
     @media (max-width: 1200px) {
       display: none;

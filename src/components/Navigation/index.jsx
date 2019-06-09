@@ -31,6 +31,10 @@ const Styles = styled.div`
     align-items: center;
     width: 40%;
     margin-right: 20px;
+    a:hover {
+      border-bottom: 2px solid #282828;
+      padding-bottom: 6px;
+    }
 
     @media (max-width: 800px) {
       width: 60%;

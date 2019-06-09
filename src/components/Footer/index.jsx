@@ -42,6 +42,11 @@ const Styles = styled.div`
   img {
     width: 25px;
     margin: 0 15px;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: 0.1s;
+    }
   }
 
   a {

@@ -14,8 +14,8 @@ export const Global = css`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    @media (max-width: 700px) {
-      margin: 0 5%;
+    @media (max-width: 800px) {
+      margin: 0 20px;
     }
   }
 
@@ -39,10 +39,8 @@ export const Global = css`
     margin-bottom: 20px;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
 
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
       font-size: 30px;
-    }
-    @media (max-width: 500px) {
     }
   }
 
@@ -57,8 +55,23 @@ export const Global = css`
     }
   }
 
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
+  h3 {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+
+    @media (max-width: 800px) {
+      font-size: 16px;
+    }
+  }
+
+  p {
+    margin-bottom: 10px;
+    line-height: 1.25;
+
+    @media (max-width: 800px) {
+      font-size: 14px;
+    }
   }
 `;

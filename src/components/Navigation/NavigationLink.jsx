@@ -5,7 +5,7 @@ const NavigationLink = props => {
   return (
     <>
       <NavLink to={`/${props.text}`}>
-        <p>{props.text}</p>
+        <p style={{ marginBottom: 0 }}>{props.text}</p>
       </NavLink>
     </>
   );
