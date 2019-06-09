@@ -16,7 +16,6 @@ import content from './content';
 
 function App(props) {
   const [state] = useState({
-    nav_on: false,
     content: content,
     navigation: content.navigation
   });

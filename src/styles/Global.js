@@ -29,8 +29,8 @@ export const Global = css`
   }
 
   .active {
-    border-bottom: 2px solid #282828;
-    padding-bottom: 6px;
+    border-bottom: 3px solid #ead7d3;
+    padding-bottom: 5px;
   }
 
   h1 {
