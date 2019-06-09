@@ -15,7 +15,7 @@ export const Global = css`
     -moz-osx-font-smoothing: grayscale;
 
     @media (max-width: 800px) {
-      margin: 0 20px;
+      margin: 0 5px;
     }
   }
 

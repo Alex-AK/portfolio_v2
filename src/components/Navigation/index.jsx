@@ -43,5 +43,8 @@ const Styles = styled.div`
     @media (max-width: 800px) {
       width: 60%;
     }
+    @media (max-width: 600px) {
+      display: none;
+    }
   }
 `;

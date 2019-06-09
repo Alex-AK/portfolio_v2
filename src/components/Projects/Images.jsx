@@ -33,28 +33,38 @@ const Styles = styled.div`
   }
   @media (max-width: 800px) {
     width: 100%;
+    margin: 10px 0 10px -20px;
   }
 
   .desktop {
     width: 400px;
     height: 255px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     @media (max-width: 1000px) {
       transform: scale(0.9);
     }
     @media (max-width: 800px) {
       margin-bottom: 20px;
     }
+    @media (max-width: 600px) {
+      transform: scale(0.7);
+    }
   }
 
   .mobile {
     width: 150px;
     position: absolute;
-    margin: 30px 0 0 180px;
+    margin: 20px 0 0 180px;
+
     @media (max-width: 1000px) {
       transform: scale(0.9);
     }
     @media (max-width: 800px) {
-      margin: 20px 0 0 170px;
+      margin: 15px 0 0 170px;
+    }
+    @media (max-width: 600px) {
+      transform: scale(0.7);
+      margin: 15px 0 0 130px;
     }
   }
 `;

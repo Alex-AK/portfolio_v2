@@ -8,10 +8,6 @@ export const Buttons = css`
     justify-content: center;
     margin-right: 20px;
 
-    @media (max-width: 700px) {
-      display: none;
-    }
-
     cursor: pointer;
 
     svg {
@@ -56,6 +52,25 @@ export const Buttons = css`
       .o2 {
         stroke-dashoffset: -420;
       }
+    }
+  }
+  .nav {
+    @media (max-width: 700px) {
+      display: none;
+    }
+  }
+
+  .small {
+    margin-top: 20px;
+
+    svg {
+      height: 30px;
+      width: 90px;
+    }
+
+    span {
+      font-size: 10px;
+      letter-spacing: 1.5px;
     }
   }
 `;

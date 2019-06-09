@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import More from './More';
-const Content = ({ title, intro, p_1, p_2 }) => {
+const Content = ({ title, intro, p_1, p_2, links }) => {
   return (
     <Styles>
       <h3>{title}</h3>
       <p>{intro}</p>
       <p>{p_1}</p>
       <p>{p_2}</p>
-      <More />
+      <More links={links} />
     </Styles>
   );
 };
@@ -22,14 +22,10 @@ const Styles = styled.div`
   flex-direction: column;
   width: 50%;
   max-width: 600px;
-  margin: 0 40px;
+  margin: 60px 40px 0 50px;
 
   @media (max-width: 800px) {
-    width: 90%;
-  }
-
-  @media (max-width: 800px) {
-    margin: 0 2%;
-    width: 100%;
+    width: 96%;
+    margin: 0 auto;
   }
 `;

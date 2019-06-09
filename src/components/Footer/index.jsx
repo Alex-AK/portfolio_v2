@@ -39,6 +39,10 @@ const Styles = styled.div`
   width: 350px;
   margin: 0 auto;
 
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+
   img {
     width: 25px;
     margin: 0 15px;

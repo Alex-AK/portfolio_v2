@@ -10,9 +10,9 @@ const Projects = () => {
 
   return (
     <Styles>
-      <h1>PROJECTS</h1>
+      <h2>CLIENT PROJECTS</h2>
       {state.projects.map(project => (
-        <Project project={project} />
+        <Project key={project.title} project={project} />
       ))}
     </Styles>
   );
@@ -22,15 +22,10 @@ export default Projects;
 
 const Styles = styled.div`
   max-width: 1200px;
-  margin: 60px auto 0 auto;
+  margin: 0 auto;
 
-  h1 {
-    width: 210px;
+  h2 {
     margin: 0 auto;
-
-    @media (max-width: 800px) {
-      width: 160px;
-    }
   }
 
   &:last-child {
@@ -39,6 +34,23 @@ const Styles = styled.div`
 
   @media (max-width: 800px) {
     flex-direction: column;
-    margin: 40px auto 0 auto;
+    margin: 0 auto;
+  }
+
+  .divider {
+    height: 2px;
+    width: 500px;
+    margin: 60px auto 50px auto;
+    background: #282828;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+
+    &:last-child {
+      display: none;
+    }
+
+    @media (max-width: 800px) {
+      width: 90%;
+      margin: 20px auto;
+    }
   }
 `;
