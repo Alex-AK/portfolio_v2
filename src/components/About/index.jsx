@@ -17,24 +17,22 @@ const About = props => {
           </Link>{' '}
           and{' '}
           <Link to='/writing' className='hyperlink'>
-            writing
-          </Link>
-          . If you'd like to work with me, first check out my{' '}
-          <Link to='/writing' className='hyperlink'>
+            writing.
+          </Link>{' '}
+          If you'd like to work with me, first check out my{' '}
+          <Link to='/writing/values' className='hyperlink'>
             values
           </Link>{' '}
           then{' '}
           <Link to='/contact' className='hyperlink'>
-            reach out
+            reach out.
           </Link>
-          .
         </h3>
         <p>
-          Looking for mentorship?{' '}
-          <Link to='/contact' className='hyperlink'>
-            I'm available
+          Looking for mentorship? I'm available.{' '}
+          <Link to='/writing/mentorship' className='hyperlink'>
+            Read this first.
           </Link>
-          .
         </p>
       </div>
     </Styles>
@@ -48,7 +46,7 @@ const Styles = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 87vh;
+  height: 84.7vh;
   position: relative;
   margin: 0 auto;
 
