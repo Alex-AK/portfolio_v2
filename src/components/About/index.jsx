@@ -29,7 +29,13 @@ const About = props => {
           </Link>
           .
         </h3>
-        <p>Looking for mentorship? I'm available.</p>
+        <p>
+          Looking for mentorship?{' '}
+          <Link to='/contact' className='hyperlink'>
+            I'm available
+          </Link>
+          .
+        </p>
       </div>
     </Styles>
   );

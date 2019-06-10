@@ -60,7 +60,7 @@ export const Global = css`
   .page-title {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin: 40px 0 0 0;
   }
 
   p {

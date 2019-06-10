@@ -15,11 +15,8 @@ const Logo = () => {
 export default Logo;
 
 const Styles = styled.div`
-  a {
-    text-decoration: none;
-  }
   h1 {
-    margin: 0 0 0 30px;
+    margin: 0 0 0 20px;
 
     @media (max-width: 800px) {
       margin: 0 0 0 15px;

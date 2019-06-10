@@ -26,7 +26,7 @@ const Styles = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  margin: 0 auto;
+  margin: 5px auto;
   position: sticky;
   top: 0;
   background: #fcfcfa;
@@ -36,7 +36,6 @@ const Styles = styled.div`
   .links {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     width: 50%;
     max-width: 700px;
     margin-right: 20px;
