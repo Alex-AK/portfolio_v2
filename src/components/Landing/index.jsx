@@ -27,7 +27,7 @@ const Styles = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 93vh;
+  height: 90vh;
   position: relative;
 
   div {

@@ -9,22 +9,28 @@ const About = props => {
     <Styles>
       <div>
         <h1>{about.title}</h1>
-        <h3>{about.sub_title}</h3>
-        <p>
-          Mellow natured adventure seeker who thrives in team settings with a
-          passion for quality. Take a look at my{' '}
+        <h3>
+          {about.sub_title}
+          Take a look at my{' '}
           <Link to='/projects' className='hyperlink'>
             projects
           </Link>{' '}
-          and
+          and{' '}
           <Link to='/writing' className='hyperlink'>
             writing
           </Link>
-          . I'm available for hire.
-        </p>
-        <p>p.s. I'm available for presentations and mentorship.</p>
+          . If you'd like to work with me, first check out my{' '}
+          <Link to='/writing' className='hyperlink'>
+            values
+          </Link>{' '}
+          then{' '}
+          <Link to='/contact' className='hyperlink'>
+            reach out
+          </Link>
+          .
+        </h3>
+        <p>Looking for mentorship? I'm available.</p>
       </div>
-      <img src={about.image} alt='Alex King Portrait' />
     </Styles>
   );
 };
@@ -32,33 +38,23 @@ const About = props => {
 export default About;
 
 const Styles = styled.div`
+  max-width: 1200px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 87vh;
   position: relative;
+  margin: 0 auto;
 
   @media (max-width: 800px) {
     flex-direction: column-reverse;
   }
 
   div {
-    width: 60%;
-    margin-right: 40px;
-    @media (max-width: 800px) {
-      width: 90%;
-      margin: 0 5%;
-    }
-  }
+    margin-right: 50px;
 
-  img {
-    height: 200px;
-    border-radius: 50%;
     @media (max-width: 800px) {
-      display: 150px;
-    }
-    @media (max-width: 600px) {
-      margin-bottom: 70px;
+      margin: 0 5%;
     }
   }
 
@@ -68,5 +64,11 @@ const Styles = styled.div`
     @media (max-width: 600px) {
       width: 100%;
     }
+  }
+
+  p {
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 500;
   }
 `;

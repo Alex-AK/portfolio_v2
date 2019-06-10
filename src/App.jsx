@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import styled from 'styled-components';
 
 import Landing from './components/Landing';
 import Projects from './components/Projects';
@@ -22,7 +23,7 @@ function App(props) {
   const path = props.history.location.pathname;
 
   return (
-    <>
+    <Styles>
       <GlobalStyles />
       <div className='App'>
         {path !== '/' && <Navigation navigation={state.navigation} />}
@@ -47,8 +48,12 @@ function App(props) {
         </Switch>
         <Footer />
       </div>
-    </>
+    </Styles>
   );
 }
 
 export default App;
+
+const Styles = styled.div`
+  min-height: 100vh;
+`;

@@ -48,7 +48,7 @@ export const Global = css`
 
   h3 {
     font-size: 20px;
-    line-height: 1.25;
+    line-height: 1.35;
     margin-bottom: 10px;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
 
@@ -89,8 +89,8 @@ export const Global = css`
     }
   }
   .hyperlink {
-    border-bottom: 2px solid #f4e4d4;
-    padding: 0 2px 1px 2px;
+    border-bottom: 2.5px solid #f4e4d4;
+    padding-bottom: 1px;
 
     &:hover {
       border-bottom: none;

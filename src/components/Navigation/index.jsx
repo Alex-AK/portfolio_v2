@@ -43,6 +43,8 @@ const Styles = styled.div`
 
     a {
       padding: 0 3px 8px 3px;
+      font-weight: 500;
+      text-transform: uppercase;
     }
 
     a:hover {
@@ -60,6 +62,10 @@ const Styles = styled.div`
     .active {
       border-bottom: 3px solid #f4e4d4;
       padding-bottom: 5px;
+    }
+    p {
+      margin-bottom: 0;
+      font-size: 14px;
     }
   }
 `;

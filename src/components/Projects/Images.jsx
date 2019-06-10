@@ -38,7 +38,7 @@ const Styles = styled.div`
 
   .desktop {
     width: 400px;
-    height: 255px;
+    height: 228px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     @media (max-width: 1000px) {
       transform: scale(0.9);

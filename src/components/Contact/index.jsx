@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Contract = () => {
   return (
     <Styles>
-      <h1>CONTRACT</h1>
+      <h1>CONTACT</h1>
     </Styles>
   );
 };
