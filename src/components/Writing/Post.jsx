@@ -20,9 +20,9 @@ const Post = ({ post }) => {
     <>
       <Styles>
         <h3 className='post-title'>{title}</h3>
-        {testimonial && renderTestimonial()}
         <p>{p_1}</p>
         <p>{p_2}</p>
+        {testimonial && renderTestimonial()}
         <p>{p_3}</p>
         {links && <More links={links} />}
         <div className='end'>
@@ -59,7 +59,7 @@ const Styles = styled.div`
   .testimonial {
     font-style: italic;
     margin: 20px 0;
-    padding: 10px 0;
+    padding: 10px;
     border-top: 1px solid lightgrey;
     border-bottom: 1px solid lightgrey;
     font-size: 14px;

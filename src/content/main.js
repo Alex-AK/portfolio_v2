@@ -1,12 +1,14 @@
 import line_desktop from '../assets/line_desktop.jpg';
 import line_mobile from '../assets/line_mobile.png';
+import self from '../assets/alex_king.jpg';
 
 const content = {
   navigation: ['projects', 'services', 'writing', 'about', 'contact'],
   landing: {
     title: "Hi, I'm Alex.",
     sub_title:
-      "I'm a software developer with a love for coffee, pleasant user experience, and intentionality."
+      "I'm a freelance software developer with a love for coffee, pleasant user experience, and intentionality.",
+    image: self
   },
   projects: [
     {

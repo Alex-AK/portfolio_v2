@@ -20,11 +20,8 @@ export const Global = css`
   }
 
   a {
-    font-size: 14px;
-    font-weight: 500;
     color: #282828;
     text-decoration: none;
-    text-transform: uppercase;
   }
 
   h1 {
