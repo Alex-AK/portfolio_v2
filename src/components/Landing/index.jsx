@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import coffee_menu from '../../assets/coffee-background-landing.jpg';
 import content from '../../content/main';
