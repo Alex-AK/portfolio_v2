@@ -8,40 +8,17 @@ import Button from './Button';
 
 const Landing = props => {
   const [about] = useState(content.landing);
+  const [navigation] = useState(content.navigation);
   return (
     <Styles>
+      <img src={coffee_menu} alt='coffee menu' />
       <div>
-        <img src={coffee_menu} alt='coffee menu' />
-        <div>
-          <h1>{about.title}</h1>
-          <h3>
-            {about.sub_title}
-            Take a look at my{' '}
-            <Link to='/projects' className='hyperlink'>
-              projects,
-            </Link>{' '}
-            <Link to='/services' className='hyperlink'>
-              services,
-            </Link>{' '}
-            and{' '}
-            <Link to='/writing' className='hyperlink'>
-              writing.
-            </Link>{' '}
-            If you'd like to work with me, first check out my{' '}
-            <Link to='/writing/values' className='hyperlink'>
-              values
-            </Link>{' '}
-            then{' '}
-            <Link to='/contact' className='hyperlink'>
-              reach out.
-            </Link>
-          </h3>
-          <p>
-            Looking for mentorship? I'm available.{' '}
-            <Link to='/writing/mentorship' className='hyperlink'>
-              Read this first.
-            </Link>
-          </p>
+        <h1>{about.title}</h1>
+        <h3>{about.sub_title}</h3>
+        <div className='buttons'>
+          {navigation.map(button => {
+            return <Button title={button} />;
+          })}
         </div>
       </div>
     </Styles>
@@ -51,24 +28,18 @@ const Landing = props => {
 export default Landing;
 
 const Styles = styled.div`
+  max-width: 1200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 93vh;
+  height: 84.7vh;
   position: relative;
-
-  div {
-    margin-right: 50px;
-
-    @media (max-width: 800px) {
-      margin: 0 5%;
-    }
-  }
+  margin: 0 auto;
 
   h3 {
     width: 650px;
 
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
       width: 100%;
     }
   }
@@ -103,13 +74,3 @@ const Styles = styled.div`
     margin-top: 20px;
   }
 `;
-
-// const Styles = styled.div`
-//   max-width: 1200px;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   height: 84.7vh;
-//   position: relative;
-//   margin: 0 auto;
-// `;

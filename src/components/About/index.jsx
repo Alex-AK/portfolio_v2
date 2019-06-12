@@ -10,7 +10,7 @@ const About = props => {
       <div>
         <h1>{about.title}</h1>
         <h3>
-          {about.sub_title}, Take a look at my{' '}
+          {about.sub_title} Take a look at my{' '}
           <Link to='/projects' className='hyperlink'>
             projects,
           </Link>{' '}
@@ -18,23 +18,16 @@ const About = props => {
           <Link to='/writing' className='hyperlink'>
             writing.
           </Link>{' '}
-          If you'd like to work with me, first check out my{' '}
-          <Link to='/writing/values' className='hyperlink'>
-            values
-          </Link>{' '}
-          <Link to='/services' className='hyperlink'>
-            services
-          </Link>{' '}
-          then{' '}
+          If you'd like to work with me{' '}
           <Link to='/contact' className='hyperlink'>
             reach out.
-          </Link>
+          </Link>{' '}
         </h3>
         <p>
-          Looking for mentorship? I'm available.{' '}
           <Link to='/writing/mentorship' className='hyperlink'>
-            Read this first.
-          </Link>
+            Looking for mentorship?
+          </Link>{' '}
+          I'm available.
         </p>
       </div>
     </Styles>

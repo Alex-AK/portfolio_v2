@@ -56,5 +56,4 @@ export default App;
 
 const Styles = styled.div`
   min-height: 100vh;
-  border: 1px solid red;
 `;
