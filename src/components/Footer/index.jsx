@@ -35,7 +35,7 @@ const Styles = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 6vh;
+  height: 5vh;
   width: 350px;
   margin: 20px auto 0 auto;
 

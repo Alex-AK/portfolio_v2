@@ -10,10 +10,9 @@ const About = props => {
       <div>
         <h1>{about.title}</h1>
         <h3>
-          {about.sub_title}
-          Take a look at my{' '}
+          {about.sub_title}, Take a look at my{' '}
           <Link to='/projects' className='hyperlink'>
-            projects
+            projects,
           </Link>{' '}
           and{' '}
           <Link to='/writing' className='hyperlink'>
@@ -22,6 +21,9 @@ const About = props => {
           If you'd like to work with me, first check out my{' '}
           <Link to='/writing/values' className='hyperlink'>
             values
+          </Link>{' '}
+          <Link to='/services' className='hyperlink'>
+            services
           </Link>{' '}
           then{' '}
           <Link to='/contact' className='hyperlink'>

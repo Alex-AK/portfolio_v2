@@ -2,7 +2,7 @@ import line_desktop from '../assets/line_desktop.jpg';
 import line_mobile from '../assets/line_mobile.png';
 
 const content = {
-  navigation: ['projects', 'services', 'writing', 'about', 'contact'],
+  navigation: ['projects', 'services', 'writing', 'contact'],
   landing: {
     title: "Hi, I'm Alex.",
     sub_title:
