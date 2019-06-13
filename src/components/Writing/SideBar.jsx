@@ -2,7 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Sidebar = () => {
+const SideBar = () => {
   return (
     <Styles>
       <div>
@@ -19,7 +19,7 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default SideBar;
 
 const Styles = styled.div`
   position: absolute;

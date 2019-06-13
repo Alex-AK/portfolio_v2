@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Content from './Content';
-import Sidebar from './Sidebar';
+import SideBar from './SideBar';
 
 const Writing = () => {
   return (
     <>
       <h2 className='page-title'>Writing</h2>
       <Styles>
-        <Sidebar />
+        <SideBar />
         <Content />
       </Styles>
     </>
