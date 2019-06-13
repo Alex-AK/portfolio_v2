@@ -39,11 +39,11 @@ function App(props) {
               />
             )}
           />
-          <Route path='/projects' render={props => <Projects />} />
-          <Route path='/services' render={props => <Services />} />
-          <Route path='/writing' render={props => <Writing />} />
-          <Route path='/about' render={props => <About />} />
-          <Route path='/contact' render={props => <Contact />} />
+          <Route path='/projects' component={Projects} />
+          <Route path='/services' component={Services} />
+          <Route path='/writing' component={Writing} />
+          <Route path='/about' component={About} />
+          <Route path='/contact' component={Contact} />
           <Route component={ErrorPage} />
         </Switch>
         <Footer />
