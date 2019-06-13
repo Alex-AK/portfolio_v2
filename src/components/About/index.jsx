@@ -38,11 +38,11 @@ export default About;
 
 const Styles = styled.div`
   max-width: 1200px;
+  min-height: calc(100vh - 140px);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 84.7vh;
-  position: relative;
+
   margin: 0 auto;
 
   @media (max-width: 800px) {
@@ -50,8 +50,6 @@ const Styles = styled.div`
   }
 
   div {
-    margin-right: 50px;
-
     @media (max-width: 800px) {
       margin: 0 5%;
     }

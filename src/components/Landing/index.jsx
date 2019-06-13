@@ -9,18 +9,21 @@ const Landing = props => {
   const [about] = useState(content.landing);
   const [navigation] = useState(content.navigation);
   return (
-    <Styles>
-      <img src={coffee_menu} alt='coffee menu' />
-      <div>
-        <h1>{about.title}</h1>
-        <h3>{about.sub_title}</h3>
-        <div className='buttons'>
-          {navigation.map(button => {
-            return <Button title={button} />;
-          })}
+    <>
+      <div style={{ height: '60px' }} />
+      <Styles>
+        <img src={coffee_menu} alt='coffee menu' />
+        <div>
+          <h1>{about.title}</h1>
+          <h3>{about.sub_title}</h3>
+          <div className='buttons'>
+            {navigation.map(button => {
+              return <Button title={button} />;
+            })}
+          </div>
         </div>
-      </div>
-    </Styles>
+      </Styles>
+    </>
   );
 };
 
@@ -28,12 +31,16 @@ export default Landing;
 
 const Styles = styled.div`
   max-width: 1200px;
+  min-height: calc(100vh - 140px);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 84.7vh;
   position: relative;
   margin: 0 auto;
+
+  @media (max-width: 800px) {
+    margin: 0 5%;
+  }
 
   h3 {
     width: 650px;

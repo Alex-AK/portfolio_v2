@@ -27,7 +27,6 @@ function App(props) {
       <GlobalStyles />
       <div className='App'>
         {path !== '/' && <Navigation navigation={state.navigation} />}
-
         <Switch>
           <Route
             exact
@@ -46,8 +45,8 @@ function App(props) {
           <Route path='/contact' component={Contact} />
           <Route component={ErrorPage} />
         </Switch>
-        <Footer />
       </div>
+      <Footer />
     </Styles>
   );
 }
@@ -55,5 +54,7 @@ function App(props) {
 export default App;
 
 const Styles = styled.div`
-  min-height: 100vh;
+  .App {
+    min-height: calc(100vh - 70px);
+  }
 `;

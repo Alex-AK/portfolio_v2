@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Logo from './Logo';
 import content from '../../content/main';
 
-const Navigation = props => {
+const Navigation = () => {
   const [navigation] = useState(content.navigation);
 
   return (
@@ -25,8 +25,8 @@ const Styles = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
-  margin: 5px auto;
+  height: 70px;
+  margin: 0 auto;
   position: sticky;
   top: 0;
   background: #fcfcfa;

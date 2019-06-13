@@ -15,5 +15,5 @@ const Styles = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 84.75vh;
+  min-height: calc(100vh - 140px);
 `;

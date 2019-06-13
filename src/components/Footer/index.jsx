@@ -32,16 +32,18 @@ const Footer = () => {
 export default Footer;
 
 const Styles = styled.div`
+  flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 5vh;
   width: 350px;
-  margin: 20px auto 0 auto;
+  height: 50px;
+  margin: 0 auto;
 
   @media (max-width: 600px) {
     width: 100%;
     margin: 0 auto 0 auto;
+    left: 0;
   }
 
   img {

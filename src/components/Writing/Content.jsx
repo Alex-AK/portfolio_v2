@@ -23,6 +23,10 @@ const Styles = styled.div`
   width: 100%;
   margin: 20px 30px 0 280px;
 
+  &:last-child {
+    margin-bottom: 50px;
+  }
+
   @media (max-width: 800px) {
     margin: 20px 30px 0 220px;
   }
