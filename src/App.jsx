@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -20,13 +20,29 @@ function App(props) {
     content: content,
     navigation: content.navigation
   });
+
+  const [window_width, setWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   const path = props.history.location.pathname;
 
   return (
-    <Styles>
+    <>
       <GlobalStyles />
-      <div className='App'>
-        {path !== '/' && <Navigation navigation={state.navigation} />}
+      <Styles>
+        {path !== '/' && (
+          <Navigation
+            navigation={state.navigation}
+            window_width={window_width}
+          />
+        )}
+
         <Switch>
           <Route
             exact
@@ -35,6 +51,7 @@ function App(props) {
               <Landing
                 content={state.content.landing}
                 navigation={state.navigation}
+                window_width={window_width}
               />
             )}
           />
@@ -45,16 +62,14 @@ function App(props) {
           <Route path='/contact' component={Contact} />
           <Route component={ErrorPage} />
         </Switch>
-      </div>
+      </Styles>
       <Footer />
-    </Styles>
+    </>
   );
 }
 
 export default App;
 
 const Styles = styled.div`
-  .App {
-    min-height: calc(100vh - 70px);
-  }
+  min-height: calc(100vh - 70px);
 `;

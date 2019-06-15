@@ -3,8 +3,9 @@ import NavigationLink from './NavigationLink';
 import styled from 'styled-components';
 import Logo from './Logo';
 import content from '../../content/main';
+import MobileNavigation from './MobileNavigation';
 
-const Navigation = () => {
+const Navigation = props => {
   const [navigation] = useState(content.navigation);
 
   return (
@@ -15,6 +16,9 @@ const Navigation = () => {
           return <NavigationLink key={link_text} text={link_text} />;
         })}
       </div>
+      {props.window_width <= 600 && (
+        <MobileNavigation navigation={navigation} />
+      )}
     </Styles>
   );
 };

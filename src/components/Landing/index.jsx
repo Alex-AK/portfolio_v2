@@ -8,6 +8,7 @@ import Button from './Button';
 const Landing = props => {
   const [about] = useState(content.landing);
   const [navigation] = useState(content.navigation);
+
   return (
     <>
       <div style={{ height: '60px' }} />
@@ -16,7 +17,8 @@ const Landing = props => {
         <div>
           <h1>{about.title}</h1>
           <h3>{about.sub_title}</h3>
-          <div className='buttons'>
+          <div
+            className={props.window_width <= 800 ? 'buttons small' : 'buttons'}>
             {navigation.map(button => {
               return <Button title={button} />;
             })}
@@ -39,7 +41,7 @@ const Styles = styled.div`
   margin: 0 auto;
 
   @media (max-width: 800px) {
-    margin: 0 5%;
+    margin: 0 3%;
   }
 
   h3 {
@@ -78,5 +80,15 @@ const Styles = styled.div`
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+
+    @media (max-width: 600px) {
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: left;
+
+      .button {
+        margin-bottom: 15px;
+      }
+    }
   }
 `;

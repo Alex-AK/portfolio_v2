@@ -56,7 +56,7 @@ export const Buttons = css`
   }
   .nav {
     @media (max-width: 700px) {
-      display: none;
+      /* display: none; */
     }
   }
 
