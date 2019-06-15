@@ -4,9 +4,17 @@ import { NavLink } from 'react-router-dom';
 const NavigationLink = props => {
   return (
     <>
-      <NavLink to={`/${props.text}`}>
-        <p>{props.text}</p>
-      </NavLink>
+      {props.isMobile ? (
+        <NavLink
+          to={`/${props.text}`}
+          onClick={() => props.setMenu(!props.menuOpen)}>
+          <p>{props.text}</p>
+        </NavLink>
+      ) : (
+        <NavLink to={`/${props.text}`}>
+          <p>{props.text}</p>
+        </NavLink>
+      )}
     </>
   );
 };

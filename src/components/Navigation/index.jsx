@@ -3,10 +3,12 @@ import NavigationLink from './NavigationLink';
 import styled from 'styled-components';
 import Logo from './Logo';
 import content from '../../content/main';
-import MobileNavigation from './MobileNavigation';
+import MobileMenuButton from './MobileMenuButton';
+import MobileMenu from './MobileMenu';
 
 const Navigation = props => {
   const [navigation] = useState(content.navigation);
+  const [menuOpen, setMenu] = useState(true);
 
   return (
     <Styles>
@@ -17,7 +19,20 @@ const Navigation = props => {
         })}
       </div>
       {props.window_width <= 600 && (
-        <MobileNavigation navigation={navigation} />
+        <>
+          <MobileMenuButton
+            navigation={navigation}
+            menuOpen={menuOpen}
+            setMenu={setMenu}
+          />
+          {menuOpen && (
+            <MobileMenu
+              navigation={navigation}
+              setMenu={setMenu}
+              menuOpen={menuOpen}
+            />
+          )}
+        </>
       )}
     </Styles>
   );
@@ -34,7 +49,7 @@ const Styles = styled.div`
   position: sticky;
   top: 0;
   background: #fcfcfa;
-  opacity: 0.95;
+  opacity: 0.98;
   z-index: 2;
 
   .links {
@@ -44,15 +59,19 @@ const Styles = styled.div`
     max-width: 700px;
     margin-right: 20px;
 
+    .active {
+      border-bottom: 3px solid #f4e4d4;
+      padding-bottom: 5px;
+    }
     a {
       padding: 0 3px 8px 3px;
       font-weight: 500;
       text-transform: uppercase;
-    }
 
-    a:hover {
-      border-bottom: 3px solid #f4e4d4;
-      padding-bottom: 5px;
+      &:hover {
+        border-bottom: 3px solid #f4e4d4;
+        padding-bottom: 5px;
+      }
     }
 
     @media (max-width: 800px) {
@@ -62,10 +81,6 @@ const Styles = styled.div`
       display: none;
     }
 
-    .active {
-      border-bottom: 3px solid #f4e4d4;
-      padding-bottom: 5px;
-    }
     p {
       margin-bottom: 0;
       font-size: 14px;
