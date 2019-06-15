@@ -8,7 +8,7 @@ import MobileMenu from './MobileMenu';
 
 const Navigation = props => {
   const [navigation] = useState(content.navigation);
-  const [menuOpen, setMenu] = useState(true);
+  const [menuOpen, setMenu] = useState(false);
 
   return (
     <Styles>
