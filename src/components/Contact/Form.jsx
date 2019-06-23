@@ -61,7 +61,9 @@ const Form = () => {
             Don’t fill this out if you're human: <input name='bot-field' />
           </label>
         </p>
-        <Button title='submit' />
+        <div>
+          <Button title='submit' />
+        </div>
       </form>
     </Styles>
   );
@@ -73,7 +75,7 @@ const Styles = styled.div`
   form {
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 350px;
     height: 100%;
   }
 
@@ -99,8 +101,8 @@ const Styles = styled.div`
     margin: 5px 0 25px 0;
     border-radius: 3px;
     border: 1px solid #282828;
-    max-width: 400px;
-    min-width: 400px;
+    max-width: 350px;
+    min-width: 350px;
     min-height: 50px;
     max-height: 200px;
     font-size: 15px;

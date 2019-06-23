@@ -5,6 +5,12 @@ import content from '../../content/main';
 
 import Button from './Button';
 
+/**
+ * Testing comments
+ *
+ *  @param {*} props
+ *
+ */
 const Landing = props => {
   const [about] = useState(content.landing);
   const [navigation] = useState(content.navigation);

@@ -8,6 +8,40 @@ const content = {
     sub_title:
       "I'm a software developer with a love for coffee, pleasant user experience, and intentionality. "
   },
+  services: [
+    {
+      title: 'Web Development',
+      summary: 'this is some summary text for web development',
+      l_1: 'this is list item one',
+      l_2: 'this is list item two',
+      l_3: 'this is list item three',
+      l_4: 'this is list item four'
+    },
+    {
+      title: 'Web Development',
+      summary: 'this is some summary text for web development',
+      l_1: 'this is list item one',
+      l_2: 'this is list item two',
+      l_3: 'this is list item three',
+      l_4: 'this is list item four'
+    },
+    {
+      title: 'Web Development',
+      summary: 'this is some summary text for web development',
+      l_1: 'this is list item one',
+      l_2: 'this is list item two',
+      l_3: 'this is list item three',
+      l_4: 'this is list item four'
+    },
+    {
+      title: 'Web Development',
+      summary: 'this is some summary text for web development',
+      l_1: 'this is list item one',
+      l_2: 'this is list item two',
+      l_3: 'this is list item three',
+      l_4: 'this is list item four'
+    }
+  ],
   projects: [
     {
       images: {

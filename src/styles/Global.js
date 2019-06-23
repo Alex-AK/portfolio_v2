@@ -91,6 +91,7 @@ export const Global = css`
   .hyperlink {
     border-bottom: 2.5px solid #f4e4d4;
     padding-bottom: 1px;
+    cursor: pointer;
 
     &:hover {
       border-bottom: none;
