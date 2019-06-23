@@ -58,8 +58,36 @@ export const Global = css`
   }
 
   .page-title {
-    display: flex;
-    margin: 40px 0 40px 5%;
+    margin: 40px 0 40px 0;
+    padding-left: 100px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    @media (max-width: 800px) {
+      padding-left: 40px;
+      margin: 20px 0 0 0;
+    }
+
+    div {
+      display: inline;
+      padding: 0 20px;
+    }
+
+    &:before,
+    &:after {
+      position: absolute;
+      top: 51%;
+      overflow: hidden;
+      width: 80%;
+      height: 1px;
+      content: '\a0';
+      background: #282828;
+    }
+    &:before {
+      margin-left: -80%;
+      text-align: right;
+    }
   }
 
   p {

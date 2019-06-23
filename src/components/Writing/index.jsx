@@ -7,7 +7,9 @@ import SideBar from './SideBar';
 const Writing = () => {
   return (
     <>
-      <h2 className='page-title'>Writing</h2>
+      <h2 className='page-title'>
+        <div>Writing</div>
+      </h2>
       <Styles>
         <SideBar />
         <Content />

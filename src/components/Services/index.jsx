@@ -12,7 +12,9 @@ const Services = () => {
   return (
     <Styles>
       {/* Services section */}
-      <h2 className='page-title'>Services</h2>
+      <h2 className='page-title'>
+        <div>Services</div>
+      </h2>
       <h3 className='service-summary'>
         Do non laborum nisi nostrud qui elit voluptate ex. Veniam id magna
         tempor qui sint in exercitation in ipsum irure deserunt tempor nostrud.
@@ -24,7 +26,9 @@ const Services = () => {
       </div>
 
       {/* How to work together section */}
-      <h2 className='page-title'>How to work together</h2>
+      <h2 className='page-title'>
+        <div>How to work together</div>
+      </h2>
       <h3 className='service-summary'>
         Do non laborum nisi nostrud qui elit voluptate ex. Veniam id magna
         tempor qui sint in exercitation in ipsum irure deserunt tempor nostrud.
