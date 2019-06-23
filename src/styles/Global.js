@@ -58,7 +58,7 @@ export const Global = css`
   }
 
   .page-title {
-    margin: 40px 0 40px 0;
+    margin: 40px 10px;
     padding-left: 100px;
     position: relative;
     z-index: 1;
@@ -79,14 +79,13 @@ export const Global = css`
       position: absolute;
       top: 51%;
       overflow: hidden;
-      width: 80%;
+      width: 100%;
       height: 1px;
       content: '\a0';
-      background: #282828;
+      background: #d3d3d3;
     }
     &:before {
-      margin-left: -80%;
-      text-align: right;
+      margin-left: -100%;
     }
   }
 
@@ -103,7 +102,7 @@ export const Global = css`
     height: 1px;
     width: 500px;
     margin: 40px auto 30px auto;
-    background: #282828;
+    background: #d3d3d3;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
 
     &:last-child {
