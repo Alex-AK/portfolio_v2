@@ -59,8 +59,7 @@ export const Global = css`
 
   .page-title {
     display: flex;
-    justify-content: center;
-    margin: 40px 0 0 0;
+    margin: 40px 0 40px 5%;
   }
 
   p {

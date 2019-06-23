@@ -20,6 +20,4 @@ export default Writing;
 
 const Styles = styled.div`
   display: flex;
-  max-width: 1200px;
-  margin: 0 auto;
 `;

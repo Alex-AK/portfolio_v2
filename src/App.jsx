@@ -42,26 +42,27 @@ function App(props) {
             window_width={window_width}
           />
         )}
-
-        <Switch>
-          <Route
-            exact
-            path='/'
-            render={props => (
-              <Landing
-                content={state.content.landing}
-                navigation={state.navigation}
-                window_width={window_width}
-              />
-            )}
-          />
-          <Route path='/projects' component={Projects} />
-          <Route path='/services' component={Services} />
-          <Route path='/writing' component={Writing} />
-          <Route path='/about' component={About} />
-          <Route path='/contact' component={Contact} />
-          <Route component={ErrorPage} />
-        </Switch>
+        <div className='main-content'>
+          <Switch>
+            <Route
+              exact
+              path='/'
+              render={props => (
+                <Landing
+                  content={state.content.landing}
+                  navigation={state.navigation}
+                  window_width={window_width}
+                />
+              )}
+            />
+            <Route path='/projects' component={Projects} />
+            <Route path='/services' component={Services} />
+            <Route path='/writing' component={Writing} />
+            <Route path='/about' component={About} />
+            <Route path='/contact' component={Contact} />
+            <Route component={ErrorPage} />
+          </Switch>
+        </div>
       </Styles>
       <Footer />
     </>
@@ -72,4 +73,9 @@ export default App;
 
 const Styles = styled.div`
   min-height: calc(100vh - 70px);
+
+  .main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 `;

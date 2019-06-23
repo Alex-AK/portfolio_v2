@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import content from '../../content/main';
 
-import ServiceCard from './ServiceCard';
+import Card from './ServiceCard';
+import Contact from '../Contact';
 
 const Services = () => {
   const [services] = useState(content.services);
+  const [work_together] = useState(content.work_together);
 
   return (
     <Styles>
+      {/* Services section */}
       <h2 className='page-title'>Services</h2>
       <h3 className='service-summary'>
         Do non laborum nisi nostrud qui elit voluptate ex. Veniam id magna
@@ -16,9 +19,24 @@ const Services = () => {
       </h3>
       <div className='service-cards'>
         {services.map(service => (
-          <ServiceCard service={service} />
+          <Card content={service} />
         ))}
       </div>
+
+      {/* How to work together section */}
+      <h2 className='page-title'>How to work together</h2>
+      <h3 className='service-summary'>
+        Do non laborum nisi nostrud qui elit voluptate ex. Veniam id magna
+        tempor qui sint in exercitation in ipsum irure deserunt tempor nostrud.
+      </h3>
+      <div className='work-together-cards'>
+        {work_together.map(work => (
+          <Card content={work} />
+        ))}
+      </div>
+
+      {/* Contact form section */}
+      <Contact />
     </Styles>
   );
 };
@@ -26,7 +44,6 @@ const Services = () => {
 export default Services;
 
 const Styles = styled.div`
-  max-width: 1200px;
   margin: 0 auto;
 
   .service-cards {
@@ -35,8 +52,11 @@ const Styles = styled.div`
     flex-wrap: wrap;
   }
 
+  .work-together-cards {
+  }
+
   .service-summary {
-    margin: 40px auto 50px auto;
+    margin: 40px 0 50px 0;
     width: 675px;
   }
 `;

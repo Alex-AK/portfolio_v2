@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ServiceCard = ({ service }) => {
-  const { title, summary, l_1, l_2, l_3, l_4 } = service;
+const Card = ({ content }) => {
+  const { title, summary, l_1, l_2, l_3, l_4 } = content;
   return (
     <Styles>
       <h3 className='card-title'>{title}</h3>
@@ -17,11 +17,10 @@ const ServiceCard = ({ service }) => {
   );
 };
 
-export default ServiceCard;
+export default Card;
 
 const Styles = styled.div`
   width: 45%;
-  border: 1px solid #d3d3d3;
   border-radius: 5px;
   margin-bottom: 50px;
   padding: 20px 30px;

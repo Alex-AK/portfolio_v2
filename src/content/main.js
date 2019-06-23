@@ -42,6 +42,32 @@ const content = {
       l_4: 'this is list item four'
     }
   ],
+  work_together: [
+    {
+      title: 'Initial Assessment',
+      summary: 'this is some summary text for web development',
+      l_1: 'this is list item one',
+      l_2: 'this is list item two',
+      l_3: 'this is list item three',
+      l_4: 'this is list item four'
+    },
+    {
+      title: 'Full Service Development',
+      summary: 'this is some summary text for web development',
+      l_1: 'this is list item one',
+      l_2: 'this is list item two',
+      l_3: 'this is list item three',
+      l_4: 'this is list item four'
+    },
+    {
+      title: 'Individual Service',
+      summary: 'this is some summary text for web development',
+      l_1: 'this is list item one',
+      l_2: 'this is list item two',
+      l_3: 'this is list item three',
+      l_4: 'this is list item four'
+    }
+  ],
   projects: [
     {
       images: {

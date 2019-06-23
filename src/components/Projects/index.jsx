@@ -21,9 +21,6 @@ const Projects = () => {
 export default Projects;
 
 const Styles = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-
   @media (max-width: 800px) {
     flex-direction: column;
     margin: 0 auto;

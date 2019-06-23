@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Form from './Form';
 
-const Contract = () => {
+const Contact = () => {
   return (
     <Styles>
       <h3>If you'd like to send me a message, use the form below.</h3>
@@ -11,7 +11,7 @@ const Contract = () => {
   );
 };
 
-export default Contract;
+export default Contact;
 
 const Styles = styled.div`
   display: flex;
