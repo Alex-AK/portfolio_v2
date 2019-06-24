@@ -33,6 +33,7 @@ const Styles = styled.div`
 
   .two-column {
     display: flex;
+    align-items: center;
 
     @media (max-width: 800px) {
       flex-direction: column;
@@ -40,10 +41,12 @@ const Styles = styled.div`
   }
 
   .left-column {
-    margin: 20px 30px;
+    margin: -50px 80px 0 0;
     width: 350px;
+    text-align: center;
 
     @media (max-width: 800px) {
+      text-align: left;
       margin: 30px 0;
     }
   }

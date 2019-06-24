@@ -29,10 +29,6 @@ const Services = () => {
       <h2 className='page-title'>
         <div>How to work together</div>
       </h2>
-      <h3 className='service-summary'>
-        Do non laborum nisi nostrud qui elit voluptate ex. Veniam id magna
-        tempor qui sint in exercitation in ipsum irure deserunt tempor nostrud.
-      </h3>
       <div className='work-together-cards'>
         {work_together.map(work => (
           <Card content={work} />
@@ -60,7 +56,13 @@ const Styles = styled.div`
   }
 
   .service-summary {
-    margin: 40px 0 50px 0;
+    margin: 30px 0 50px 20px;
     width: 675px;
+
+    @media (max-width: 800px) {
+      margin: 30px 0px;
+      padding: 0 20px;
+      width: 100%;
+    }
   }
 `;
