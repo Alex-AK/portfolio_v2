@@ -2,11 +2,24 @@ import React from 'react';
 import styled from 'styled-components';
 import Form from './Form';
 
-const Contact = () => {
+const Contact = props => {
   return (
-    <Styles>
-      <h3>If you'd like to send me a message, use the form below.</h3>
-      <Form />
+    <Styles
+      style={
+        props.contact_page
+          ? { minHeight: 'calc(100vh - 140px)' }
+          : { margin: '100px 0' }
+      }>
+      <div className='two-column'>
+        <div className='left-column'>
+          <h2>Contact</h2>
+          <h3>
+            Feel free to send me a message with work inquiries or further
+            questions.
+          </h3>
+        </div>
+        <Form />
+      </div>
     </Styles>
   );
 };
@@ -17,12 +30,21 @@ const Styles = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  /* min-height: calc(100vh - 280px); */
 
-  h3 {
-    margin-bottom: 40px;
+  .two-column {
+    display: flex;
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+    }
   }
 
-  min-height: calc(100vh - 140px);
+  .left-column {
+    margin: 20px 30px;
+    width: 350px;
+
+    @media (max-width: 800px) {
+      margin: 30px 0;
+    }
+  }
 `;

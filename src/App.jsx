@@ -59,7 +59,7 @@ function App(props) {
             <Route path='/services' component={Services} />
             <Route path='/writing' component={Writing} />
             <Route path='/about' component={About} />
-            <Route path='/contact' component={Contact} />
+            <Route path='/contact' render={props => <Contact contact_page />} />
             <Route component={ErrorPage} />
           </Switch>
         </div>
