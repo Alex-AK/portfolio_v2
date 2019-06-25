@@ -1,19 +1,22 @@
 // package imports
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import SearchInput from './SearchInput';
 
 const SideBar = () => {
+  const [input, setInput] = useState('');
+
   return (
     <Styles>
-      <div>
+      <div className='fixed-sidebar'>
         {/* insert search bar here */}
-        <h4>Search</h4>
+        <SearchInput input={input} setInput={setInput} />
         {/* filtering by category, how will this work with hooks? */}
-        <h5>Client Projects</h5>
-        <h5>Personal Projects</h5>
-        <h5>Top 10 Articles</h5>
-        <h5>Personal Writing</h5>
-        <h5>Book Summaries</h5>
+        <h5 onClick={() => setInput('Client Projects')}>Client Projects</h5>
+        <h5 onClick={() => setInput('Personal Projects')}>Personal Projects</h5>
+        <h5 onClick={() => setInput('Top 10 Articles')}>Top 10 Articles</h5>
+        <h5 onClick={() => setInput('Personal Writing')}>Personal Writing</h5>
+        <h5 onClick={() => setInput('Book Summaries')}>Book Summaries</h5>
       </div>
     </Styles>
   );
@@ -24,13 +27,13 @@ export default SideBar;
 const Styles = styled.div`
   position: absolute;
 
-  div {
+  .fixed-sidebar {
     position: fixed;
     min-height: 80vh;
     width: 260px;
     margin: 15px 0 15px 10px;
     padding-right: 20px;
-    border-right: 1px solid black;
+    border-right: 1px solid #d3d3d3;
 
     @media (max-width: 800px) {
       width: 210px;
