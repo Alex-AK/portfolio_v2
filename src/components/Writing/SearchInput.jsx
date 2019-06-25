@@ -6,12 +6,15 @@ import searchIcon from '../../assets/search-icon.png';
 const SearchInput = ({ input, setInput }) => {
   return (
     <Styles>
-      <img src={searchIcon} alt='Search Icon' />
-      <input
-        placeholder='Search Writing'
-        value={input}
-        onChange={e => setInput(e.target.value)}
-      />
+      <div>
+        <img src={searchIcon} alt='Search Icon' />
+        <input
+          placeholder='Search Writing'
+          value={input}
+          onChange={e => setInput(e.target.value)}
+        />
+      </div>
+      <button onClick={() => setInput('')}>Clear Search</button>
     </Styles>
   );
 };
@@ -19,7 +22,9 @@ const SearchInput = ({ input, setInput }) => {
 export default SearchInput;
 
 const Styles = styled.div`
-  display: flex;
+  div {
+    display: flex;
+  }
 
   img {
     width: 20px;
@@ -32,9 +37,24 @@ const Styles = styled.div`
     border: none;
     background: #fcfcfa;
     border-bottom: 1px solid #d3d3d3;
-    margin: 5px 0 25px 0;
+    margin: 5px 0 5px 0;
     padding: 0 0 3px 30px;
     width: 250px;
     font-size: 16px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    width: 240px;
+    margin-bottom: 25px;
+    border: 1px solid #d3d3d3;
+    border-radius: 3px;
+
+    &:focus {
+      outline: none;
+    }
   }
 `;

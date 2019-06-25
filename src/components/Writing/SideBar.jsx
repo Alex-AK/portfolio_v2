@@ -50,8 +50,11 @@ const Styles = styled.div`
     }
 
     h5 {
-      font-size: 14px;
-      margin: 0 0 10px 5px;
+      font-size: 15px;
+      margin: 0 0 15px 5px;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 `;
