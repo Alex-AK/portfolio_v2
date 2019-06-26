@@ -1,11 +1,9 @@
 // package imports
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import SearchInput from './SearchInput';
 
-const SideBar = () => {
-  const [input, setInput] = useState('');
-
+const SideBar = ({ input, setInput }) => {
   return (
     <Styles>
       <div className='fixed-sidebar'>

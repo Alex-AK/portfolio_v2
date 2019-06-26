@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import writing from '../../content/writing';
 
 import Post from './Post';
 
-const Content = () => {
-  const [posts] = useState(writing);
+const Content = ({ posts }) => {
   return (
     <Styles>
       {posts.map(post => {
