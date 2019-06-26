@@ -8,7 +8,7 @@ const Content = ({ title, intro, p_1, p_2, links }) => {
       <p>{intro}</p>
       <p>{p_1}</p>
       <p>{p_2}</p>
-      <More links={links} />
+      <More links={links} title={title} />
     </Styles>
   );
 };

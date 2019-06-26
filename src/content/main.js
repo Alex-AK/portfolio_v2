@@ -89,7 +89,7 @@ const content = {
       }
     },
     {
-      title: 'LINE',
+      title: 'Training Bot',
       introduction:
         'Id consequat amet aute esse mollit incididunt excepteur. Sit exercitation sit est quis sit fugiat aliqua culpa do enim id Lorem proident adipisicing.',
       content: {
@@ -104,11 +104,11 @@ const content = {
       },
       links: {
         github: 'https://github.com/alex-ak',
-        live_site: 'https://linebyhand.com/'
+        live_site: 'https://trainingbot.co'
       }
     },
     {
-      title: 'LINE',
+      title: 'Good Time Journal',
       introduction:
         'Id consequat amet aute esse mollit incididunt excepteur. Sit exercitation sit est quis sit fugiat aliqua culpa do enim id Lorem proident adipisicing.',
       content: {
@@ -123,7 +123,7 @@ const content = {
       },
       links: {
         github: 'https://github.com/alex-ak',
-        live_site: 'https://linebyhand.com/'
+        live_site: 'https://goodtimejournal-ak.netlify.com'
       }
     }
   ]

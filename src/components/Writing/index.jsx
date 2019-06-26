@@ -16,7 +16,7 @@ const Writing = props => {
 
   useEffect(() => {
     setInput(topic);
-  }, []);
+  }, [topic]);
 
   // filter options
   const fuse_options = {
@@ -26,7 +26,14 @@ const Writing = props => {
     distance: 100,
     maxPatternLength: 32,
     minMatchCharLength: 2,
-    keys: ['title', 'author.firstName']
+    keys: [
+      'title',
+      'introduction',
+      'content.p_1',
+      'content.p_2',
+      'content.p_3',
+      'content.p_4'
+    ]
   };
 
   // filter search input

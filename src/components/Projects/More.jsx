@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const More = ({ links }) => {
+const More = ({ title, links }) => {
   const { github, live_site } = links;
   return (
     <Styles>
@@ -24,15 +24,17 @@ const More = ({ links }) => {
           </svg>
         </div>
       </a>
-      <Link to={`/sample`}>
-        <div className='button small'>
-          <span>Read More</span>
-          <svg>
-            <polyline className='o1' points='0 0, 150 0, 150 55, 0 55, 0 0' />
-            <polyline className='o2' points='0 0, 150 0, 150 55, 0 55, 0 0' />
-          </svg>
-        </div>
-      </Link>
+      {title && (
+        <Link to={`/writing/${title}`}>
+          <div className='button small'>
+            <span>Read More</span>
+            <svg>
+              <polyline className='o1' points='0 0, 150 0, 150 55, 0 55, 0 0' />
+              <polyline className='o2' points='0 0, 150 0, 150 55, 0 55, 0 0' />
+            </svg>
+          </div>
+        </Link>
+      )}
     </Styles>
   );
 };
