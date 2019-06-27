@@ -6,24 +6,28 @@ const More = ({ title, links }) => {
   const { github, live_site } = links;
   return (
     <Styles>
-      <a href={live_site} target='_blank' rel='noopener noreferrer'>
-        <div className='button small'>
-          <span>View Site</span>
-          <svg>
-            <polyline className='o1' points='0 0, 150 0, 150 55, 0 55, 0 0' />
-            <polyline className='o2' points='0 0, 150 0, 150 55, 0 55, 0 0' />
-          </svg>
-        </div>
-      </a>
-      <a href={github} target='_blank' rel='noopener noreferrer'>
-        <div className='button small'>
-          <span>View Code</span>
-          <svg>
-            <polyline className='o1' points='0 0, 150 0, 150 55, 0 55, 0 0' />
-            <polyline className='o2' points='0 0, 150 0, 150 55, 0 55, 0 0' />
-          </svg>
-        </div>
-      </a>
+      {live_site && (
+        <a href={live_site} target='_blank' rel='noopener noreferrer'>
+          <div className='button small'>
+            <span>View Site</span>
+            <svg>
+              <polyline className='o1' points='0 0, 150 0, 150 55, 0 55, 0 0' />
+              <polyline className='o2' points='0 0, 150 0, 150 55, 0 55, 0 0' />
+            </svg>
+          </div>
+        </a>
+      )}
+      {github && (
+        <a href={github} target='_blank' rel='noopener noreferrer'>
+          <div className='button small'>
+            <span>View Code</span>
+            <svg>
+              <polyline className='o1' points='0 0, 150 0, 150 55, 0 55, 0 0' />
+              <polyline className='o2' points='0 0, 150 0, 150 55, 0 55, 0 0' />
+            </svg>
+          </div>
+        </a>
+      )}
       {title && (
         <Link to={`/writing/${title}`}>
           <div className='button small'>

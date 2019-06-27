@@ -29,7 +29,6 @@ const writing = [
     testimonial: 'testimonial goes here.',
     link: null,
     links: {
-      github: 'https://github.com/alex-ak',
       live_site: 'https://linebyhand.com/'
     }
   },

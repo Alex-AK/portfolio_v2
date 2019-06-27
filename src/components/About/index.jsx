@@ -24,7 +24,7 @@ const About = props => {
           </Link>{' '}
         </h3>
         <p>
-          <Link to='/writing/mentorship' className='hyperlink'>
+          <Link to='/contact' className='hyperlink'>
             Looking for mentorship?
           </Link>{' '}
           I'm available.
