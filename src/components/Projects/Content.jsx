@@ -1,13 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import More from './More';
-const Content = ({ title, intro, p_1, p_2, links }) => {
+const Content = ({ title, intro, p_1, p_2, p_3, p_4, links }) => {
+  console.log(intro);
   return (
     <Styles>
-      <h3>{title}</h3>
+      <h3 className='heavy'>{title}</h3>
       <p>{intro}</p>
-      <p>{p_1}</p>
-      <p>{p_2}</p>
+      <ul>
+        <li>{p_1}</li>
+        <li>{p_2}</li>
+        {p_3 && <li>{p_3}</li>}
+        {p_4 && <li>{p_4}</li>}
+      </ul>
       <More links={links} title={title} />
     </Styles>
   );
@@ -27,5 +32,16 @@ const Styles = styled.div`
   @media (max-width: 800px) {
     width: 96%;
     margin: 0 auto;
+  }
+
+  ul {
+    margin-left: 20px;
+
+    li {
+      margin-bottom: 8px;
+      font-size: 14px;
+      list-style-type: circle;
+      line-height: 1.25;
+    }
   }
 `;

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import Landing from './components/Landing';
 import Projects from './components/Projects';
-import Services from './components/Services';
+// import Services from './components/Services';
 import Writing from './components/Writing';
 import About from './components/About';
 import Contact from './components/Contact';
@@ -56,7 +56,7 @@ function App(props) {
               )}
             />
             <Route path='/projects' component={Projects} />
-            <Route path='/services' component={Services} />
+            {/* <Route path='/services' component={Services} /> */}
             <Route path='/writing' component={Writing} />
             <Route path='/about' component={About} />
             <Route path='/contact' render={props => <Contact contact_page />} />

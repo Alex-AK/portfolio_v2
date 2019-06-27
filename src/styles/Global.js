@@ -57,6 +57,10 @@ export const Global = css`
     }
   }
 
+  .heavy {
+    font-weight: 500;
+  }
+
   .page-title {
     margin: 40px 10px;
     padding-left: 100px;
@@ -94,7 +98,7 @@ export const Global = css`
     line-height: 1.25;
 
     @media (max-width: 800px) {
-      font-size: 14px;
+      font-size: 15px;
     }
   }
 

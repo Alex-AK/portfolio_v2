@@ -19,7 +19,7 @@ const Post = ({ post }) => {
   return (
     <>
       <Styles>
-        <h3 className='post-title'>{title}</h3>
+        <h3 className='post-title heavy'>{title}</h3>
         <p>{p_1}</p>
         <p>{p_2}</p>
         {testimonial && renderTestimonial()}

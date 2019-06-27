@@ -15,6 +15,8 @@ const Project = props => {
           intro={intro}
           p_1={content.p_1}
           p_2={content.p_2}
+          p_3={content.p_3}
+          p_4={content.p_4}
           links={links}
         />
       </Styles>
