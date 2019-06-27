@@ -11,7 +11,7 @@ const Projects = () => {
   return (
     <Styles>
       <h2 className='page-title'>
-        <div>Client Projects</div>
+        <div>Projects</div>
       </h2>
       {state.projects.map(project => (
         <Project key={project.title} project={project} />
