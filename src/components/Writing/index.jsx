@@ -1,15 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Fuse from 'fuse.js';
-
-import writing from '../../content/writing';
+import * as contentful from 'contentful';
 
 import Content from './Content';
 import SideBar from './SideBar';
 
 const Writing = props => {
   const [input, setInput] = useState('');
-  const [posts] = useState(writing);
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const client = contentful.createClient({
+      space: '23hwvl7gwky6',
+      accessToken: '1Jki7kkgqje214FW_I8WKQX6Nk6tGarswGSzhBwvctE'
+    });
+
+    client
+      .getEntries({ content_type: 'projectCaseStudy' })
+      .then(res => setPosts(res.items))
+      .catch(err => console.log(err));
+  }, []);
 
   // if navigating to writing page through a topic link, get topic.
   let topic = props.history.location.pathname.slice(9);
@@ -17,6 +28,8 @@ const Writing = props => {
   useEffect(() => {
     setInput(topic);
   }, [topic]);
+
+  console.log(posts);
 
   // filter options
   const fuse_options = {
@@ -26,14 +39,7 @@ const Writing = props => {
     distance: 100,
     maxPatternLength: 32,
     minMatchCharLength: 2,
-    keys: [
-      'title',
-      'introduction',
-      'content.p_1',
-      'content.p_2',
-      'content.p_3',
-      'content.p_4'
-    ]
+    keys: ['fields.title', 'fields.introduction', 'fields.projectGoals']
   };
 
   // filter search input

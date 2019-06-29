@@ -4,14 +4,21 @@ import styled from 'styled-components';
 import More from '../Projects/More';
 
 const Post = ({ post }) => {
-  const { title, content, testimonial, name, links } = post;
-  const { p_1, p_2, p_3 } = content;
+  const {
+    title,
+    introduction,
+    projectFeatures,
+    projectGoals,
+    projectImages,
+    creditsAndRoles,
+    technology
+  } = post;
 
   const renderTestimonial = () => {
     return (
       <div>
-        <p className='testimonial'>{testimonial}</p>
-        <p className='name'>{name}</p>
+        {/* <p className='testimonial'>{testimonial}</p> */}
+        {/* <p className='name'>{name}</p> */}
       </div>
     );
   };
@@ -20,11 +27,10 @@ const Post = ({ post }) => {
     <>
       <Styles>
         <h3 className='post-title heavy'>{title}</h3>
-        <p>{p_1}</p>
-        <p>{p_2}</p>
-        {testimonial && renderTestimonial()}
-        <p>{p_3}</p>
-        {links && <More links={links} />}
+        <p>{introduction}</p>
+        <p>{projectGoals}</p>
+        {/* {testimonial && renderTestimonial()} */}
+        {/* {links && <More links={links} />} */}
         <div className='end'>
           <p>
             Written by{' '}

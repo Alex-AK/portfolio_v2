@@ -2,12 +2,39 @@ const writing = [
   {
     title: 'Project Overview - Training Bot',
     content: {
-      p_1:
+      introduction:
         'A full stack web application built in React to allow training managers send employees automated messages via text and email.',
-      p_2: '',
-      p_3: ''
+      project_goals: '',
+      testimonial: null,
+      features: [
+        'third party industry standard user authentication.',
+        'user dashboard - The central location of our App. Here you can see all of your team members, training series, and outgoing/sent messages.',
+        'custom user interface design for ease of use',
+        'full site mobile support',
+        'custom server based automation system with optional text or email',
+        'subscription based payment integration',
+        'secured database and server',
+        'server and client side data validation and error handling'
+      ],
+      summary:
+        'Excepteur dolore cillum veniam elit aliquip. Labore do officia duis sunt reprehenderit pariatur ullamco consectetur culpa esse. Amet non mollit reprehenderit amet veniam magna aliquip.',
+      credit: [
+        'Nate Boyette - Bay Area, CA - Software Developer',
+        'Leigh-Ann Friedel - Arlington VA - Software Developer',
+        'Alex King - Seattle WA - Software Developer',
+        ' Mike Landers - Elk Grove, CA - Software Developer',
+        'Brandon Lent - Tampa, FL - Software Developer'
+      ],
+      technology: [
+        'React / JavaScript',
+        'Redux state management',
+        'Node / Express server',
+        'External APIs Twilio, SendGrid, Stripe, Auth0',
+        'Custom server side notification functions with cronjob',
+        'Material UI',
+        'MySQL / AWS'
+      ]
     },
-    testimonial: null,
     link: null,
     links: {
       github: 'https://github.com/training-bot/',
