@@ -3,13 +3,11 @@ const writing = [
     title: 'Project Overview - Training Bot',
     content: {
       p_1:
-        'Id sint cillum ut ullamco id et veniam duis mollit irure. Enim elit laboris et ea sunt laborum reprehenderit.',
-      p_2:
-        'Dolore consectetur duis Lorem non velit veniam Lorem ea Lorem. Est esse quis ea cillum in minim sit eu aute in. Esse cupidatat adipisicing sit consequat nisi commodo non nulla magna laborum officia cupidatat eu amet. ',
-      p_3:
-        'Id sint cillum ut ullamco id et veniam duis mollit irure. Enim elit laboris et ea sunt laborum reprehenderit.'
+        'A full stack web application built in React to allow training managers send employees automated messages via text and email.',
+      p_2: '',
+      p_3: ''
     },
-    testimonial: 'testimonial goes here.',
+    testimonial: null,
     link: null,
     links: {
       github: 'https://github.com/training-bot/',
@@ -20,13 +18,11 @@ const writing = [
     title: 'Project Overview - LINE',
     content: {
       p_1:
-        'Id sint cillum ut ullamco id et veniam duis mollit irure. Enim elit laboris et ea sunt laborum reprehenderit.',
-      p_2:
-        'Dolore consectetur duis Lorem non velit veniam Lorem ea Lorem. Est esse quis ea cillum in minim sit eu aute in. Esse cupidatat adipisicing sit consequat nisi commodo non nulla magna laborum officia cupidatat eu amet. ',
-      p_3:
-        'Id sint cillum ut ullamco id et veniam duis mollit irure. Enim elit laboris et ea sunt laborum reprehenderit.'
+        'An e-commerce site built with SquareSpace to meet client requirements of being able to manage store and orders.',
+      p_2: '',
+      p_3: ''
     },
-    testimonial: 'testimonial goes here.',
+    testimonial: 'testimonial goes here',
     link: null,
     links: {
       live_site: 'https://linebyhand.com/'
@@ -36,13 +32,11 @@ const writing = [
     title: 'Project Overview - ck tile co.',
     content: {
       p_1:
-        'Id sint cillum ut ullamco id et veniam duis mollit irure. Enim elit laboris et ea sunt laborum reprehenderit.',
-      p_2:
-        'Dolore consectetur duis Lorem non velit veniam Lorem ea Lorem. Est esse quis ea cillum in minim sit eu aute in. Esse cupidatat adipisicing sit consequat nisi commodo non nulla magna laborum officia cupidatat eu amet. ',
-      p_3:
-        'Id sint cillum ut ullamco id et veniam duis mollit irure. Enim elit laboris et ea sunt laborum reprehenderit.'
+        'A simple and accessible website for a full service tiling company based in Tunbridge Vermont.',
+      p_2: '',
+      p_3: ''
     },
-    testimonial: 'testimonial goes here.',
+    testimonial: null,
     link: null,
     links: {
       github: 'https://github.com/alex-ak/cktile.co',
@@ -53,13 +47,11 @@ const writing = [
     title: 'Project Overview - Mentor Me',
     content: {
       p_1:
-        'Id sint cillum ut ullamco id et veniam duis mollit irure. Enim elit laboris et ea sunt laborum reprehenderit.',
-      p_2:
-        'Dolore consectetur duis Lorem non velit veniam Lorem ea Lorem. Est esse quis ea cillum in minim sit eu aute in. Esse cupidatat adipisicing sit consequat nisi commodo non nulla magna laborum officia cupidatat eu amet. ',
-      p_3:
-        'Id sint cillum ut ullamco id et veniam duis mollit irure. Enim elit laboris et ea sunt laborum reprehenderit.'
+        'Mentor Me lets new entrepreneurs seek advice from qualified business professionals.',
+      p_2: '',
+      p_3: ''
     },
-    testimonial: 'testimonial goes here.',
+    testimonial: null,
     link: null,
     links: {
       github: 'https://github.com/team-mentor-me/mentor-me-back'
@@ -70,12 +62,10 @@ const writing = [
     content: {
       p_1:
         'Id sint cillum ut ullamco id et veniam duis mollit irure. Enim elit laboris et ea sunt laborum reprehenderit.',
-      p_2:
-        'Dolore consectetur duis Lorem non velit veniam Lorem ea Lorem. Est esse quis ea cillum in minim sit eu aute in. Esse cupidatat adipisicing sit consequat nisi commodo non nulla magna laborum officia cupidatat eu amet. ',
-      p_3:
-        'Id sint cillum ut ullamco id et veniam duis mollit irure. Enim elit laboris et ea sunt laborum reprehenderit.'
+      p_2: '',
+      p_3: ''
     },
-    testimonial: 'testimonial goes here.',
+    testimonial: null,
     link: null,
     links: {
       github: 'https://github.com/GoodTimeJournal/react-front-end',
@@ -86,13 +76,11 @@ const writing = [
     title: 'Project Overview - Smith and Jones Architecture',
     content: {
       p_1:
-        'Id sint cillum ut ullamco id et veniam duis mollit irure. Enim elit laboris et ea sunt laborum reprehenderit.',
-      p_2:
-        'Dolore consectetur duis Lorem non velit veniam Lorem ea Lorem. Est esse quis ea cillum in minim sit eu aute in. Esse cupidatat adipisicing sit consequat nisi commodo non nulla magna laborum officia cupidatat eu amet. ',
-      p_3:
-        'Id sint cillum ut ullamco id et veniam duis mollit irure. Enim elit laboris et ea sunt laborum reprehenderit.'
+        'A modern responsive architecture website built with HTML, CSS, and custom ES6 JavaScript components.',
+      p_2: '',
+      p_3: ''
     },
-    testimonial: 'testimonial goes here.',
+    testimonial: null,
     link: null,
     links: {
       github: 'https://github.com/lambda-projects-ak/sj-architecture',
