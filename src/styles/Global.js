@@ -96,6 +96,7 @@ export const Global = css`
   p {
     margin-bottom: 10px;
     line-height: 1.25;
+    max-width: 750px;
 
     @media (max-width: 800px) {
       font-size: 15px;
@@ -125,6 +126,17 @@ export const Global = css`
 
     &:hover {
       border-bottom: none;
+    }
+  }
+
+  ul {
+    margin-left: 20px;
+
+    li {
+      margin: 0 0 5px 10px;
+      font-size: 14px;
+      list-style-type: circle;
+      line-height: 1.25;
     }
   }
 `;

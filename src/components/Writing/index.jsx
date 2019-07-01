@@ -29,8 +29,6 @@ const Writing = props => {
     setInput(topic);
   }, [topic]);
 
-  console.log(posts);
-
   // filter options
   const fuse_options = {
     shouldSort: true,

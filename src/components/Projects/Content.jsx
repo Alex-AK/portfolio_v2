@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import More from './More';
 const Content = ({ title, intro, p_1, p_2, p_3, p_4, links }) => {
-  console.log(intro);
   return (
     <Styles>
       <h3 className='heavy'>{title}</h3>
@@ -32,16 +31,5 @@ const Styles = styled.div`
   @media (max-width: 800px) {
     width: 96%;
     margin: 0 auto;
-  }
-
-  ul {
-    margin-left: 20px;
-
-    li {
-      margin-bottom: 8px;
-      font-size: 14px;
-      list-style-type: circle;
-      line-height: 1.25;
-    }
   }
 `;
