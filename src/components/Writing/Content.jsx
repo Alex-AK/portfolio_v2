@@ -7,7 +7,7 @@ const Content = ({ posts }) => {
   return (
     <Styles>
       {posts.map(post => {
-        return <Post key={post.title} post={post.fields} />;
+        return <Post key={post.fields.title} post={post.fields} />;
       })}
     </Styles>
   );
