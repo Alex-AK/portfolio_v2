@@ -11,11 +11,13 @@ const Post = ({ post }) => {
     introduction,
     projectGoals,
     features,
+    mainImage,
     images,
     projectSummary,
     roles,
     technology,
-    links
+    links,
+    inspired
   } = post;
 
   const mapImages = () => {
@@ -59,20 +61,47 @@ const Post = ({ post }) => {
     );
   };
 
+  const renderInspired = () => {
+    return (
+      <p>
+        Inspired by{' '}
+        <a
+          href={inspired.url}
+          className='hyperlink'
+          target='_blank'
+          rel='noopener noreferrer'>
+          {inspired.inspiredBy}
+        </a>
+      </p>
+    );
+  };
+
   return (
     <>
       <Styles>
-        <h3 className='post-title heavy'>{title}</h3>
-        <p>{introduction}</p>
-        <p>{projectGoals}</p>
+        <div className='introduction'>
+          <div>
+            <h3 className='post-title heavy'>{title}</h3>
+            <p>{introduction}</p>
+            <p>{projectGoals}</p>
+          </div>
+          <div>
+            <img
+              className='landing-image'
+              src={mainImage.fields.file.url}
+              alt={mainImage.fields.title}
+            />
+            <p className='caption'>{mainImage.fields.description}</p>
+          </div>
+        </div>
 
         <h4>Features</h4>
         {features && mapFeatures()}
 
+        {images && mapImages()}
+
         <h4>Summary</h4>
         {projectSummary && <p>{projectSummary}</p>}
-
-        {images && mapImages()}
 
         {/* {testimonial && renderTestimonial()} */}
 
@@ -91,12 +120,8 @@ const Post = ({ post }) => {
               Alex King
             </Link>
           </p>
-          <p>
-            Inspired by{' '}
-            <Link to='/about' className='hyperlink'>
-              Name Goes Here
-            </Link>
-          </p>
+
+          {inspired && renderInspired()}
         </div>
       </Styles>
       <div className='divider'>
@@ -111,16 +136,29 @@ export default Post;
 const Styles = styled.div`
   margin: 20px;
 
-  p {
-    /* custom for writing? */
-  }
-
   h4 {
     margin: 15px 0 10px 0;
     font-weight: 500;
   }
 
-  li {
+  .introduction {
+    display: flex;
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .landing-image {
+      width: 400px;
+      margin: 0 0 10px 20px;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+      @media (max-width: 800px) {
+        width: 100%;
+        margin: 10px 0;
+      }
+    }
   }
 
   .image-container {
@@ -130,13 +168,18 @@ const Styles = styled.div`
     margin: 30px 0;
 
     img {
-      width: 800px;
+      width: 750px;
       margin-bottom: 10px;
-    }
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
-    .caption {
-      font-size: 13px;
+      @media (max-width: 800px) {
+        width: 100%;
+      }
     }
+  }
+  .caption {
+    text-align: center;
+    font-size: 13px;
   }
 
   .testimonial {
