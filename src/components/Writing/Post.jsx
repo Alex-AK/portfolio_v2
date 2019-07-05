@@ -28,14 +28,12 @@ const Post = ({ post }) => {
           <img src={mainImage.fields.file.url} alt={mainImage.fields.title} />
           <p className='caption'>{mainImage.fields.description}</p>
         </div>
-        <div>
-          <p>{introduction}</p>
+        <p>{introduction}</p>
 
-          <h4>Overview</h4>
-          {projectGoalsSplit.map((paragraph, key) => (
-            <p key={key}>{paragraph.split('_').pop()}</p>
-          ))}
-        </div>
+        <h4>Overview</h4>
+        {projectGoalsSplit.map((paragraph, key) => (
+          <p key={key}>{paragraph.split('_').pop()}</p>
+        ))}
       </div>
     );
   };
@@ -173,7 +171,7 @@ const Styles = styled.div`
         margin: 0 0 20px 30px;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
-        @media (max-width: 800px) {
+        @media (max-width: 950px) {
           width: 100%;
           margin: 10px 0;
         }
