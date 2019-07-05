@@ -100,6 +100,7 @@ export const Global = css`
 
     @media (max-width: 800px) {
       font-size: 15px;
+      max-width: 100%;
     }
   }
 

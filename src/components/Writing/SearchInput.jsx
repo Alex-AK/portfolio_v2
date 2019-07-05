@@ -42,6 +42,10 @@ const Styles = styled.div`
     width: 250px;
     font-size: 16px;
 
+    @media (max-width: 800px) {
+      width: 200px;
+    }
+
     &:focus {
       outline: none;
     }
@@ -52,6 +56,10 @@ const Styles = styled.div`
     margin-bottom: 25px;
     border: 1px solid #d3d3d3;
     border-radius: 3px;
+
+    @media (max-width: 800px) {
+      width: 200px;
+    }
 
     &:focus {
       outline: none;

@@ -14,11 +14,31 @@ const Post = ({ post }) => {
     mainImage,
     images,
     projectSummary,
-    roles,
+    contributors,
     technology,
     links,
     inspired
   } = post;
+
+  const renderIntroduction = () => {
+    const projectGoalsSplit = projectGoals.split('_');
+    return (
+      <div className='introduction'>
+        <div className='landing-image'>
+          <img src={mainImage.fields.file.url} alt={mainImage.fields.title} />
+          <p className='caption'>{mainImage.fields.description}</p>
+        </div>
+        <div>
+          <p>{introduction}</p>
+
+          <h4>Overview</h4>
+          {projectGoalsSplit.map((paragraph, key) => (
+            <p key={key}>{paragraph.split('_').pop()}</p>
+          ))}
+        </div>
+      </div>
+    );
+  };
 
   const mapImages = () => {
     return images.map(image => {
@@ -38,10 +58,12 @@ const Post = ({ post }) => {
       </ul>
     ));
 
-  const mapRoles = () =>
-    roles.map(role => (
-      <ul key={role}>
-        <li>{role}</li>
+  const mapContributors = () =>
+    contributors.map(contributor => (
+      <ul key={contributor.name}>
+        <a href={contributor.link} target='_blank' rel='noopener noreferrer'>
+          <li>{contributor.name}</li>
+        </a>
       </ul>
     ));
 
@@ -79,25 +101,13 @@ const Post = ({ post }) => {
   return (
     <>
       <Styles>
-        <div className='introduction'>
-          <div>
-            <h3 className='post-title heavy'>{title}</h3>
-            <p>{introduction}</p>
-            <p>{projectGoals}</p>
-          </div>
-          <div>
-            <img
-              className='landing-image'
-              src={mainImage.fields.file.url}
-              alt={mainImage.fields.title}
-            />
-            <p className='caption'>{mainImage.fields.description}</p>
-          </div>
-        </div>
+        <h3 className='post-title heavy'>{title}</h3>
+        {renderIntroduction()}
 
         <h4>Features</h4>
         {features && mapFeatures()}
 
+        <h4>Project Images</h4>
         {images && mapImages()}
 
         <h4>Summary</h4>
@@ -105,8 +115,8 @@ const Post = ({ post }) => {
 
         {/* {testimonial && renderTestimonial()} */}
 
-        <h4>Project Roles</h4>
-        {roles && mapRoles()}
+        <h4>Contributors</h4>
+        {contributors && mapContributors()}
 
         <h4>Technologies Used</h4>
         {technology && mapTechnology()}
@@ -136,27 +146,37 @@ export default Post;
 const Styles = styled.div`
   margin: 20px;
 
+  @media (max-width: 1100px) {
+    p,
+    li {
+      max-width: 100%;
+    }
+  }
+
   h4 {
     margin: 15px 0 10px 0;
     font-weight: 500;
   }
 
   .introduction {
-    display: flex;
-
     @media (max-width: 800px) {
       flex-direction: column;
       align-items: center;
     }
 
     .landing-image {
-      width: 400px;
-      margin: 0 0 10px 20px;
-      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      display: inline;
+      float: right;
 
-      @media (max-width: 800px) {
-        width: 100%;
-        margin: 10px 0;
+      img {
+        width: 400px;
+        margin: 0 0 20px 30px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+        @media (max-width: 800px) {
+          width: 100%;
+          margin: 10px 0;
+        }
       }
     }
   }
@@ -165,14 +185,18 @@ const Styles = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 30px 0;
+    margin: 20px 0 30px 0;
+
+    @media (max-width: 800px) {
+      width: 100%;
+    }
 
     img {
       width: 750px;
       margin-bottom: 10px;
       box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
-      @media (max-width: 800px) {
+      @media (max-width: 1100px) {
         width: 100%;
       }
     }
@@ -192,7 +216,6 @@ const Styles = styled.div`
   }
 
   .end {
-    font-size: 11px;
     font-weight: 500;
     margin: 20px 0 -30px 0;
     text-align: right;
@@ -200,6 +223,10 @@ const Styles = styled.div`
     a {
       font-size: 11px;
       text-transform: capitalize;
+    }
+
+    p {
+      font-size: 11px;
     }
   }
 `;
