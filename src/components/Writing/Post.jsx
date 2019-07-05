@@ -152,7 +152,7 @@ const Styles = styled.div`
   }
 
   h4 {
-    margin: 15px 0 10px 0;
+    margin: 20px 0 10px 0;
     font-weight: 500;
   }
 
@@ -163,12 +163,13 @@ const Styles = styled.div`
     }
 
     .landing-image {
+      margin-bottom: 10px;
       display: inline;
       float: right;
 
       img {
+        margin: 0 0 10px 30px;
         width: 400px;
-        margin: 0 0 20px 30px;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
         @media (max-width: 950px) {
