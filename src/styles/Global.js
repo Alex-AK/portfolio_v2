@@ -96,6 +96,7 @@ export const Global = css`
   p {
     margin-bottom: 8px;
     line-height: 1.25;
+    letter-spacing: 0.25px;
     max-width: 750px;
 
     @media (max-width: 800px) {
