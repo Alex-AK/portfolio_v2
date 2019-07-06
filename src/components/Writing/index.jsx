@@ -37,7 +37,12 @@ const Writing = props => {
     distance: 100,
     maxPatternLength: 32,
     minMatchCharLength: 2,
-    keys: ['fields.title', 'fields.introduction', 'fields.projectGoals']
+    keys: [
+      'fields.title',
+      'fields.introduction',
+      'fields.projectGoals',
+      'fields.searchTerms'
+    ]
   };
 
   // filter search input

@@ -11,8 +11,8 @@ const SideBar = ({ input, setInput }) => {
         <SearchInput input={input} setInput={setInput} />
         {/* filtering by category, how will this work with hooks? */}
         <h5 onClick={() => setInput('Case Study')}>Project Case Studies</h5>
-        {/*
         <h5 onClick={() => setInput('Client Projects')}>Client Projects</h5>
+        {/*
         <h5 onClick={() => setInput('Personal Projects')}>Personal Projects</h5>
         <h5 onClick={() => setInput('Top 10 Articles')}>Top 10 Articles</h5>
         <h5 onClick={() => setInput('Personal Writing')}>Personal Writing</h5>
