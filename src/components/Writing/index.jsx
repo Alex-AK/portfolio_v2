@@ -12,8 +12,8 @@ const Writing = props => {
 
   useEffect(() => {
     const client = contentful.createClient({
-      space: process.env.SPACE_ID,
-      accessToken: process.env.CONTENTFUL_TOKEN
+      space: process.env.REACT_APP_SPACE_ID,
+      accessToken: process.env.REACT_APP_CONTENTFUL_TOKEN
     });
 
     client
