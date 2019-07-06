@@ -125,16 +125,22 @@ const Post = ({ post }) => {
 
         {/* {testimonial && renderTestimonial()} */}
 
-        {contributors && technology && (
-          <div className='contributors-technology'>
-            <div>
-              <h4>Technologies Used</h4> {mapTechnology()}
-            </div>
-            <div>
-              <h4>Contributors</h4> {mapContributors()}
-            </div>
+        <div className='contributors-technology'>
+          <div>
+            {technology && (
+              <>
+                <h4>Technologies Used</h4> {mapTechnology()}
+              </>
+            )}
           </div>
-        )}
+          <div>
+            {contributors && (
+              <>
+                <h4>Contributors</h4> {mapContributors()}
+              </>
+            )}
+          </div>
+        </div>
 
         {links && <More links={links} />}
 

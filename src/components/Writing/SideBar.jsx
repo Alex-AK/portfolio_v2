@@ -3,12 +3,16 @@ import React from 'react';
 import styled from 'styled-components';
 import SearchInput from './SearchInput';
 
-const SideBar = ({ input, setInput }) => {
+const SideBar = ({ input, setInput, clearSearch }) => {
   return (
     <Styles>
       <div className='fixed-sidebar'>
         {/* insert search bar here */}
-        <SearchInput input={input} setInput={setInput} />
+        <SearchInput
+          input={input}
+          setInput={setInput}
+          clearSearch={clearSearch}
+        />
         {/* filtering by category, how will this work with hooks? */}
         <h5 onClick={() => setInput('Case Study')}>Project Case Studies</h5>
         <h5 onClick={() => setInput('Client Projects')}>Client Projects</h5>

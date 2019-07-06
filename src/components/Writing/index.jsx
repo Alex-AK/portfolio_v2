@@ -32,7 +32,7 @@ const Writing = props => {
   // filter options
   const fuse_options = {
     shouldSort: true,
-    threshold: 0.5,
+    threshold: 0.2,
     location: 0,
     distance: 100,
     maxPatternLength: 32,
@@ -49,13 +49,17 @@ const Writing = props => {
   const fuse = new Fuse(posts, fuse_options);
   let result = fuse.search(input);
 
+  const clearSearch = () => {
+    setInput('');
+  };
+
   return (
     <>
       <h2 className='page-title'>
         <div>Writing</div>
       </h2>
       <Styles>
-        <SideBar input={input} setInput={setInput} />
+        <SideBar input={input} setInput={setInput} clearSearch={clearSearch} />
         <Content posts={input.length > 0 ? result : posts} />
       </Styles>
     </>

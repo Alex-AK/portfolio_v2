@@ -20,66 +20,6 @@ const content = {
     sub_title:
       "I'm a software developer with a love for coffee, pleasant user experience, and intentionality. "
   },
-  services: [
-    {
-      title: 'Web Development',
-      summary: 'this is some summary text for web development',
-      l_1: 'this is list item one',
-      l_2: 'this is list item two',
-      l_3: 'this is list item three',
-      l_4: 'this is list item four'
-    },
-    {
-      title: 'Web Development',
-      summary: 'this is some summary text for web development',
-      l_1: 'this is list item one',
-      l_2: 'this is list item two',
-      l_3: 'this is list item three',
-      l_4: 'this is list item four'
-    },
-    {
-      title: 'Web Development',
-      summary: 'this is some summary text for web development',
-      l_1: 'this is list item one',
-      l_2: 'this is list item two',
-      l_3: 'this is list item three',
-      l_4: 'this is list item four'
-    },
-    {
-      title: 'Web Development',
-      summary: 'this is some summary text for web development',
-      l_1: 'this is list item one',
-      l_2: 'this is list item two',
-      l_3: 'this is list item three',
-      l_4: 'this is list item four'
-    }
-  ],
-  work_together: [
-    {
-      title: 'Initial Assessment',
-      summary: 'this is some summary text for web development',
-      l_1: 'this is list item one',
-      l_2: 'this is list item two',
-      l_3: 'this is list item three',
-      l_4: 'this is list item four'
-    },
-    {
-      title: 'Full Service Development',
-      summary: 'this is some summary text for web development',
-      l_1: 'this is list item one',
-      l_2: 'this is list item two',
-      l_3: 'this is list item three',
-      l_4: 'this is list item four'
-    },
-    {
-      title: 'Individual Service',
-      summary: 'this is some summary text for web development',
-      l_1: 'this is list item one',
-      l_2: 'this is list item two',
-      l_3: 'this is list item three',
-      l_4: 'this is list item four'
-    }
-  ],
   projects: [
     {
       images: {
@@ -105,7 +45,7 @@ const content = {
     {
       title: 'LINE',
       intro:
-        'An e-commerce site built with SquareSpace to meet client requirements of being able to manage store and orders.',
+        'An e-commerce site built with SquareSpace to meet client requirements of being able to manage store inventory and customer orders.',
       content: {
         p_1:
           'Designed and implemented a home goods e-commerce site with Content Management System (CMS).',

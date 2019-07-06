@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import searchIcon from '../../assets/search-icon.png';
 
-const SearchInput = ({ input, setInput }) => {
+const SearchInput = ({ input, setInput, clearSearch }) => {
   return (
     <Styles>
       <div>
@@ -14,7 +14,7 @@ const SearchInput = ({ input, setInput }) => {
           onChange={e => setInput(e.target.value)}
         />
       </div>
-      <button onClick={() => setInput('')}>Clear Search</button>
+      <button onClick={clearSearch}>Clear Search</button>
     </Styles>
   );
 };
