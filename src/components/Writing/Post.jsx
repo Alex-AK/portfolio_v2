@@ -125,17 +125,15 @@ const Post = ({ post }) => {
 
         {/* {testimonial && renderTestimonial()} */}
 
-        {contributors && (
-          <>
-            <h4>Contributors</h4>
-            {mapContributors()}
-          </>
-        )}
-
-        {technology && (
-          <>
-            <h4>Technologies Used</h4> {mapTechnology()}
-          </>
+        {contributors && technology && (
+          <div className='contributors-technology'>
+            <div>
+              <h4>Technologies Used</h4> {mapTechnology()}
+            </div>
+            <div>
+              <h4>Contributors</h4> {mapContributors()}
+            </div>
+          </div>
         )}
 
         {links && <More links={links} />}
@@ -231,6 +229,15 @@ const Styles = styled.div`
     border-top: 1px solid lightgrey;
     border-bottom: 1px solid lightgrey;
     font-size: 14px;
+  }
+
+  .contributors-technology {
+    display: flex;
+    margin: 5px 0;
+
+    div {
+      width: 50%;
+    }
   }
 
   .end {

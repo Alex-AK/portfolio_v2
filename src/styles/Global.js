@@ -94,7 +94,7 @@ export const Global = css`
   }
 
   p {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     line-height: 1.25;
     max-width: 750px;
 
