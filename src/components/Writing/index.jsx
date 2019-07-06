@@ -5,6 +5,7 @@ import * as contentful from 'contentful';
 
 import Content from './Content';
 import SideBar from './SideBar';
+import PageTitle from '../Navigation/PageTitle';
 
 const Writing = props => {
   const [input, setInput] = useState('');
@@ -56,9 +57,7 @@ const Writing = props => {
 
   return (
     <>
-      <h2 className='page-title'>
-        <div>Writing</div>
-      </h2>
+      <PageTitle title='writing' />
       <Styles>
         <SideBar input={input} setInput={setInput} clearSearch={clearSearch} />
         <Content posts={input.length > 0 ? result : posts} />

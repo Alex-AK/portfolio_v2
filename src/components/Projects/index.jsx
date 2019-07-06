@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import content from '../../content/main';
 import Project from './Project';
+import PageTitle from '../Navigation/PageTitle';
 import styled from 'styled-components';
 
 const Projects = () => {
@@ -9,14 +10,14 @@ const Projects = () => {
   });
 
   return (
-    <Styles>
-      <h2 className='page-title'>
-        <div>Projects</div>
-      </h2>
-      {state.projects.map(project => (
-        <Project key={project.title} project={project} />
-      ))}
-    </Styles>
+    <>
+      <PageTitle title='Projects' />
+      <Styles>
+        {state.projects.map(project => (
+          <Project key={project.title} project={project} />
+        ))}
+      </Styles>
+    </>
   );
 };
 
