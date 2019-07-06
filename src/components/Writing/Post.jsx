@@ -102,22 +102,41 @@ const Post = ({ post }) => {
         <h3 className='post-title heavy'>{title}</h3>
         {renderIntroduction()}
 
-        <h4>Features</h4>
-        {features && mapFeatures()}
+        {features && (
+          <>
+            <h4>Features</h4>
+            {mapFeatures()}
+          </>
+        )}
 
-        <h4>Project Images</h4>
-        {images && mapImages()}
+        {images && (
+          <>
+            <h4>Project Images</h4>
+            {mapImages()}
+          </>
+        )}
 
-        <h4>Summary</h4>
-        {projectSummary && <p>{projectSummary}</p>}
+        {projectSummary && (
+          <>
+            <h4>Summary</h4>
+            <p>{projectSummary}</p>
+          </>
+        )}
 
         {/* {testimonial && renderTestimonial()} */}
 
-        <h4>Contributors</h4>
-        {contributors && mapContributors()}
+        {contributors && (
+          <>
+            <h4>Contributors</h4>
+            {mapContributors()}
+          </>
+        )}
 
-        <h4>Technologies Used</h4>
-        {technology && mapTechnology()}
+        {technology && (
+          <>
+            <h4>Technologies Used</h4> {mapTechnology()}
+          </>
+        )}
 
         {links && <More links={links} />}
 
