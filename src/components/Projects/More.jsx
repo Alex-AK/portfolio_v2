@@ -29,7 +29,7 @@ const More = ({ title, links }) => {
         </a>
       )}
       {title && (
-        <Link to={`/writing/${title}`}>
+        <Link to={{ pathname: '/writing', state: { queryString: title } }}>
           <div className='button small'>
             <span>Read More</span>
             <svg>

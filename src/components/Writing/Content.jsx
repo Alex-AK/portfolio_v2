@@ -4,8 +4,6 @@ import styled from 'styled-components';
 import Post from './Post';
 
 const Content = ({ posts }) => {
-  posts = posts.reverse();
-
   return (
     <Styles>
       {posts.map(post => {

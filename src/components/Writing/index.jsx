@@ -12,22 +12,22 @@ const Writing = props => {
 
   useEffect(() => {
     const client = contentful.createClient({
-      space: '23hwvl7gwky6',
-      accessToken: '1Jki7kkgqje214FW_I8WKQX6Nk6tGarswGSzhBwvctE'
+      space: process.env.SPACE_ID,
+      accessToken: process.env.CONTENTFUL_TOKEN
     });
 
     client
       .getEntries({ content_type: 'projectCaseStudy' })
-      .then(res => setPosts(res.items))
+      .then(res => setPosts(res.items.reverse()))
       .catch(err => console.log(err));
   }, []);
 
   // if navigating to writing page through a topic link, get topic.
-  let topic = props.history.location.pathname.slice(9);
-
   useEffect(() => {
-    setInput(topic);
-  }, [topic]);
+    if (props.location.state) {
+      setInput(props.location.state.queryString);
+    }
+  }, [props.location]);
 
   // filter options
   const fuse_options = {
@@ -51,6 +51,7 @@ const Writing = props => {
 
   const clearSearch = () => {
     setInput('');
+    window.scroll(0, 0);
   };
 
   return (
