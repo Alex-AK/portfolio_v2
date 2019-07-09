@@ -56,7 +56,6 @@ function App(props) {
               )}
             />
             <Route path='/projects' component={Projects} />
-            {/* <Route path='/services' component={Services} /> */}
             <Route path='/writing' component={Writing} />
             <Route path='/about' component={About} />
             <Route path='/contact' render={props => <Contact contact_page />} />

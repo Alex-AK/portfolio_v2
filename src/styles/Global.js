@@ -61,38 +61,6 @@ export const Global = css`
     font-weight: 500;
   }
 
-  .page-title {
-    margin: 40px 10px;
-    padding-left: 100px;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-
-    @media (max-width: 800px) {
-      padding-left: 40px;
-      margin: 20px 0 0 0;
-    }
-
-    div {
-      display: inline;
-      padding: 0 20px;
-    }
-
-    &:before,
-    &:after {
-      position: absolute;
-      top: 51%;
-      overflow: hidden;
-      width: 100%;
-      height: 1px;
-      content: '\a0';
-      background: #d3d3d3;
-    }
-    &:before {
-      margin-left: -100%;
-    }
-  }
-
   p {
     margin-bottom: 8px;
     line-height: 1.25;

@@ -32,10 +32,10 @@ const Styles = styled.div`
   position: absolute;
 
   .fixed-sidebar {
+    min-height: 85vh;
     position: fixed;
-    min-height: 80vh;
     width: 260px;
-    margin: 15px 0 15px 10px;
+    margin: 90px 0 15px 10px;
     padding-right: 20px;
     border-right: 1px solid #d3d3d3;
 
