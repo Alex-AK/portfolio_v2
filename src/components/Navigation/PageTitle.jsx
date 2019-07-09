@@ -5,7 +5,9 @@ const PageTitle = ({ title }) => {
   return (
     <Styles>
       <div>
-        <h2 className='page-title'>{title}</h2>
+        <h2 className='page-title'>
+          <span>{title}</span>
+        </h2>
       </div>
     </Styles>
   );
@@ -30,8 +32,7 @@ const Styles = styled.div`
       padding-left: 40px;
     }
 
-    h2 {
-      /* display: inline; */
+    span {
       padding: 0 20px;
     }
 
