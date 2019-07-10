@@ -40,7 +40,7 @@ const Styles = styled.div`
   position: relative;
   margin: 0 auto;
 
-  @media (min-height: 450px) {
+  @media (max-height: 1000px) {
     margin-bottom: -60px;
   }
 

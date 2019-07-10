@@ -74,7 +74,7 @@ const Styles = styled.div`
   min-height: calc(100vh - 70px);
 
   @media (max-height: 1000px) {
-    margin-top: -50px;
+    margin-top: -40px;
   }
 
   .main-content {
