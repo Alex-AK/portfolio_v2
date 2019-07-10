@@ -26,9 +26,9 @@ const Styles = styled.div`
   }
 
   @media (max-width: 800px) {
-    margin: 80px 30px 0 220px;
+    margin: 100px 30px 0 220px;
   }
   @media (max-width: 600px) {
-    margin: 80px 30px 0 20px;
+    margin: 100px 30px 0 20px;
   }
 `;

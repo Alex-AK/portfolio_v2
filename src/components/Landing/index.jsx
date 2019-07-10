@@ -41,7 +41,7 @@ const Styles = styled.div`
   margin: 0 auto;
 
   @media (max-width: 800px) {
-    margin: 0 3%;
+    margin: 0 4%;
   }
 
   h3 {
