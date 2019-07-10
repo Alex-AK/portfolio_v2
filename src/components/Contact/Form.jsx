@@ -24,7 +24,7 @@ const Form = () => {
   return (
     <Styles>
       <form name='contact' onSubmit={handleSubmit} netlify action='/'>
-        <label for='name'>
+        <label htmlFor='name'>
           Name
           <input
             onChange={handleChange}
@@ -34,7 +34,7 @@ const Form = () => {
             required
           />
         </label>
-        <label for='email'>
+        <label htmlFor='email'>
           Email
           <input
             onChange={handleChange}
@@ -45,7 +45,7 @@ const Form = () => {
             required
           />
         </label>
-        <label for='message'>
+        <label htmlFor='message'>
           Message
           <textarea
             onChange={handleChange}
@@ -56,7 +56,7 @@ const Form = () => {
             required
           />
         </label>
-        <p class='hidden'>
+        <p className='hidden'>
           <label>
             Don’t fill this out if you're human: <input name='bot-field' />
           </label>

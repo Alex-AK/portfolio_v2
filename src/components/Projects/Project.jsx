@@ -37,10 +37,6 @@ const Styles = styled.div`
   margin: 0 auto;
   padding: 30px 0 80px 0;
 
-  &:last-child {
-    margin-bottom: 40px;
-  }
-
   @media (max-width: 800px) {
     flex-direction: column;
     padding: 40px 0 0 0;

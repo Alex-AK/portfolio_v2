@@ -47,7 +47,7 @@ const Styles = styled.div`
       margin-bottom: 20px;
     }
     @media (max-width: 600px) {
-      transform: scale(0.7);
+      transform: scale(0.8);
     }
   }
 
