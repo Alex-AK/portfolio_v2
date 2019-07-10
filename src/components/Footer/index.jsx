@@ -58,5 +58,6 @@ const Styles = styled.div`
 
   a {
     text-decoration: none;
+    z-index: 3;
   }
 `;
