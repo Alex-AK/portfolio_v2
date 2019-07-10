@@ -40,12 +40,8 @@ const Styles = styled.div`
   position: relative;
   margin: 0 auto;
 
-  @media (max-height: 1000px) {
-    margin-bottom: -60px;
-  }
-
   @media (max-width: 800px) {
-    margin: 0 3%;
+    margin: 0 3% -60px 3%;
   }
 
   h3 {

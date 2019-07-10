@@ -44,17 +44,14 @@ const Styles = styled.div`
   align-items: center;
   margin: 0 auto;
 
-  @media (max-height: 1000px) {
-    margin-bottom: -60px;
-  }
-
   @media (max-width: 800px) {
     flex-direction: column-reverse;
+    margin-bottom: -60px;
   }
 
   div {
     @media (max-width: 800px) {
-      margin: 0 5%;
+      margin: 0 3%;
     }
   }
 
