@@ -28,6 +28,10 @@ const Styles = styled.div`
     z-index: 1;
     overflow: hidden;
 
+    @media (max-width: 600px) {
+      top: 40px;
+    }
+
     @media (max-width: 800px) {
       padding-left: 40px;
     }

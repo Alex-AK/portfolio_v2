@@ -52,12 +52,23 @@ const Styles = styled.div`
   opacity: 0.98;
   z-index: 2;
 
+  @media (max-width: 600px) {
+    height: 50px;
+  }
+
   .links {
     display: flex;
     justify-content: space-between;
     width: 50%;
     max-width: 700px;
     margin-right: 20px;
+
+    @media (max-width: 800px) {
+      width: 70%;
+    }
+    @media (max-width: 600px) {
+      display: none;
+    }
 
     .active {
       border-bottom: 3px solid #f4e4d4;
@@ -72,13 +83,6 @@ const Styles = styled.div`
         border-bottom: 3px solid #f4e4d4;
         padding-bottom: 5px;
       }
-    }
-
-    @media (max-width: 800px) {
-      width: 70%;
-    }
-    @media (max-width: 600px) {
-      display: none;
     }
 
     p {
