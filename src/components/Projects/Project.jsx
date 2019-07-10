@@ -43,7 +43,6 @@ const Styles = styled.div`
 
   @media (max-width: 800px) {
     flex-direction: column;
-    margin: 0 auto;
     padding: 40px 0 0 0;
   }
   @media (max-width: 600px) {

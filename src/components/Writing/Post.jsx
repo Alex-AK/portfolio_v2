@@ -241,8 +241,16 @@ const Styles = styled.div`
     display: flex;
     margin: 5px 0;
 
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
+
     div {
       width: 50%;
+
+      @media (max-width: 600px) {
+        width: 100%;
+      }
     }
   }
 

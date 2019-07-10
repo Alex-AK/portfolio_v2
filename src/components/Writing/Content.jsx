@@ -19,7 +19,7 @@ const Styles = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 80px 30px 0 280px;
+  margin: 90px 30px 0 280px;
 
   &:last-child {
     margin-bottom: 50px;
@@ -29,6 +29,6 @@ const Styles = styled.div`
     margin: 100px 30px 0 220px;
   }
   @media (max-width: 600px) {
-    margin: 100px 30px 0 20px;
+    margin: 100px 0 0 0;
   }
 `;

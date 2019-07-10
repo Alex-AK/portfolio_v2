@@ -31,6 +31,10 @@ const Styles = styled.div`
   justify-content: center;
   align-items: center;
 
+  @media (max-height: 1000px) {
+    margin-bottom: -60px;
+  }
+
   .two-column {
     display: flex;
     align-items: center;
