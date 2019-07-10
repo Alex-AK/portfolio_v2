@@ -22,8 +22,11 @@ export default SearchInput;
 const Styles = styled.div`
   position: fixed;
   display: flex;
-  top: 120px;
+  top: 90px;
   width: 100%;
+  padding-bottom: 10px;
+  background: #fcfcfa;
+  z-index: 5;
 
   img {
     width: 20px;
@@ -36,7 +39,7 @@ const Styles = styled.div`
     border: none;
     background: #fcfcfa;
     border-bottom: 1px solid #d3d3d3;
-    margin: 5px 1%;
+    margin: 5px 1% 5px 1%;
     padding: 0 0 3px 30px;
     width: 74%;
     font-size: 16px;
@@ -48,9 +51,10 @@ const Styles = styled.div`
 
   button {
     width: 22%;
-    height: 25px;
+    height: 22px;
     border: 1px solid #d3d3d3;
     border-radius: 3px;
+    margin-top: 5px;
 
     &:focus {
       outline: none;
