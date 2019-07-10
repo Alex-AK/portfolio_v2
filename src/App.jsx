@@ -56,7 +56,12 @@ function App(props) {
               )}
             />
             <Route path='/projects' component={Projects} />
-            <Route path='/writing' component={Writing} />
+            <Route
+              path='/writing'
+              render={props => (
+                <Writing {...props} window_width={window_width} />
+              )}
+            />
             <Route path='/about' component={About} />
             <Route path='/contact' render={props => <Contact contact_page />} />
             <Route component={ErrorPage} />
