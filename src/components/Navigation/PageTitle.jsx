@@ -19,7 +19,7 @@ const Styles = styled.div`
   position: relative;
 
   .page-title {
-    padding: 10px 0 25px 0;
+    padding: 15px 0 20px 0;
     position: fixed;
     width: 1180px;
     top: 60px;
