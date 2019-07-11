@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 import NavigationLink from './NavigationLink';
-import Logo from './Logo';
 
 const MobileMenu = props => {
   return (
