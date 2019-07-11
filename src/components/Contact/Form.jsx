@@ -6,19 +6,12 @@ import Button from '../Landing/Button';
 const Form = () => {
   const [values, setValues] = useState({ name: '', email: '', message: '' });
 
-  // // if local storage has form data, set form to saved data
-  // const form_data = JSON.parse(localStorage.getItem('contact'));
-  // let name = form_data ? form_data.name : values.name;
-  // let email = form_data ? form_data.email : values.email;
-  // let message = form_data ? form_data.message : values.message;
-
   const handleSubmit = event => {
     event.preventDefault();
   };
 
   const handleChange = event => {
     setValues({ ...values, [event.target.name]: event.target.value });
-    // localStorage.setItem('contact', JSON.stringify(values));
   };
 
   return (
@@ -62,7 +55,7 @@ const Form = () => {
           </label>
         </p>
         <div>
-          <Button title='submit' />
+          <Button title='submit' non_link />
         </div>
       </form>
     </Styles>

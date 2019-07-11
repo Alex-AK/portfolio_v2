@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 import searchIcon from '../../assets/search-icon.png';
 
+import Button from '../Landing/Button';
+
 const SearchInput = ({ input, setInput, clearSearch }) => {
   return (
     <Styles>
@@ -12,7 +14,9 @@ const SearchInput = ({ input, setInput, clearSearch }) => {
         value={input}
         onChange={e => setInput(e.target.value)}
       />
-      <button onClick={clearSearch}>Clear</button>
+      <Button clearSearch={clearSearch} title='clear' extra_small non_link>
+        Clear
+      </Button>
     </Styles>
   );
 };

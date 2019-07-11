@@ -1,19 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Button = props => {
+const renderButton = props => {
   return (
-    <>
-      <Link to={`${props.title}`}>
-        <div className='button nav'>
-          <span>{props.title}</span>
-          <svg>
-            <polyline className='o1' points='0 0, 150 0, 150 55, 0 55, 0 0' />
-            <polyline className='o2' points='0 0, 150 0, 150 55, 0 55, 0 0' />
-          </svg>
-        </div>
-      </Link>
-    </>
+    <div
+      className={`button nav ${props.extra_small && 'extra_small'}`}
+      onClick={props.extra_small && props.clearSearch}>
+      <span>{props.title}</span>
+      <svg>
+        <polyline className='o1' points='0 0, 150 0, 150 55, 0 55, 0 0' />
+        <polyline className='o2' points='0 0, 150 0, 150 55, 0 55, 0 0' />
+      </svg>
+    </div>
+  );
+};
+
+const Button = props => {
+  return props.non_link ? (
+    renderButton(props)
+  ) : (
+    <Link to={`${props.title}`}>{renderButton(props)}</Link>
   );
 };
 
