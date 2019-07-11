@@ -50,7 +50,7 @@ const Styles = styled.div`
   top: 0;
   background: #fcfcfa;
   opacity: 0.98;
-  z-index: 2;
+  z-index: 6;
 
   @media (max-width: 600px) {
     height: 50px;
