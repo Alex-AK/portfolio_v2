@@ -78,7 +78,7 @@ export default App;
 const Styles = styled.div`
   min-height: calc(100vh - 70px);
 
-  @media (max-height: 600px) {
+  @media (max-height: 450px) {
     margin-top: -40px;
   }
 
