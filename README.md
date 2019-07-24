@@ -29,5 +29,7 @@ These instructions will get you a copy of the project up and running on your loc
 ## Add environment variables - example .env template
 
 ```
-
+# contentful
+REACT_APP_CONTENTFUL_TOKEN= place contentful token here
+REACT_APP_SPACE_ID= place contentful space id here
 ```
