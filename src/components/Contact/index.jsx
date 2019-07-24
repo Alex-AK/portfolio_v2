@@ -11,7 +11,7 @@ const Contact = props => {
           : { margin: '100px 0' }
       }>
       <div>
-        <h1>Contact</h1>
+        <h1>Say hello.</h1>
         <h3>
           I offer software and web development services as well as free initial
           consultations. If you're looking for support on a new or existing
@@ -43,7 +43,7 @@ const Styles = styled.div`
   }
 
   div {
-    max-width: 600px;
+    max-width: 620px;
     @media (max-width: 800px) {
       margin: 0 3%;
     }

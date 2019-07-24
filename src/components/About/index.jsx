@@ -58,7 +58,7 @@ const Styles = styled.div`
   }
 
   h3 {
-    width: 600px;
+    width: 620px;
 
     @media (max-width: 600px) {
       width: 100%;
