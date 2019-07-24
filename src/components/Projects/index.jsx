@@ -4,14 +4,15 @@ import Project from './Project';
 import PageTitle from '../Navigation/PageTitle';
 import styled from 'styled-components';
 
-const Projects = () => {
+const Projects = ({ window_width }) => {
   const [state] = useState({
     projects: content.projects
   });
 
+  console.log(window_width);
   return (
     <>
-      <PageTitle title='Projects' />
+      {window_width <= 600 && <PageTitle title='Projects' />}
       <Styles>
         {state.projects.map(project => (
           <Project key={project.title} project={project} />
@@ -24,10 +25,10 @@ const Projects = () => {
 export default Projects;
 
 const Styles = styled.div`
-  margin-top: 80px;
+  margin-top: 40px;
 
   @media (max-width: 800px) {
     flex-direction: column;
-    margin: 60px auto 0 auto;
+    margin: 30px auto 0 auto;
   }
 `;

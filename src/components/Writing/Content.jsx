@@ -6,9 +6,13 @@ import Post from './Post';
 const Content = ({ posts }) => {
   return (
     <Styles>
-      {posts.map(post => {
-        return <Post key={post.fields.title} post={post.fields} />;
-      })}
+      {posts ? (
+        posts.map(post => {
+          return <Post key={post.fields.title} post={post.fields} />;
+        })
+      ) : (
+        <h1>No writing with matching search criteria.</h1>
+      )}
     </Styles>
   );
 };

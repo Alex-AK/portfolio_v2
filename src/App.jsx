@@ -55,7 +55,10 @@ function App(props) {
                 />
               )}
             />
-            <Route path='/projects' component={Projects} />
+            <Route
+              path='/projects'
+              render={props => <Projects window_width={window_width} />}
+            />
             <Route
               path='/writing'
               render={props => (

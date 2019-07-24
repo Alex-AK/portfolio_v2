@@ -58,7 +58,7 @@ const Writing = props => {
 
   return (
     <>
-      <PageTitle title='writing' />
+      {/* <PageTitle title='writing' /> */}
       <Styles>
         {props.window_width > 600 ? (
           <SideBar

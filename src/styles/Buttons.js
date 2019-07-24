@@ -75,11 +75,14 @@ export const Buttons = css`
   }
 
   .extra_small {
-    /* margin-top: 20px; */
-
     svg {
       height: 20px;
       width: 100px;
+      box-shadow: none;
+      border: 1px solid #d3d3d3;
+      .o1 {
+        fill: transparent;
+      }
     }
 
     span {
@@ -89,11 +92,16 @@ export const Buttons = css`
   }
 
   .full_width {
-    margin-left: 5px;
+    margin: 8px 0 0 5px;
 
     svg {
       height: 20px;
-      width: 65px;
+      width: 60px;
+      box-shadow: none;
+      border: 1px solid #d3d3d3;
+      .o1 {
+        fill: transparent;
+      }
     }
 
     span {

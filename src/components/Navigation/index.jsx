@@ -53,7 +53,7 @@ const Styles = styled.div`
   z-index: 6;
 
   @media (max-width: 600px) {
-    height: 50px;
+    height: 60px;
   }
 
   .links {

@@ -7,13 +7,15 @@ const SideBar = ({ input, setInput, clearSearch }) => {
   return (
     <Styles>
       <div className='fixed-sidebar'>
-        {/* insert search bar here */}
+        <label htmlFor='search input' className='section-title'>
+          Search Writing
+        </label>
         <SearchInput
           input={input}
           setInput={setInput}
           clearSearch={clearSearch}
         />
-        {/* filtering by category, how will this work with hooks? */}
+        <h4 className='section-title'>Filter By Category</h4>
         <h5 onClick={() => setInput('Case Study')}>Project Case Studies</h5>
         <h5 onClick={() => setInput('Client Projects')}>Client Projects</h5>
         {/*
@@ -36,7 +38,7 @@ const Styles = styled.div`
     position: fixed;
     width: 275px;
     margin: 60px 0 15px 10px;
-    padding-right: 20px;
+    padding: 10px 20px 0 0;
     border-right: 1px solid #d3d3d3;
 
     @media (max-width: 800px) {
@@ -47,15 +49,15 @@ const Styles = styled.div`
       display: none;
     }
 
-    h4 {
-      padding: 0 0 5px 5px;
-      margin-bottom: 10px;
-      border-bottom: 1px solid black;
+    .section-title {
+      margin: 20px 0 15px 0;
+      font-size: 15px;
+      font-weight: 500;
     }
 
     h5 {
-      font-size: 15px;
-      margin: 0 0 15px 5px;
+      font-size: 14px;
+      margin: 0 0 7px 0;
       &:hover {
         cursor: pointer;
       }
