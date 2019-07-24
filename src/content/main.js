@@ -48,9 +48,11 @@ const content = {
         'An e-commerce site built with SquareSpace to meet client requirements of being able to manage store inventory and customer orders.',
       content: {
         p_1:
-          'Designed and implemented a home goods e-commerce site with Content Management System (CMS).',
+          'Produced site wire frames, UI / UX mockups for website and established new data schema for project.',
         p_2:
-          'Produced site wire frames, UI / UX mockups for website and established new data schema for project.'
+          'Designed and implemented a home goods e-commerce site with Content Management System (CMS).',
+        p_3:
+          ' Serve as webmaster; handle web management, security assurance, and site integrity.'
       },
       images: {
         desktop: line_desktop,

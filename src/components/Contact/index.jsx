@@ -10,16 +10,19 @@ const Contact = props => {
           ? { minHeight: 'calc(100vh - 140px)' }
           : { margin: '100px 0' }
       }>
-      <div className='two-column'>
-        <div className='left-column'>
-          <h2>Contact</h2>
-          <h3>
-            Feel free to send me a message with work inquiries or further
-            questions.
-          </h3>
-        </div>
-        <Form />
+      <div>
+        <h1>Contact</h1>
+        <h3>
+          I offer software and web development services as well as free initial
+          consultations. If you're looking for support on a new or existing
+          project, reach me directly at{' '}
+          <a href='mailto:hello@alex-ak.com' className='hyperlink'>
+            hello@alex-ak.com
+          </a>
+          . I look forward to speaking with you.
+        </h3>
       </div>
+      {/* <Form /> */}
     </Styles>
   );
 };
@@ -31,23 +34,10 @@ const Styles = styled.div`
   justify-content: center;
   align-items: center;
 
-  .two-column {
-    display: flex;
-    align-items: center;
-
-    @media (max-width: 800px) {
-      flex-direction: column;
-    }
+  @media (max-width: 800px) {
+    margin: 0 3%;
   }
-
-  .left-column {
-    margin: -50px 80px 0 0;
-    width: 350px;
-    text-align: center;
-
-    @media (max-width: 800px) {
-      text-align: left;
-      margin: 30px 0;
-    }
+  div {
+    max-width: 600px;
   }
 `;
