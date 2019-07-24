@@ -53,7 +53,6 @@ const Styles = styled.div`
   }
 
   @media (max-width: 800px) {
-    justify-content: center;
     margin-bottom: 40px;
   }
 `;
