@@ -37,6 +37,10 @@ const Styles = styled.div`
   @media (max-width: 800px) {
     margin: 0 3%;
   }
+
+  @media (max-width: 450px) {
+    margin-bottom: -60px;
+  }
   div {
     max-width: 600px;
   }

@@ -9,7 +9,6 @@ const Projects = ({ window_width }) => {
     projects: content.projects
   });
 
-  console.log(window_width);
   return (
     <>
       {window_width <= 600 && <PageTitle title='Projects' />}
