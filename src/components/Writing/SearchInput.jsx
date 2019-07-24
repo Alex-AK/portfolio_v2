@@ -2,19 +2,22 @@ import React from 'react';
 import styled from 'styled-components';
 
 import searchIcon from '../../assets/search-icon.png';
+import Button from '../Landing/Button';
 
 const SearchInput = ({ input, setInput, clearSearch }) => {
   return (
     <Styles>
-      <div>
-        <img src={searchIcon} alt='Search Icon' />
-        <input
-          placeholder='Search Writing'
-          value={input}
-          onChange={e => setInput(e.target.value)}
-        />
-      </div>
-      <button onClick={clearSearch}>Clear Search</button>
+      <img src={searchIcon} alt='Search Icon' />
+      <input
+        placeholder='Search Writing'
+        aria-label='search input'
+        value={input}
+        onChange={e => setInput(e.target.value)}
+      />
+      <Button clearSearch={clearSearch} title='clear' full_width non_link>
+        Clear
+      </Button>
+      {/* <button onClick={clearSearch}>Clear Search</button> */}
     </Styles>
   );
 };
@@ -22,9 +25,8 @@ const SearchInput = ({ input, setInput, clearSearch }) => {
 export default SearchInput;
 
 const Styles = styled.div`
-  div {
-    display: flex;
-  }
+  display: flex;
+  margin-bottom: 20px;
 
   img {
     width: 20px;
@@ -38,12 +40,12 @@ const Styles = styled.div`
     background: #fcfcfa;
     border-bottom: 1px solid #d3d3d3;
     margin: 5px 0 5px 0;
-    padding: 0 0 3px 30px;
-    width: 250px;
+    padding: 0 0 3px 28px;
+    width: 195px;
     font-size: 16px;
 
     @media (max-width: 800px) {
-      width: 200px;
+      width: 145px;
     }
 
     &:focus {

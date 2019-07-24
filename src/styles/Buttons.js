@@ -87,4 +87,18 @@ export const Buttons = css`
       letter-spacing: 1.5px;
     }
   }
+
+  .full_width {
+    margin-left: 5px;
+
+    svg {
+      height: 20px;
+      width: 65px;
+    }
+
+    span {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+    }
+  }
 `;

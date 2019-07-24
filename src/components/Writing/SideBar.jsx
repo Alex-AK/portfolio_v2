@@ -34,13 +34,13 @@ const Styles = styled.div`
   .fixed-sidebar {
     min-height: 80vh;
     position: fixed;
-    width: 260px;
+    width: 275px;
     margin: 60px 0 15px 10px;
     padding-right: 20px;
     border-right: 1px solid #d3d3d3;
 
     @media (max-width: 800px) {
-      width: 210px;
+      width: 225px;
     }
 
     @media (max-width: 600px) {

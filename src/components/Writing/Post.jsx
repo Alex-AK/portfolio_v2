@@ -59,9 +59,11 @@ const Post = ({ post }) => {
   const mapContributors = () =>
     contributors.map(contributor => (
       <ul key={contributor.name}>
-        <a href={contributor.link} target='_blank' rel='noopener noreferrer'>
-          <li>{contributor.name}</li>
-        </a>
+        <li>
+          <a href={contributor.link} target='_blank' rel='noopener noreferrer'>
+            {contributor.name}
+          </a>
+        </li>
       </ul>
     ));
 
