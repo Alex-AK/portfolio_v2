@@ -44,5 +44,8 @@ const Styles = styled.div`
 
   div {
     max-width: 600px;
+    @media (max-width: 800px) {
+      margin: 0 3%;
+    }
   }
 `;
