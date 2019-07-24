@@ -23,12 +23,12 @@ const About = props => {
             reach out.
           </Link>{' '}
         </h3>
-        <p>
+        <h3 style={{ marginTop: 20 }}>
           <Link to='/contact' className='hyperlink'>
             Looking for mentorship?
           </Link>{' '}
           I'm available.
-        </p>
+        </h3>
       </div>
     </Styles>
   );

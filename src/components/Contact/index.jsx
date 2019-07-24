@@ -11,7 +11,7 @@ const Contact = props => {
           : { margin: '100px 0' }
       }>
       <div>
-        <h1>Say hello.</h1>
+        <h1>Contact Me.</h1>
         <h3>
           I offer software and web development services as well as free initial
           consultations. If you're looking for support on a new or existing
@@ -19,8 +19,9 @@ const Contact = props => {
           <a href='mailto:hello@alex-ak.com' className='hyperlink'>
             hello@alex-ak.com
           </a>
-          . I look forward to speaking with you.
+          .
         </h3>
+        <h3 style={{ marginTop: 20 }}>I look forward to speaking with you.</h3>
       </div>
       {/* <Form /> */}
     </Styles>
