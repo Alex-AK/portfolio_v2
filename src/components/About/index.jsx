@@ -48,7 +48,7 @@ const Styles = styled.div`
     flex-direction: column-reverse;
   }
   @media (max-width: 450px) {
-    margin: 0 0 -60px 0;
+    margin-bottom: -90px;
   }
 
   div {
