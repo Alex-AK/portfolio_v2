@@ -82,7 +82,7 @@ const Styles = styled.div`
   min-height: calc(100vh - 70px);
 
   @media (max-width: 450px) {
-    margin-bottom: -100px;
+    margin: -20px 0 -100px 0;
   }
 
   .main-content {
