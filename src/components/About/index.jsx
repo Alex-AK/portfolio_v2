@@ -3,10 +3,13 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import content from '../../content/main';
 
+import alex_photo from '../../assets/alex_king_portfolio.jpg';
+
 const About = props => {
   const [about] = useState(content.landing);
   return (
     <Styles>
+      <img src={alex_photo} alt='Alex King, Software Developer' />
       <div>
         <h1>{about.title}</h1>
         <h3>
@@ -45,10 +48,27 @@ const Styles = styled.div`
   margin: 0 auto;
 
   @media (max-width: 800px) {
-    flex-direction: column-reverse;
+    flex-direction: column;
+    align-items: baseline;
   }
   @media (max-width: 450px) {
     margin: -20px 0 -100px 0;
+  }
+
+  img {
+    border-radius: 100%;
+    width: 190px;
+    margin-right: 80px;
+
+    @media (max-width: 1000px) {
+      width: 160px;
+      margin-right: 40px;
+    }
+
+    @media (max-width: 800px) {
+      margin: 0 0 40px 3%;
+      width: 160px;
+    }
   }
 
   div {
