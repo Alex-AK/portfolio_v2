@@ -78,9 +78,9 @@ const Styles = styled.div`
   }
 
   h3 {
-    width: 620px;
+    width: 600px;
 
-    @media (max-width: 600px) {
+    @media (max-width: 640px) {
       width: 100%;
     }
   }
