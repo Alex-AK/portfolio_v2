@@ -111,9 +111,9 @@ const content = {
         'A modern responsive architecture website built with HTML, CSS, and custom ES6 JavaScript components.',
       content: {
         p_1:
-          'Excepteur ad dolore irure incididunt commodo ipsum do sit nostrud veniam non labore. Ex qui ullamco eiusmod in incididunt aliquip velit. Velit ex sit aliqua nostrud sunt anim anim.',
+          'Implemented static website using modern JavaScript ES6 and LESS preproccessing with custom built tab navigation and carousel components.',
         p_2:
-          'Est in mollit officia tempor ullamco do eiusmod ad pariatur ad anim reprehenderit. Duis Lorem enim dolor ea sit laboris. Adipisicing sit eu ex eu non aliquip exercitation amet.'
+          'Utilized GSAP animation library to enhance user experience across site.'
       },
       images: {
         desktop: smith_and_jones_desktop,
