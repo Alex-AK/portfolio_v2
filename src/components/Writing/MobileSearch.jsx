@@ -1,14 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import searchIcon from '../../assets/search-icon.png';
-
 import Button from '../Landing/Button';
 
 const SearchInput = ({ input, setInput, clearSearch }) => {
   return (
     <Styles>
-      <img src={searchIcon} alt='Search Icon' />
       <input
         placeholder='Search Writing'
         value={input}
@@ -27,26 +24,24 @@ const Styles = styled.div`
   position: fixed;
   display: flex;
   top: 90px;
+  justify-content: center;
   width: 100%;
   padding-bottom: 10px;
   background: #fcfcfa;
   z-index: 5;
 
-  img {
-    width: 20px;
-    height: 20px;
-    position: fixed;
-    margin: 4px 0 0 2px;
-  }
-
   input {
     border: none;
     background: #fcfcfa;
+    border-top: 1px solid #d3d3d3;
+    border-left: 1px solid #d3d3d3;
     border-bottom: 1px solid #d3d3d3;
-    margin: 5px 1% 5px 1%;
-    padding: 0 0 3px 30px;
-    width: 74%;
-    font-size: 16px;
+    border-radius: 4px 0 0 4px;
+    margin: 15px -2px 5px 0;
+    /* padding: 0 0 3px 30px; */
+    padding: 5px;
+    width: 80%;
+    font-size: 13px;
 
     &:focus {
       outline: none;

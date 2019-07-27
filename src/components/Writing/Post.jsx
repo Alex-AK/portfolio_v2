@@ -258,8 +258,12 @@ const Styles = styled.div`
 
   .end {
     font-weight: 500;
-    margin: 20px 0 -30px 0;
+    margin: 20px 0 -30px 100px;
     text-align: right;
+
+    @media (max-width: 800px) {
+      margin: 20px 0 -30px 0;
+    }
 
     a {
       font-size: 11px;

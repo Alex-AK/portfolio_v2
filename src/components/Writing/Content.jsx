@@ -6,12 +6,14 @@ import Post from './Post';
 const Content = ({ posts }) => {
   return (
     <Styles>
-      {posts ? (
+      {posts.length > 0 ? (
         posts.map(post => {
           return <Post key={post.fields.title} post={post.fields} />;
         })
       ) : (
-        <h1>No writing with matching search criteria.</h1>
+        <div className='no-content'>
+          <h3>No writing with matching search criteria.</h3>
+        </div>
       )}
     </Styles>
   );
@@ -34,5 +36,13 @@ const Styles = styled.div`
   }
   @media (max-width: 600px) {
     margin: 80px 0 0 0;
+  }
+
+  .no-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 75vh;
   }
 `;

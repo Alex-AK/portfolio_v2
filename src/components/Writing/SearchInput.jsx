@@ -13,7 +13,7 @@ const SearchInput = ({ input, setInput, clearSearch }) => {
         value={input}
         onChange={e => setInput(e.target.value)}
       />
-      <Button clearSearch={clearSearch} title='clear' full_width non_link>
+      <Button clearSearch={clearSearch} title='clear' extra_small non_link>
         Clear
       </Button>
     </Styles>
@@ -36,15 +36,17 @@ const Styles = styled.div`
   input {
     border: none;
     background: #fcfcfa;
+    border-top: 1px solid #d3d3d3;
+    border-left: 1px solid #d3d3d3;
     border-bottom: 1px solid #d3d3d3;
-    margin: 10px 0 5px 0;
-    padding: 0 0 3px 2px;
+    border-radius: 4px 0 0 4px;
+    margin: 15px 0 5px 0;
+    padding: 5px;
     width: 200px;
     font-size: 13px;
 
     @media (max-width: 800px) {
       width: 150px;
-      font-size: 14px;
     }
 
     &:focus {

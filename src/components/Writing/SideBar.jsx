@@ -38,7 +38,7 @@ const Styles = styled.div`
     position: fixed;
     width: 275px;
     margin: 60px 0 15px 10px;
-    padding: 10px 20px 0 0;
+    padding: 10px 25px 0 0;
     border-right: 1px solid #d3d3d3;
 
     @media (max-width: 800px) {
