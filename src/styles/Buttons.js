@@ -92,16 +92,17 @@ export const Buttons = css`
   }
 
   .full_width {
-    margin: 8px 0 0 5px;
+    margin: 6px 0 0 -2px;
 
     svg {
-      height: 20px;
+      height: 28px;
       width: 60px;
       box-shadow: none;
       border: 1px solid #d3d3d3;
       .o1 {
         fill: transparent;
       }
+      border-radius: 0 4px 4px 0;
     }
 
     span {
