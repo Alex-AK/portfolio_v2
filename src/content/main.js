@@ -28,7 +28,7 @@ const content = {
       },
       title: 'Training Bot',
       intro:
-        'A full stack web application built in React to allow training managers send employees automated messages.',
+        'A full stack web application built in React allowing training managers to send employees automated text message and email notifications.',
       content: {
         p_1:
           'Built and deployed production level notification bot utilizing Node, MySQL, and AWS with custom written automation functions to manage notification data, interval timers, and notification triggers.',
