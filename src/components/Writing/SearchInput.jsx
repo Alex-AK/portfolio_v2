@@ -40,28 +40,14 @@ const Styles = styled.div`
     border-left: 1px solid #d3d3d3;
     border-bottom: 1px solid #d3d3d3;
     border-radius: 4px 0 0 4px;
-    margin: 15px 0 5px 0;
+    margin: 0 0 5px 0;
     padding: 5px;
+    height: 25px;
     width: 200px;
     font-size: 13px;
 
     @media (max-width: 800px) {
       width: 150px;
-    }
-
-    &:focus {
-      outline: none;
-    }
-  }
-
-  button {
-    width: 240px;
-    margin-bottom: 25px;
-    border: 1px solid #d3d3d3;
-    border-radius: 3px;
-
-    @media (max-width: 800px) {
-      width: 200px;
     }
 
     &:focus {

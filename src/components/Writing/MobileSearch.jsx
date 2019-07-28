@@ -23,7 +23,7 @@ export default SearchInput;
 const Styles = styled.div`
   position: fixed;
   display: flex;
-  top: 90px;
+  top: 100px;
   justify-content: center;
   width: 100%;
   padding-bottom: 10px;
@@ -37,9 +37,9 @@ const Styles = styled.div`
     border-left: 1px solid #d3d3d3;
     border-bottom: 1px solid #d3d3d3;
     border-radius: 4px 0 0 4px;
-    margin: 15px -2px 5px 0;
-    /* padding: 0 0 3px 30px; */
+    margin: 0 -2px 5px 0;
     padding: 5px;
+    height: 25px;
     width: 80%;
     font-size: 13px;
 

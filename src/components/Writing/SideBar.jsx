@@ -2,20 +2,25 @@
 import React from 'react';
 import styled from 'styled-components';
 import SearchInput from './SearchInput';
+import NewsletterForm from './NewsletterForm';
 
-const SideBar = ({ input, applyFilter, clearSearch }) => {
+const SideBar = ({ input, applyFilter, setInput, clearSearch }) => {
   return (
     <Styles>
       <div className='fixed-sidebar'>
-        <label htmlFor='search input' className='section-title'>
+        <label htmlFor='search input' className='section-title top-title'>
           Search Writing
         </label>
         <SearchInput
           input={input}
-          applyFilter={applyFilter}
           clearSearch={clearSearch}
+          setInput={setInput}
         />
-        <h4 className='section-title'>Filter By Category</h4>
+        <label htmlFor='newsletter input' className='section-title'>
+          Weekly Newsletter
+        </label>
+        <NewsletterForm />
+        <h4 className='section-title'>Filter Writing By Category</h4>
         <h5 onClick={() => applyFilter('Case Study')}>Project Case Studies</h5>
         <h5 onClick={() => applyFilter('Client Projects')}>Client Projects</h5>
         {/*
@@ -50,9 +55,13 @@ const Styles = styled.div`
     }
 
     .section-title {
-      margin: 20px 0 15px 0;
+      margin: 20px 0 10px 0;
       font-size: 15px;
       font-weight: 500;
+
+      &:first-child {
+        margin-top: 0;
+      }
     }
 
     h5 {
@@ -62,5 +71,10 @@ const Styles = styled.div`
         cursor: pointer;
       }
     }
+  }
+
+  label {
+    display: block;
+    margin: 0;
   }
 `;
