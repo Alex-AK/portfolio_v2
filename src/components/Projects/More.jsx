@@ -48,6 +48,10 @@ export default More;
 const Styles = styled.div`
   display: flex;
 
+  a {
+    border-bottom: none !important;
+  }
+
   span {
     margin: 10px;
   }
