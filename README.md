@@ -7,12 +7,14 @@ Placeholder for introduction and description of project.
 Designed and developed by [Alex King](https://github.com/alex-ak)
 
 ## Technology Used
+
 - React
 - Hooks
 - React Router
 - Styled Components
 - FuseJS
 - Contenful
+- MailChimp
 - Package management: yarn
 
 ## Getting Started
