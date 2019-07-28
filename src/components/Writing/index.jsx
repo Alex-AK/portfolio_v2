@@ -19,7 +19,7 @@ const Writing = props => {
     });
 
     client
-      .getEntries({ content_type: 'projectCaseStudy' })
+      .getEntries()
       .then(res => setPosts(res.items.reverse()))
       .catch(err => console.log(err));
   }, []);
@@ -51,6 +51,10 @@ const Writing = props => {
   const fuse = new Fuse(posts, fuse_options);
   let result = fuse.search(input);
 
+  const applyFilter = filter => {
+    setInput(filter);
+    window.scroll(0, 0);
+  };
   const clearSearch = () => {
     setInput('');
     window.scroll(0, 0);
@@ -59,17 +63,20 @@ const Writing = props => {
   return (
     <>
       {props.window_width <= 600 && <PageTitle title='writing' />}
+      <h1 className='SEO'>
+        Alex King - Software Developer - Writing Page - Seattle Wa.
+      </h1>
       <Styles>
         {props.window_width > 600 ? (
           <SideBar
             input={input}
-            setInput={setInput}
+            applyFilter={applyFilter}
             clearSearch={clearSearch}
           />
         ) : (
           <MobileSearch
             input={input}
-            setInput={setInput}
+            applyFilter={applyFilter}
             clearSearch={clearSearch}
           />
         )}

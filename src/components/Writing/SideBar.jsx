@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import SearchInput from './SearchInput';
 
-const SideBar = ({ input, setInput, clearSearch }) => {
+const SideBar = ({ input, applyFilter, clearSearch }) => {
   return (
     <Styles>
       <div className='fixed-sidebar'>
@@ -12,17 +12,17 @@ const SideBar = ({ input, setInput, clearSearch }) => {
         </label>
         <SearchInput
           input={input}
-          setInput={setInput}
+          applyFilter={applyFilter}
           clearSearch={clearSearch}
         />
         <h4 className='section-title'>Filter By Category</h4>
-        <h5 onClick={() => setInput('Case Study')}>Project Case Studies</h5>
-        <h5 onClick={() => setInput('Client Projects')}>Client Projects</h5>
+        <h5 onClick={() => applyFilter('Case Study')}>Project Case Studies</h5>
+        <h5 onClick={() => applyFilter('Client Projects')}>Client Projects</h5>
         {/*
-        <h5 onClick={() => setInput('Personal Projects')}>Personal Projects</h5>
-        <h5 onClick={() => setInput('Top 10 Articles')}>Top 10 Articles</h5>
-        <h5 onClick={() => setInput('Personal Writing')}>Personal Writing</h5>
-        <h5 onClick={() => setInput('Book Summaries')}>Book Summaries</h5> */}
+        <h5 onClick={() => applyFilter('Personal Projects')}>Personal Projects</h5>
+        <h5 onClick={() => applyFilter('Top 10 Articles')}>Top 10 Articles</h5>
+        <h5 onClick={() => applyFilter('Personal Writing')}>Personal Writing</h5>
+        <h5 onClick={() => applyFilter('Book Summaries')}>Book Summaries</h5> */}
       </div>
     </Styles>
   );
@@ -37,7 +37,7 @@ const Styles = styled.div`
     min-height: 80vh;
     position: fixed;
     width: 275px;
-    margin: 60px 0 15px 10px;
+    margin: 40px 0 15px 10px;
     padding: 10px 25px 0 0;
     border-right: 1px solid #d3d3d3;
 
