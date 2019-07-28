@@ -285,4 +285,16 @@ const Styles = styled.div`
       font-size: 11px;
     }
   }
+
+  a {
+    /* for markdown anchor tag styling */
+    /* this simply replicates the .hyperlink class */
+    border-bottom: 2.5px solid #f4e4d4;
+    padding-bottom: 1px;
+    cursor: pointer;
+
+    &:hover {
+      border-bottom: none;
+    }
+  }
 `;
