@@ -63,6 +63,9 @@ const Writing = props => {
   return (
     <>
       {props.window_width <= 600 && <PageTitle title='writing' />}
+      <h1 className='SEO'>
+        Alex King - Software Developer - Writing Page - Seattle Wa.
+      </h1>
       <Styles>
         {props.window_width > 600 ? (
           <SideBar

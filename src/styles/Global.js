@@ -109,4 +109,11 @@ export const Global = css`
       line-height: 1.25;
     }
   }
+
+  .SEO {
+    color: transparent;
+    text-shadow: none;
+    height: 0;
+    margin: 0;
+  }
 `;

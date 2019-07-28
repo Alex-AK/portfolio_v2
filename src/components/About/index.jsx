@@ -8,32 +8,35 @@ import alex_photo from '../../assets/alex_king_portfolio.jpg';
 const About = props => {
   const [about] = useState(content.landing);
   return (
-    <Styles>
-      <img src={alex_photo} alt='Alex King, Software Developer' />
-      <div>
-        <h1>{about.title}</h1>
-        <h3>
-          {about.sub_title} Take a look at my{' '}
-          <Link to='/projects' className='hyperlink'>
-            projects,
-          </Link>{' '}
-          and{' '}
-          <Link to='/writing' className='hyperlink'>
-            writing.
-          </Link>{' '}
-          If you'd like to work with me{' '}
-          <Link to='/contact' className='hyperlink'>
-            reach out.
-          </Link>{' '}
-        </h3>
-        <h3 style={{ marginTop: 20 }}>
-          <Link to='/contact' className='hyperlink'>
-            Looking for mentorship?
-          </Link>{' '}
-          I'm available.
-        </h3>
-      </div>
-    </Styles>
+    <>
+      <Styles>
+        <img src={alex_photo} alt='Alex King, Software Developer' />
+
+        <div>
+          <h1>{about.title}</h1>
+          <h3>
+            {about.sub_title} Take a look at my{' '}
+            <Link to='/projects' className='hyperlink'>
+              projects,
+            </Link>{' '}
+            and{' '}
+            <Link to='/writing' className='hyperlink'>
+              writing.
+            </Link>{' '}
+            If you'd like to work with me{' '}
+            <Link to='/contact' className='hyperlink'>
+              reach out.
+            </Link>{' '}
+          </h3>
+          <h3 style={{ marginTop: 20 }}>
+            <Link to='/contact' className='hyperlink'>
+              Looking for mentorship?
+            </Link>{' '}
+            I'm available.
+          </h3>
+        </div>
+      </Styles>
+    </>
   );
 };
 

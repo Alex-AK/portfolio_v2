@@ -12,6 +12,9 @@ const Landing = props => {
   return (
     <>
       <div style={{ height: '60px' }} />
+      <h1 className='SEO'>
+        Alex King - Software Developer - Landing Page - Seattle, Wa.
+      </h1>
       <Styles>
         <img src={coffee_menu} alt='coffee menu' />
         <div>

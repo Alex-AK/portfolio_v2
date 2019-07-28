@@ -12,6 +12,9 @@ const Projects = ({ window_width }) => {
   return (
     <>
       {window_width <= 600 && <PageTitle title='Projects' />}
+      <h1 className='SEO'>
+        Alex King - Software Developer - Project Page - Seattle, Wa.
+      </h1>
       <Styles>
         {state.projects.map(project => (
           <Project key={project.title} project={project} />
