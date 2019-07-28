@@ -73,30 +73,12 @@ export const Buttons = css`
       letter-spacing: 1.5px;
     }
   }
-  /* 
-  .extra_small {
-    svg {
-
-      width: 100px;
-      box-shadow: none;
-      border: 1px solid #d3d3d3;
-      border-radius: 0 4px 4px 0;
-      .o1 {
-        fill: transparent;
-      }
-    }
-
-    span {
-      font-size: 10px;
-      letter-spacing: 1.5px;
-    }
-  } */
 
   .extra_small {
-    margin: 10px 0 0 -2px;
+    margin: -5px 0 0 -2px;
 
     svg {
-      height: 28px;
+      height: 25px;
       width: 60px;
       box-shadow: none;
       border: 1px solid #d3d3d3;

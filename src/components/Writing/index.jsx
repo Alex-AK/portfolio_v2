@@ -72,6 +72,7 @@ const Writing = props => {
             input={input}
             applyFilter={applyFilter}
             clearSearch={clearSearch}
+            setInput={setInput}
           />
         ) : (
           <MobileSearch
