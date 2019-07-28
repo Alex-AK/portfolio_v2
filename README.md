@@ -13,7 +13,8 @@ After the initial foundation was set I began to focus my time on refining the us
 As with all of my work, my goal is to deliver a product that aligns with my clients values, vision, and goals. Being the client for this project, I am pleased to deliver and share my portfolio with you. If you’re interested in working with me on existing or future projects, reach out and connect with me directly. I also regularly write to share my story and work which can be found here.
 
 #### Project Images
-- coming soon.
+![alex_king_software_developer_homepage](https://user-images.githubusercontent.com/42871759/62011320-c34fae80-b12b-11e9-9ae3-9c08779a51e6.jpg)
+
 
 #### Features
 - Modern and modular React codebase utilizing hooks.
