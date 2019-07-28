@@ -71,8 +71,7 @@ const NewsletterForm = ({ setInput }) => {
       <p
         className='sub_text'
         onClick={() => setInput('Newsletter Context & Privacy.')}>
-        Newsletter{' '}
-        <span className='hyperlink'>Context and Privacy Policy.</span>
+        Newsletter <span className='hyperlink'>Context and Privacy.</span>
       </p>
     </Styles>
   );
@@ -137,6 +136,6 @@ const Styles = styled.div`
 
   .sub_text {
     font-size: 10px;
-    font-weight: 500;
+    margin-top: -1px;
   }
 `;
