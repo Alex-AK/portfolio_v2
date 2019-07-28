@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import More from '../Projects/More';
 
+import Markdown from 'markdown-to-jsx';
+
 const Post = ({ post }) => {
   // de-structure incoming content
   // ordered in display order
@@ -21,7 +23,7 @@ const Post = ({ post }) => {
   } = post;
 
   const renderIntroduction = () => {
-    const splitContent = content.split('_');
+    // const splitContent = content.split('_');
     return (
       <div className='introduction'>
         <div className='landing-image'>
@@ -38,9 +40,11 @@ const Post = ({ post }) => {
 
         <p>{introduction}</p>
         {mainImage && <h4>Overview</h4>}
-        {splitContent.map((paragraph, key) => (
+        {/* convert this to markdown with <Markdown></Markdown> */}
+        {/* {splitContent.map((paragraph, key) => (
           <p key={key}>{paragraph.split('_').pop()}</p>
-        ))}
+        ))} */}
+        <Markdown>{content}</Markdown>
       </div>
     );
   };

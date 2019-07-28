@@ -51,13 +51,14 @@ const Writing = props => {
   const fuse = new Fuse(posts, fuse_options);
   let result = fuse.search(input);
 
+  const applyFilter = filter => {
+    setInput(filter);
+    window.scroll(0, 0);
+  };
   const clearSearch = () => {
     setInput('');
     window.scroll(0, 0);
   };
-
-  console.log(result);
-  console.log(posts);
 
   return (
     <>
@@ -66,13 +67,13 @@ const Writing = props => {
         {props.window_width > 600 ? (
           <SideBar
             input={input}
-            setInput={setInput}
+            applyFilter={applyFilter}
             clearSearch={clearSearch}
           />
         ) : (
           <MobileSearch
             input={input}
-            setInput={setInput}
+            applyFilter={applyFilter}
             clearSearch={clearSearch}
           />
         )}
