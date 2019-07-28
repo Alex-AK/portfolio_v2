@@ -19,7 +19,7 @@ const SideBar = ({ input, applyFilter, setInput, clearSearch }) => {
         <label htmlFor='newsletter input' className='section-title'>
           Weekly Newsletter
         </label>
-        <NewsletterForm />
+        <NewsletterForm setInput={setInput} />
         <h4 className='section-title'>Filter Writing By Category</h4>
         <h5 onClick={() => applyFilter('Case Study')}>Project Case Studies</h5>
         <h5 onClick={() => applyFilter('Client Projects')}>Client Projects</h5>

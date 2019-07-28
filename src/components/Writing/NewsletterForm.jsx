@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 import Button from '../Landing/Button';
 
-const NewsletterForm = () => {
-  const [input, setInput] = useState('');
+const NewsletterForm = ({ setInput }) => {
+  const [input, setEmailInput] = useState('');
 
   return (
     <Styles id='mc_embed_signup'>
@@ -25,7 +25,7 @@ const NewsletterForm = () => {
               name='EMAIL'
               className='required email'
               id='mce-EMAIL'
-              onChange={e => setInput(e.target.value)}
+              onChange={e => setEmailInput(e.target.value)}
               required
             />
           </div>
@@ -55,7 +55,7 @@ const NewsletterForm = () => {
               name='b_42c39497353cbf8c4ccd8fa5b_e0541b268e'
               tabIndex='-1'
               value=''
-              onChange={() => setInput('')}
+              onChange={() => setEmailInput('')}
             />
           </div>
 
@@ -68,6 +68,12 @@ const NewsletterForm = () => {
           />
         </div>
       </form>
+      <p
+        className='sub_text'
+        onClick={() => setInput('Newsletter Context & Privacy.')}>
+        Newsletter{' '}
+        <span className='hyperlink'>Context and Privacy Policy.</span>
+      </p>
     </Styles>
   );
 };
@@ -127,5 +133,10 @@ const Styles = styled.div`
   input:-webkit-autofill:focus,
   input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 30px white inset !important;
+  }
+
+  .sub_text {
+    font-size: 10px;
+    font-weight: 500;
   }
 `;
