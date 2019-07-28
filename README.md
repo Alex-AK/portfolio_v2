@@ -13,20 +13,20 @@ After the initial foundation was set I began to focus my time on refining the us
 As with all of my work, my goal is to deliver a product that aligns with my clients values, vision, and goals. Being the client for this project, I am pleased to deliver and share my portfolio with you. If you’re interested in working with me on existing or future projects, reach out and connect with me directly. I also regularly write to share my story and work which can be found here.
 
 #### Project Images
+##### Alex King Portfolio - Landing Page
 ![alex_king_software_developer_homepage](https://user-images.githubusercontent.com/42871759/62011320-c34fae80-b12b-11e9-9ae3-9c08779a51e6.jpg)
-Alex King Portfolio - Landing Page
 
+##### Project Page - A hub for users to view recent projects and learn more.
 ![alex_king_software_developer_projects](https://user-images.githubusercontent.com/42871759/62011329-dfebe680-b12b-11e9-961a-f192e9206bce.jpg)
-Project Page - A hub for users to view recent projects and learn more.
 
+##### Writing Page - A writing page with custom content models and content management utilizing Contentful API.
 ![alex_king_software_developer_writing](https://user-images.githubusercontent.com/42871759/62011333-fc881e80-b12b-11e9-931c-0b9bc67dcc46.jpg)
-Writing Page - A writing page with custom content models and content management utilizing Contentful API.
 
+##### About Page - A simple about page to communicate my values, skills, and recommended navigation.
 ![alex_king_software_developer_about](https://user-images.githubusercontent.com/42871759/62011337-0873e080-b12c-11e9-8279-7c7d5f66002e.jpg)
-About Page - A simple about page to communicate my values, skills, and recommended navigation.
 
+##### Contact Page - Clear contact page with directions to connect.
 ![alex_king_software_developer_contact](https://user-images.githubusercontent.com/42871759/62011339-1590cf80-b12c-11e9-845a-e0bd26d3c57a.jpg)
-Contact Page - Clear contact page with directions to connect.
 
 #### Features
 - Modern and modular React codebase utilizing hooks.
