@@ -9,7 +9,7 @@ const Post = ({ post }) => {
   const {
     title,
     introduction,
-    projectGoals,
+    content,
     features,
     mainImage,
     images,
@@ -21,17 +21,24 @@ const Post = ({ post }) => {
   } = post;
 
   const renderIntroduction = () => {
-    const projectGoalsSplit = projectGoals.split('_');
+    const splitContent = content.split('_');
     return (
       <div className='introduction'>
         <div className='landing-image'>
-          <img src={mainImage.fields.file.url} alt={mainImage.fields.title} />
-          <p className='caption'>{mainImage.fields.description}</p>
+          {mainImage && (
+            <>
+              <img
+                src={mainImage.fields.file.url}
+                alt={mainImage.fields.title}
+              />
+              <p className='caption'>{mainImage.fields.description}</p>
+            </>
+          )}
         </div>
-        <p>{introduction}</p>
 
-        <h4>Overview</h4>
-        {projectGoalsSplit.map((paragraph, key) => (
+        <p>{introduction}</p>
+        {mainImage && <h4>Overview</h4>}
+        {splitContent.map((paragraph, key) => (
           <p key={key}>{paragraph.split('_').pop()}</p>
         ))}
       </div>

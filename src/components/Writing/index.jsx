@@ -19,7 +19,7 @@ const Writing = props => {
     });
 
     client
-      .getEntries({ content_type: 'projectCaseStudy' })
+      .getEntries()
       .then(res => setPosts(res.items.reverse()))
       .catch(err => console.log(err));
   }, []);
@@ -55,6 +55,9 @@ const Writing = props => {
     setInput('');
     window.scroll(0, 0);
   };
+
+  console.log(result);
+  console.log(posts);
 
   return (
     <>
