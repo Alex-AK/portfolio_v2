@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import More from '../Projects/More';
 
-// import Markdown from 'markdown-to-jsx';
+import Markdown from 'markdown-to-jsx';
 
 const Post = ({ post }) => {
   // de-structure incoming content
@@ -23,7 +23,7 @@ const Post = ({ post }) => {
   } = post;
 
   const renderIntroduction = () => {
-    const splitContent = content.split('_');
+    // const splitContent = content.split('_');
     return (
       <div className='introduction'>
         <div className='landing-image'>
@@ -41,10 +41,10 @@ const Post = ({ post }) => {
         <p>{introduction}</p>
         {mainImage && <h4>Overview</h4>}
         {/* convert this to markdown with <Markdown></Markdown> */}
-        {splitContent.map((paragraph, key) => (
+        {/* {splitContent.map((paragraph, key) => (
           <p key={key}>{paragraph.split('_').pop()}</p>
-        ))}
-        {/* <Markdown>{content}</Markdown> */}
+        ))} */}
+        <Markdown>{content}</Markdown>
       </div>
     );
   };
@@ -132,7 +132,7 @@ const Post = ({ post }) => {
         {projectSummary && (
           <>
             <h4>Summary</h4>
-            <p>{projectSummary}</p>
+            <Markdown>{projectSummary}</Markdown>
           </>
         )}
 
@@ -283,6 +283,18 @@ const Styles = styled.div`
 
     p {
       font-size: 11px;
+    }
+  }
+
+  a {
+    /* for markdown anchor tag styling */
+    /* this simply replicates the .hyperlink class */
+    border-bottom: 2.5px solid #f4e4d4;
+    padding-bottom: 1px;
+    cursor: pointer;
+
+    &:hover {
+      border-bottom: none;
     }
   }
 `;
