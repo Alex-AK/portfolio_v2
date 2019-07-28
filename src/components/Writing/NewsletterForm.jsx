@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import Button from '../Landing/Button';
-
 const NewsletterForm = ({ setInput }) => {
   const [input, setEmailInput] = useState('');
 
