@@ -48,11 +48,15 @@ const Styles = styled.div`
   }
 
   @media (max-width: 600px) {
-    margin-bottom: -60px;
+    margin-bottom: -30px;
   }
 
   @media (max-width: 450px) {
     margin: -20px 3% -100px 3%;
+  }
+
+  @media (max-width: 350px) {
+    margin-bottom: -50px;
   }
 
   h3 {

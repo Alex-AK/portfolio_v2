@@ -58,6 +58,10 @@ const Styles = styled.div`
     margin: -20px 0 -100px 0;
   }
 
+  @media (max-width: 350px) {
+    margin: 0;
+  }
+
   img {
     border-radius: 100%;
     width: 190px;
