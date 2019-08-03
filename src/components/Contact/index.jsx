@@ -39,13 +39,13 @@ const Styles = styled.div`
     margin: 0 3%;
   }
 
-  @media (max-width: 450px) {
+  /* @media (max-width: 450px) {
     margin: -20px 0 -100px 0;
-  }
-
+  } */
+  /* 
   @media (max-width: 350px) {
     margin: 0;
-  }
+  } */
 
   div {
     max-width: 620px;

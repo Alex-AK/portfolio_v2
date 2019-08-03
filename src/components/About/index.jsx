@@ -55,11 +55,8 @@ const Styles = styled.div`
     align-items: baseline;
   }
   @media (max-width: 450px) {
-    margin: -20px 0 -100px 0;
-  }
-
-  @media (max-width: 350px) {
-    margin: 0;
+    /* margin: -20px 0 -100px 0; */
+    min-height: none;
   }
 
   img {
@@ -75,10 +72,6 @@ const Styles = styled.div`
     @media (max-width: 800px) {
       margin: 0 0 40px 3%;
       width: 160px;
-    }
-
-    @media (max-width: 600px) {
-      display: none;
     }
   }
 
