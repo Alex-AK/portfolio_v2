@@ -83,4 +83,7 @@ const Styles = styled.div`
     max-width: 1200px;
     margin: 0 auto;
   }
+  @media (max-width: 500px) {
+    min-height: none;
+  }
 `;

@@ -55,11 +55,8 @@ const Styles = styled.div`
     align-items: baseline;
   }
   @media (max-width: 450px) {
-    margin: -20px 0 -100px 0;
-  }
-
-  @media (max-width: 350px) {
-    margin: 0;
+    /* margin: -20px 0 -100px 0; */
+    min-height: none;
   }
 
   img {
