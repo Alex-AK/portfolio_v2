@@ -76,6 +76,10 @@ const Styles = styled.div`
       margin: 0 0 40px 3%;
       width: 160px;
     }
+
+    @media (max-width: 600px) {
+      display: none;
+    }
   }
 
   div {

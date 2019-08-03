@@ -44,7 +44,7 @@ const Styles = styled.div`
   }
 
   @media (max-width: 350px) {
-    margin-bottom: -60px;
+    margin: 0;
   }
 
   div {
