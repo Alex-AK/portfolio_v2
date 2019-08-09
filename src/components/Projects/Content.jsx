@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import More from './More';
+
+import More from '../General/More';
+
 const Content = ({ title, intro, p_1, p_2, p_3, p_4, links }) => {
   return (
     <Styles>

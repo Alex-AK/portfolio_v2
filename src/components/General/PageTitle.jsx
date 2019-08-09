@@ -22,7 +22,7 @@ const Styles = styled.div`
     padding: 20px 0 20px 0;
     position: fixed;
     width: 1180px;
-    top: 60px;
+    top: 50px;
     background: #fcfcfa;
     padding-left: 100px;
     z-index: 1;

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 // import searchIcon from '../../assets/search-icon.png';
-import Button from '../Landing/Button';
+import Button from '../Button';
 
 const SearchInput = ({ input, setInput, clearSearch }) => {
   return (

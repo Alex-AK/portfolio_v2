@@ -1,9 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import More from '../Projects/More';
 
-import Markdown from 'markdown-to-jsx';
+// component imports
+import More from '../General/More';
+import Divider from '../General/Divider';
+
+// helper function imports
+import {
+  renderIntroduction,
+  renderSummary,
+  mapImages,
+  mapFeatures,
+  renderTechnologyAndContributors,
+  renderEnd
+} from './renderContentModule';
 
 const Post = ({ post }) => {
   // de-structure incoming content
@@ -22,155 +32,26 @@ const Post = ({ post }) => {
     inspired
   } = post;
 
-  const renderIntroduction = () => {
-    // const splitContent = content.split('_');
-    return (
-      <div className='introduction'>
-        <div className='landing-image'>
-          {mainImage && (
-            <>
-              <img
-                src={mainImage.fields.file.url}
-                alt={mainImage.fields.title}
-              />
-              <p className='caption'>{mainImage.fields.description}</p>
-            </>
-          )}
-        </div>
-
-        <p>{introduction}</p>
-        {mainImage && <h4>Overview</h4>}
-        {/* convert this to markdown with <Markdown></Markdown> */}
-        {/* {splitContent.map((paragraph, key) => (
-          <p key={key}>{paragraph.split('_').pop()}</p>
-        ))} */}
-        <Markdown>{content}</Markdown>
-      </div>
-    );
-  };
-
-  const mapImages = () => {
-    return images.map(image => {
-      return (
-        <div className='image-container' key={image.fields.title}>
-          <img src={image.fields.file.url} alt={image.fields.title} />
-          <p className='caption'>{image.fields.description}</p>
-        </div>
-      );
-    });
-  };
-
-  const mapFeatures = () =>
-    features.map(feature => (
-      <ul key={feature}>
-        <li>{feature}</li>
-      </ul>
-    ));
-
-  const mapContributors = () =>
-    contributors.map(contributor => (
-      <ul key={contributor.name}>
-        <li>
-          <a href={contributor.link} target='_blank' rel='noopener noreferrer'>
-            {contributor.name}
-          </a>
-        </li>
-      </ul>
-    ));
-
-  const mapTechnology = () =>
-    technology.map(tech => (
-      <ul key={tech}>
-        <li>{tech}</li>
-      </ul>
-    ));
-
-  const renderTestimonial = () => {
-    return (
-      <div>
-        {/* <p className='testimonial'>{testimonial}</p> */}
-        {/* <p className='name'>{name}</p> */}
-      </div>
-    );
-  };
-
-  const renderInspired = () => {
-    return (
-      <p>
-        Inspired by{' '}
-        <a
-          href={inspired.url}
-          className='hyperlink'
-          target='_blank'
-          rel='noopener noreferrer'>
-          {inspired.inspiredBy}
-        </a>
-      </p>
-    );
-  };
-
   return (
     <>
       <Styles>
-        <h3 className='post-title heavy'>{title}</h3>
-        {renderIntroduction()}
+        {introduction &&
+          renderIntroduction(title, mainImage, introduction, content)}
 
-        {features && (
-          <>
-            <h4>Features</h4>
-            {mapFeatures()}
-          </>
-        )}
+        {features && mapFeatures(features)}
 
-        {images && (
-          <>
-            <h4>Project Images</h4>
-            {mapImages()}
-          </>
-        )}
+        {images && mapImages(images)}
 
-        {projectSummary && (
-          <>
-            <h4>Summary</h4>
-            <Markdown>{projectSummary}</Markdown>
-          </>
-        )}
+        {projectSummary && renderSummary(projectSummary)}
 
-        {/* {testimonial && renderTestimonial()} */}
-
-        <div className='contributors-technology'>
-          <div>
-            {technology && (
-              <>
-                <h4>Technologies Used</h4> {mapTechnology()}
-              </>
-            )}
-          </div>
-          <div>
-            {contributors && (
-              <>
-                <h4>Contributors</h4> {mapContributors()}
-              </>
-            )}
-          </div>
-        </div>
+        {(technology || contributors) &&
+          renderTechnologyAndContributors(technology, contributors)}
 
         {links && <More links={links} />}
 
-        <div className='end'>
-          <p>
-            Written by{' '}
-            <Link to='/about' className='hyperlink'>
-              Alex King
-            </Link>
-          </p>
-
-          {inspired && renderInspired()}
-        </div>
+        {renderEnd(inspired)}
       </Styles>
-      <div className='divider'>
-        <span />
-      </div>
+      <Divider />
     </>
   );
 };

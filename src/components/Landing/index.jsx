@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import coffee_menu from '../../assets/coffee-background-landing.jpg';
 import content from '../../content/main';
 
-import Button from './Button';
+import Button from '../Button';
 
 const Landing = props => {
   const [about] = useState(content.landing);
@@ -35,7 +35,6 @@ const Landing = props => {
 export default Landing;
 
 const Styles = styled.div`
-  max-width: 1200px;
   min-height: calc(100vh - 140px);
   display: flex;
   justify-content: center;
