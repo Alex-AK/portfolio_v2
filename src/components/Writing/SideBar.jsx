@@ -42,7 +42,7 @@ const Styles = styled.div`
     min-height: 80vh;
     position: fixed;
     width: 275px;
-    margin: 40px 0 15px 10px;
+    margin: 70px 0 15px 10px;
     padding: 10px 25px 0 0;
     border-right: 1px solid #d3d3d3;
 

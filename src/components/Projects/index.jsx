@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import content from '../../content/main';
 import Project from './Project';
-import PageTitle from '../Navigation/PageTitle';
+import PageTitle from '../General/PageTitle';
 import styled from 'styled-components';
 
 const Projects = ({ window_width }) => {
@@ -11,7 +11,7 @@ const Projects = ({ window_width }) => {
 
   return (
     <>
-      {window_width <= 600 && <PageTitle title='Projects' />}
+      <PageTitle title='Projects' />
       <h1 className='SEO'>
         Alex King - Software Developer - Project Page - Seattle, Wa.
       </h1>

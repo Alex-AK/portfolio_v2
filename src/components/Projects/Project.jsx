@@ -2,6 +2,7 @@ import React from 'react';
 import Images from './Images';
 import Content from './Content';
 import styled from 'styled-components';
+import Divider from '../General/Divider';
 
 const Project = props => {
   const { title, intro, content, images, links } = props.project;
@@ -20,9 +21,7 @@ const Project = props => {
           links={links}
         />
       </Styles>
-      <div className='divider'>
-        <span />
-      </div>
+      <Divider />
     </>
   );
 };

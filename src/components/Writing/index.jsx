@@ -5,7 +5,7 @@ import * as contentful from 'contentful';
 
 import Content from './Content';
 import SideBar from './SideBar';
-import PageTitle from '../Navigation/PageTitle';
+import PageTitle from '../General/PageTitle';
 import MobileSearch from './MobileSearch';
 
 const Writing = props => {
@@ -62,7 +62,7 @@ const Writing = props => {
 
   return (
     <>
-      {props.window_width <= 600 && <PageTitle title='writing' />}
+      <PageTitle title='writing' />
       <h1 className='SEO'>
         Alex King - Software Developer - Writing Page - Seattle Wa.
       </h1>

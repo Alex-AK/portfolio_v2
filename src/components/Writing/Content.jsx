@@ -25,7 +25,7 @@ const Styles = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 20px 30px 0 290px;
+  margin: 50px 30px 0 290px;
 
   &:last-child {
     margin-bottom: 50px;
