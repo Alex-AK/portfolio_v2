@@ -20,7 +20,7 @@ const Writing = props => {
 
     client
       .getEntries()
-      .then(res => setPosts(res.items.reverse()))
+      .then(res => setPosts(res.items))
       .catch(err => console.log(err));
   }, []);
 

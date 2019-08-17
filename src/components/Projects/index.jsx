@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import content from '../../content/main';
 import Project from './Project';
 import PageTitle from '../General/PageTitle';
@@ -8,6 +8,10 @@ const Projects = ({ window_width }) => {
   const [state] = useState({
     projects: content.projects
   });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
