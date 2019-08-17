@@ -9,6 +9,10 @@ const Projects = ({ window_width }) => {
     projects: content.projects
   });
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <PageTitle title='Projects' />
