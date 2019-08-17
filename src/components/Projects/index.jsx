@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import content from '../../content/main';
 import Project from './Project';
 import PageTitle from '../General/PageTitle';
