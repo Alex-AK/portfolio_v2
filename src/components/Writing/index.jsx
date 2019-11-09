@@ -7,10 +7,12 @@ import Content from './Content';
 import SideBar from './SideBar';
 import PageTitle from '../General/PageTitle';
 import MobileSearch from './MobileSearch';
+import Loader from '../General/Loader';
 
 const Writing = props => {
   const [input, setInput] = useState('');
   const [posts, setPosts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const client = contentful.createClient({
@@ -20,7 +22,10 @@ const Writing = props => {
 
     client
       .getEntries()
-      .then(res => setPosts(res.items))
+      .then(res => {
+        setPosts(res.items)
+        setIsLoading(false);
+      })
       .catch(err => console.log(err));
   }, []);
 
@@ -81,7 +86,7 @@ const Writing = props => {
             clearSearch={clearSearch}
           />
         )}
-        <Content posts={input.length > 0 ? result : posts} />
+        {isLoading ? <Loader /> : <Content posts={input.length > 0 ? result : posts} />}
       </Styles>
     </>
   );

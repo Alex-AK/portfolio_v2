@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Post from './Post';
 
-const Content = ({ posts }) => {
+const Content = ({ posts, isLoading }) => {
   return (
     <Styles>
       {posts.length > 0 ? (
