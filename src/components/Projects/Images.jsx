@@ -19,15 +19,16 @@ const Styles = styled.div`
   justify-content: center;
   align-content: center;
   width: 50%;
-  margin: 30px 0;
+  margin: 30px 20px;
   position: relative;
 
   @media (max-width: 1000px) {
     transform: scale(0.9);
   }
+
   @media (max-width: 800px) {
     width: 100%;
-    margin: 10px 0 10px -20px;
+    margin: 10px 0 40px -20px;
   }
 
   .desktop {

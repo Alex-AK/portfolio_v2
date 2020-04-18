@@ -13,7 +13,7 @@ export default Divider;
 
 const Styles = styled.div`
   height: 1px;
-  width: 500px;
+  max-width: 500px;
   margin: 60px auto;
   background: #d3d3d3;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);

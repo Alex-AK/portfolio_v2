@@ -48,7 +48,7 @@ export const Global = css`
 
   h3 {
     font-size: 20px;
-    width: 600px;
+    max-width: 600px;
 
     line-height: 1.4;
     letter-spacing: 0.5px;
