@@ -122,10 +122,12 @@ const Styles = styled.div`
     @media (max-width: 1000px) {
       width: 100%;
     }
+    @media (max-width: 600px) {
+      margin: 40px 0;
+    }
 
     @media (max-width: 340px) {
       flex-wrap: wrap;
-      margin: 40px 0;
 
       .button {
         margin-bottom: 15px;
