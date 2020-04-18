@@ -1,17 +1,18 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import Button from '../Button';
+// components
+import Button from "../General/Button";
 
 const SearchInput = ({ input, setInput, clearSearch }) => {
   return (
     <Styles>
       <input
-        placeholder='Search Writing'
+        placeholder="Search Writing"
         value={input}
-        onChange={e => setInput(e.target.value)}
+        onChange={(e) => setInput(e.target.value)}
       />
-      <Button clearSearch={clearSearch} title='clear' extra_small non_link>
+      <Button clearSearch={clearSearch} title="clear" extra_small non_link>
         Clear
       </Button>
     </Styles>

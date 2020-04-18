@@ -1,13 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import content from '../../content/main';
-import Project from './Project';
-import PageTitle from '../General/PageTitle';
-import styled from 'styled-components';
+import React, { useEffect } from "react";
+import styled from "styled-components";
+
+// components
+import Divider from "../General/Divider";
+import Project from "./Project";
+import PageTitle from "../General/PageTitle";
+
+// assets
+import content from "../../content/main";
 
 const Projects = ({ window_width }) => {
-  const [state] = useState({
-    projects: content.projects
-  });
+  const { projects } = content;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -15,13 +18,16 @@ const Projects = ({ window_width }) => {
 
   return (
     <>
-      <PageTitle title='Projects' />
-      <h1 className='SEO'>
-        Alex King - Software Developer - Project Page - Seattle, Wa.
-      </h1>
+      <h1 className="SEO">Alex King - Software Developer - Seattle, Wa.</h1>
+
+      <PageTitle title="Projects" />
+
       <Styles>
-        {state.projects.map(project => (
-          <Project key={project.title} project={project} />
+        {projects.map((project) => (
+          <>
+            <Project key={project.title} project={project} />
+            <Divider />
+          </>
         ))}
       </Styles>
     </>
@@ -32,6 +38,10 @@ export default Projects;
 
 const Styles = styled.div`
   margin-top: 40px;
+
+  &:last-child {
+    margin-bottom: 80px;
+  }
 
   @media (max-width: 800px) {
     flex-direction: column;

@@ -1,19 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const Images = ({ images, title }) => {
+  const { desktop, mobile } = images;
+
   return (
     <Styles>
-      <img
-        className='desktop'
-        src={images.desktop}
-        alt={` ${title} desktop view`}
-      />
-      <img
-        className='mobile'
-        src={images.mobile}
-        alt={` ${title} mobile view`}
-      />
+      <img className="desktop" src={desktop} alt={` ${title} desktop view`} />
+      <img className="mobile" src={mobile} alt={` ${title} mobile view`} />
     </Styles>
   );
 };
@@ -25,15 +19,16 @@ const Styles = styled.div`
   justify-content: center;
   align-content: center;
   width: 50%;
-  margin: 30px 0;
+  margin: 30px 20px;
   position: relative;
 
   @media (max-width: 1000px) {
     transform: scale(0.9);
   }
+
   @media (max-width: 800px) {
     width: 100%;
-    margin: 10px 0 10px -20px;
+    margin: 10px 0 40px -20px;
   }
 
   .desktop {

@@ -1,20 +1,21 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import NavigationLink from './NavigationLink';
+// components
+import NavigationLink from "./NavigationLink";
 
-const MobileMenu = props => {
+const MobileMenu = ({ navigation, menuOpen, setMenu }) => {
   return (
     <Styles>
-      {props.navigation.map(link_text => {
+      {navigation.map((link_text) => {
         return (
-          <div className='mobile-links'>
+          <div className="mobile-links">
             <NavigationLink
               key={link_text}
               text={link_text}
               isMobile
-              menuOpen={props.menuOpen}
-              setMenu={props.setMenu}
+              menuOpen={menuOpen}
+              setMenu={setMenu}
             />
           </div>
         );

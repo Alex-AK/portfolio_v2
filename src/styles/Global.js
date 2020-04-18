@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from "styled-components";
 
 export const Global = css`
   * {
@@ -9,8 +9,8 @@ export const Global = css`
     margin: 0;
     color: #282828;
     background: #fcfcfa;
-    font-family: -apple-system, 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
-      'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+      "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
@@ -48,12 +48,20 @@ export const Global = css`
 
   h3 {
     font-size: 20px;
-    line-height: 1.35;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.02);
 
     @media (max-width: 800px) {
       font-size: 16px;
+    }
+
+    @media (max-width: 640px) {
+      width: 100%;
     }
   }
 
@@ -63,8 +71,8 @@ export const Global = css`
 
   p {
     margin-bottom: 8px;
-    line-height: 1.25;
-    letter-spacing: 0.25px;
+    line-height: 1.5;
+    letter-spacing: 0.35px;
     max-width: 750px;
 
     @media (max-width: 800px) {
@@ -73,22 +81,6 @@ export const Global = css`
     }
   }
 
-  .divider {
-    height: 1px;
-    width: 500px;
-    margin: 40px auto 30px auto;
-    background: #d3d3d3;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-
-    &:last-child {
-      display: none;
-    }
-
-    @media (max-width: 800px) {
-      width: 90%;
-      margin: 20px auto;
-    }
-  }
   .hyperlink {
     border-bottom: 2.5px solid #f4e4d4;
     padding-bottom: 1px;
@@ -114,6 +106,7 @@ export const Global = css`
     color: transparent;
     text-shadow: none;
     height: 0;
+    width: 0;
     margin: 0;
   }
 `;

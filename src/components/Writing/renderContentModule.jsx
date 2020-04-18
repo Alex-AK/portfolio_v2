@@ -1,53 +1,53 @@
-import React from 'react';
-import Markdown from 'markdown-to-jsx';
+import React from "react";
+import Markdown from "markdown-to-jsx";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-export const renderIntroduction = (title, mainImage, introduction, content) => (
+export const renderIntroduction = (title, mainImage, intro, content) => (
   <>
-    <h3 className='post-title heavy'>{title}</h3>
-    <div className='introduction'>
-      <div className='landing-image'>
+    <h3 className="post-title heavy">{title}</h3>
+    <div className="introduction">
+      <div className="landing-image">
         {mainImage && (
           <>
             <img src={mainImage.fields.file.url} alt={mainImage.fields.title} />
-            <p className='caption'>{mainImage.fields.description}</p>
+            <p className="caption">{mainImage.fields.description}</p>
           </>
         )}
       </div>
 
-      <p>{introduction}</p>
+      <p>{intro}</p>
       {mainImage && <h4>Overview</h4>}
       <Markdown>{content}</Markdown>
     </div>
   </>
 );
 
-export const renderSummary = projectSummary => (
+export const renderSummary = (projectSummary) => (
   <>
     <h4>Summary</h4>
     <Markdown>{projectSummary}</Markdown>
   </>
 );
 
-export const mapImages = images => (
+export const mapImages = (images) => (
   <>
     <h4>Project Images</h4>
-    {images.map(image => {
+    {images.map((image) => {
       return (
-        <div className='image-container' key={image.fields.title}>
+        <div className="image-container" key={image.fields.title}>
           <img src={image.fields.file.url} alt={image.fields.title} />
-          <p className='caption'>{image.fields.description}</p>
+          <p className="caption">{image.fields.description}</p>
         </div>
       );
     })}
   </>
 );
 
-export const mapFeatures = features => (
+export const mapFeatures = (features) => (
   <>
     <h4>Features</h4>
-    {features.map(feature => (
+    {features.map((feature) => (
       <ul key={feature}>
         <li>{feature}</li>
       </ul>
@@ -56,7 +56,7 @@ export const mapFeatures = features => (
 );
 
 export const renderTechnologyAndContributors = (technology, contributors) => (
-  <div className='contributors-technology'>
+  <div className="contributors-technology">
     <div>
       {technology && (
         <>
@@ -76,25 +76,25 @@ export const renderTechnologyAndContributors = (technology, contributors) => (
   </div>
 );
 
-const mapContributors = contributors =>
-  contributors.map(contributor => (
+const mapContributors = (contributors) =>
+  contributors.map((contributor) => (
     <ul key={contributor.name}>
       <li>
-        <a href={contributor.link} target='_blank' rel='noopener noreferrer'>
+        <a href={contributor.link} target="_blank" rel="noopener noreferrer">
           {contributor.name}
         </a>
       </li>
     </ul>
   ));
 
-const mapTechnology = technology =>
-  technology.map(tech => (
+const mapTechnology = (technology) =>
+  technology.map((tech) => (
     <ul key={tech}>
       <li>{tech}</li>
     </ul>
   ));
 
-export const renderTestimonial = testimonial => {
+export const renderTestimonial = (testimonial) => {
   return (
     <div>
       {/* <p className='testimonial'>{testimonial}</p> */}
@@ -103,11 +103,11 @@ export const renderTestimonial = testimonial => {
   );
 };
 
-export const renderEnd = inspired => (
-  <div className='end'>
+export const renderEnd = (inspired) => (
+  <div className="end">
     <p>
-      Written by{' '}
-      <Link to='/about' className='hyperlink'>
+      Written by{" "}
+      <Link to="/about" className="hyperlink">
         Alex King
       </Link>
     </p>
@@ -116,15 +116,16 @@ export const renderEnd = inspired => (
   </div>
 );
 
-const renderInspired = inspired => {
+const renderInspired = (inspired) => {
   return (
     <p>
-      Inspired by{' '}
+      Inspired by{" "}
       <a
         href={inspired.url}
-        className='hyperlink'
-        target='_blank'
-        rel='noopener noreferrer'>
+        className="hyperlink"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {inspired.inspiredBy}
       </a>
     </p>

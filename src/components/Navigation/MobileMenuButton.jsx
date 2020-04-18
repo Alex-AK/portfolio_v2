@@ -1,16 +1,17 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-const MobileMenuButton = props => {
+const MobileMenuButton = ({ menuOpen, setMenu }) => {
   return (
     <Styles>
       <div
         className={
-          props.menuOpen
-            ? 'hamburger-menu menu-open clickHamburgerMenu'
-            : 'hamburger-menu'
+          menuOpen
+            ? "hamburger-menu menu-open clickHamburgerMenu"
+            : "hamburger-menu"
         }
-        onClick={() => props.setMenu(!props.menuOpen)}>
+        onClick={() => setMenu(!menuOpen)}
+      >
         <span />
         <span />
         <span />

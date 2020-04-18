@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const PageTitle = ({ title }) => {
   return (
     <Styles>
       <div>
-        <h2 className='page-title'>
+        <h2 className="page-title">
           <span>{title}</span>
         </h2>
       </div>
@@ -47,7 +47,7 @@ const Styles = styled.div`
       overflow: hidden;
       width: 100%;
       height: 1px;
-      content: '\a0';
+      content: "\a0";
       background: #d3d3d3;
     }
     &:before {

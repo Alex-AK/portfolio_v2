@@ -1,21 +1,19 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 // import searchIcon from '../../assets/search-icon.png';
-import Button from '../Button';
+import Button from "../General/Button";
 
 const SearchInput = ({ input, setInput, clearSearch }) => {
   return (
     <Styles>
-      {/* <img src={searchIcon} alt='Search Icon' /> */}
       <input
-        aria-label='search input'
+        aria-label="search input"
         value={input}
-        onChange={e => setInput(e.target.value)}
+        onChange={(e) => setInput(e.target.value)}
       />
-      <Button clearSearch={clearSearch} title='clear' extra_small non_link>
-        Clear
-      </Button>
+
+      <Button clearSearch={clearSearch} title="clear" extra_small non_link />
     </Styles>
   );
 };
