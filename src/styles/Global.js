@@ -48,12 +48,20 @@ export const Global = css`
 
   h3 {
     font-size: 20px;
-    line-height: 1.35;
+    width: 600px;
+
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+
     margin-bottom: 25px;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.02);
 
     @media (max-width: 800px) {
       font-size: 16px;
+    }
+
+    @media (max-width: 640px) {
+      width: 100%;
     }
   }
 

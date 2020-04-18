@@ -31,9 +31,9 @@ const Home = ({ window_width }) => {
           <h3>
             {landing.sub_title} Take a look at my{" "}
             <Link to="/projects" className="hyperlink">
-              projects,
+              projects
             </Link>{" "}
-            and{" "}
+            or{" "}
             <Link to="/writing" className="hyperlink">
               writing.
             </Link>{" "}
@@ -42,11 +42,11 @@ const Home = ({ window_width }) => {
               reach out.
             </Link>{" "}
           </h3>
-          <h3 style={{ marginTop: 20 }}>
+
+          <h3>
             <Link to="/contact" className="hyperlink">
               Looking for mentorship?
-            </Link>{" "}
-            I'm available.
+            </Link>
           </h3>
 
           <div className={window_width <= 400 ? "buttons small" : "buttons"}>
@@ -107,14 +107,6 @@ const Styles = styled.div`
     }
   }
 
-  h3 {
-    width: 600px;
-
-    @media (max-width: 640px) {
-      width: 100%;
-    }
-  }
-
   p {
     margin-top: 20px;
     font-size: 13px;
@@ -125,7 +117,7 @@ const Styles = styled.div`
     width: 80%;
     display: flex;
     justify-content: space-between;
-    margin: 60px 0;
+    margin: 60px 0 0 0;
 
     @media (max-width: 1000px) {
       width: 100%;

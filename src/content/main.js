@@ -17,7 +17,7 @@ const content = {
   landing: {
     title: "Hi, I'm Alex.",
     sub_title:
-      "I'm a Seattle based software engineer with a love for coffee, pleasant user experience, and intentionality. Currently developing and solving problems for a Seattle startup.",
+      "I am a Seattle based software engineer with a love for coffee, pleasant user experience, and intentionality. I'm currently developing and solving problems for a Seattle startup.",
   },
   projects: [
     {

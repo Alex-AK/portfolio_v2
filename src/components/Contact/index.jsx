@@ -37,15 +37,4 @@ const Styles = styled.div`
   @media (max-width: 800px) {
     margin: 0 3%;
   }
-
-  div {
-    max-width: 620px;
-    @media (max-width: 800px) {
-      margin: 0 3%;
-    }
-
-    h3 {
-      margin-bottom: 30px;
-    }
-  }
 `;
