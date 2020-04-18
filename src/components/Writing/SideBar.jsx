@@ -1,14 +1,16 @@
 // package imports
-import React from 'react';
-import styled from 'styled-components';
-import SearchInput from './SearchInput';
-import NewsletterForm from './NewsletterForm';
+import React from "react";
+import styled from "styled-components";
+
+// components
+import NewsletterForm from "./NewsletterForm";
+import SearchInput from "./SearchInput";
 
 const SideBar = ({ input, applyFilter, setInput, clearSearch }) => {
   return (
     <Styles>
-      <div className='fixed-sidebar'>
-        <label htmlFor='search input' className='section-title top-title'>
+      <div className="fixed-sidebar">
+        <label htmlFor="search input" className="section-title top-title">
           Search Writing
         </label>
         <SearchInput
@@ -16,13 +18,13 @@ const SideBar = ({ input, applyFilter, setInput, clearSearch }) => {
           clearSearch={clearSearch}
           setInput={setInput}
         />
-        <label htmlFor='newsletter input' className='section-title'>
+        <label htmlFor="newsletter input" className="section-title">
           Weekly Newsletter
         </label>
         <NewsletterForm setInput={setInput} />
-        <h4 className='section-title'>Filter Writing By Category</h4>
-        <h5 onClick={() => applyFilter('Case Study')}>Project Case Studies</h5>
-        <h5 onClick={() => applyFilter('Client Projects')}>Client Projects</h5>
+        <h4 className="section-title">Filter Writing By Category</h4>
+        <h5 onClick={() => applyFilter("Case Study")}>Project Case Studies</h5>
+        <h5 onClick={() => applyFilter("Client Projects")}>Client Projects</h5>
         {/*
         <h5 onClick={() => applyFilter('Personal Projects')}>Personal Projects</h5>
         <h5 onClick={() => applyFilter('Top 10 Articles')}>Top 10 Articles</h5>

@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import LoaderSpinner from 'react-loader-spinner';
+import React from "react";
+import styled from "styled-components";
+import LoaderSpinner from "react-loader-spinner";
 
 const Loader = () => {
   return (

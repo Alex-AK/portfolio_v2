@@ -1,19 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const Images = ({ images, title }) => {
+  const { desktop, mobile } = images;
+
   return (
     <Styles>
-      <img
-        className='desktop'
-        src={images.desktop}
-        alt={` ${title} desktop view`}
-      />
-      <img
-        className='mobile'
-        src={images.mobile}
-        alt={` ${title} mobile view`}
-      />
+      <img className="desktop" src={desktop} alt={` ${title} desktop view`} />
+      <img className="mobile" src={mobile} alt={` ${title} mobile view`} />
     </Styles>
   );
 };

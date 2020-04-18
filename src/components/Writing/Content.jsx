@@ -1,17 +1,18 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import Post from './Post';
+// components
+import Post from "./Post";
 
 const Content = ({ posts }) => {
   return (
     <Styles>
       {posts.length > 0 ? (
-        posts.map(post => {
-          return <Post key={post.fields.title} post={post.fields} />;
+        posts.map(({ fields }) => {
+          return <Post key={fields.title} post={fields} />;
         })
       ) : (
-        <div className='no-content'>
+        <div className="no-content">
           <h3>No writing with matching search criteria.</h3>
         </div>
       )}

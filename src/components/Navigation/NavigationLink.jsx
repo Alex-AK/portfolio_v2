@@ -1,18 +1,16 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
-const NavigationLink = props => {
+const NavigationLink = ({ isMobile, text, menuOpen, setMenu }) => {
   return (
     <>
-      {props.isMobile ? (
-        <NavLink
-          to={`/${props.text}`}
-          onClick={() => props.setMenu(!props.menuOpen)}>
-          <p>{props.text}</p>
+      {isMobile ? (
+        <NavLink to={`/${text}`} onClick={() => setMenu(!menuOpen)}>
+          <p>{text}</p>
         </NavLink>
       ) : (
-        <NavLink to={`/${props.text}`}>
-          <p>{props.text}</p>
+        <NavLink to={`/${text}`}>
+          <p>{text}</p>
         </NavLink>
       )}
     </>

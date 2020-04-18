@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from "styled-components";
 
 // button animations from -
 export const Buttons = css`
@@ -54,6 +54,7 @@ export const Buttons = css`
       }
     }
   }
+
   .nav {
     @media (max-width: 700px) {
       /* display: none; */

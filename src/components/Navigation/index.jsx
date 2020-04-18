@@ -1,24 +1,29 @@
-import React, { useState } from 'react';
-import NavigationLink from './NavigationLink';
-import styled from 'styled-components';
-import Logo from './Logo';
-import content from '../../content/main';
-import MobileMenuButton from './MobileMenuButton';
-import MobileMenu from './MobileMenu';
+import React, { useState } from "react";
+import styled from "styled-components";
 
-const Navigation = props => {
-  const [navigation] = useState(content.navigation);
+// components
+import Logo from "./Logo";
+import MobileMenuButton from "./MobileMenuButton";
+import MobileMenu from "./MobileMenu";
+import NavigationLink from "./NavigationLink";
+
+// assets
+import content from "../../content/main";
+
+const Navigation = ({ window_width }) => {
+  const { navigation } = content;
+
   const [menuOpen, setMenu] = useState(false);
 
   return (
     <Styles>
       <Logo />
-      <div className='links'>
-        {navigation.map(link_text => {
+      <div className="links">
+        {navigation.map((link_text) => {
           return <NavigationLink key={link_text} text={link_text} />;
         })}
       </div>
-      {props.window_width <= 600 && (
+      {window_width <= 600 && (
         <>
           <MobileMenuButton
             navigation={navigation}
@@ -59,13 +64,14 @@ const Styles = styled.div`
   .links {
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    width: 35%;
     max-width: 700px;
     margin-right: 20px;
 
     @media (max-width: 800px) {
-      width: 70%;
+      width: 50%;
     }
+
     @media (max-width: 600px) {
       display: none;
     }

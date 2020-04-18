@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 // component imports
-import More from '../General/More';
-import Divider from '../General/Divider';
+import More from "../General/More";
+import Divider from "../General/Divider";
 
 // helper function imports
 import {
@@ -12,25 +12,14 @@ import {
   mapImages,
   mapFeatures,
   renderTechnologyAndContributors,
-  renderEnd
-} from './renderContentModule';
+  renderEnd,
+} from "./renderContentModule";
 
 const Post = ({ post }) => {
   // de-structure incoming content
   // ordered in display order
-  const {
-    title,
-    introduction,
-    content,
-    features,
-    mainImage,
-    images,
-    projectSummary,
-    contributors,
-    technology,
-    links,
-    inspired
-  } = post;
+  const { title, introduction, content, features, mainImage, images } = post;
+  const { projectSummary, contributors, technology, links, inspired } = post;
 
   return (
     <>
@@ -51,6 +40,7 @@ const Post = ({ post }) => {
 
         {renderEnd(inspired)}
       </Styles>
+
       <Divider />
     </>
   );
@@ -59,7 +49,7 @@ const Post = ({ post }) => {
 export default Post;
 
 const Styles = styled.div`
-  margin: 20px;
+  margin: 20px 20px 40px 20px;
 
   @media (max-width: 1100px) {
     p,
@@ -69,7 +59,7 @@ const Styles = styled.div`
   }
 
   h4 {
-    margin: 20px 0 10px 0;
+    margin: 30px 0 15px 0;
     font-weight: 500;
   }
 
@@ -85,9 +75,11 @@ const Styles = styled.div`
       float: right;
 
       img {
-        margin: 0 0 10px 30px;
+        margin: 0 0 10px 50px;
         width: 400px;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        border: 1px solid #d3d3d3;
+        border-radius: 3px;
 
         @media (max-width: 950px) {
           width: 100%;
@@ -109,8 +101,9 @@ const Styles = styled.div`
 
     img {
       width: 750px;
-      margin-bottom: 10px;
+      margin: 10px 0;
       box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      border: 1px solid #d3d3d3;
 
       @media (max-width: 1100px) {
         width: 100%;
@@ -120,6 +113,7 @@ const Styles = styled.div`
   .caption {
     text-align: center;
     font-size: 13px;
+    margin-bottom: 20px;
   }
 
   .testimonial {
@@ -150,7 +144,7 @@ const Styles = styled.div`
 
   .end {
     font-weight: 500;
-    margin: 20px 0 -30px 100px;
+    margin: 40px 0 -30px 100px;
     text-align: right;
 
     @media (max-width: 800px) {

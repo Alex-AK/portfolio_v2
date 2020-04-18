@@ -1,40 +1,41 @@
-import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
-import Fuse from 'fuse.js';
-import * as contentful from 'contentful';
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import Fuse from "fuse.js";
+import * as contentful from "contentful";
 
-import Content from './Content';
-import SideBar from './SideBar';
-import PageTitle from '../General/PageTitle';
-import MobileSearch from './MobileSearch';
-import Loader from '../General/Loader';
+// components
+import Content from "./Content";
+import Loader from "../General/Loader";
+import MobileSearch from "./MobileSearch";
+import PageTitle from "../General/PageTitle";
+import SideBar from "./SideBar";
 
-const Writing = props => {
-  const [input, setInput] = useState('');
+const Writing = ({ window_width, location }) => {
+  const [input, setInput] = useState("");
   const [posts, setPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const client = contentful.createClient({
       space: process.env.REACT_APP_SPACE_ID,
-      accessToken: process.env.REACT_APP_CONTENTFUL_TOKEN
+      accessToken: process.env.REACT_APP_CONTENTFUL_TOKEN,
     });
 
     client
       .getEntries()
-      .then(res => {
-        setPosts(res.items)
+      .then(({ items }) => {
+        setPosts(items);
         setIsLoading(false);
       })
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
   }, []);
 
   // if navigating to writing page through a topic link, get topic.
   useEffect(() => {
-    if (props.location.state) {
-      setInput(props.location.state.queryString);
+    if (location.state) {
+      setInput(location.state.queryString);
     }
-  }, [props.location]);
+  }, [location]);
 
   // filter options
   const fuse_options = {
@@ -45,34 +46,33 @@ const Writing = props => {
     maxPatternLength: 32,
     minMatchCharLength: 2,
     keys: [
-      'fields.title',
-      'fields.introduction',
-      'fields.projectGoals',
-      'fields.searchTerms'
-    ]
+      "fields.title",
+      "fields.introduction",
+      "fields.projectGoals",
+      "fields.searchTerms",
+    ],
   };
 
   // filter search input
   const fuse = new Fuse(posts, fuse_options);
   let result = fuse.search(input);
 
-  const applyFilter = filter => {
+  const applyFilter = (filter) => {
     setInput(filter);
     window.scroll(0, 0);
   };
   const clearSearch = () => {
-    setInput('');
+    setInput("");
     window.scroll(0, 0);
   };
 
   return (
     <>
-      <PageTitle title='writing' />
-      <h1 className='SEO'>
-        Alex King - Software Developer - Writing Page - Seattle Wa.
-      </h1>
+      <PageTitle title="writing" />
+      <h1 className="SEO">Alex King - Software Developer - Seattle Wa.</h1>
+
       <Styles>
-        {props.window_width > 600 ? (
+        {window_width > 600 ? (
           <SideBar
             input={input}
             applyFilter={applyFilter}
@@ -86,7 +86,11 @@ const Writing = props => {
             clearSearch={clearSearch}
           />
         )}
-        {isLoading ? <Loader /> : <Content posts={input.length > 0 ? result : posts} />}
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <Content posts={input.length > 0 ? result : posts} />
+        )}
       </Styles>
     </>
   );
