@@ -85,7 +85,7 @@ const Styles = styled.div`
     margin-right: 80px;
 
     @media (max-width: 1000px) {
-      margin: 60px 0;
+      margin: 30px 0 60px 0;
       width: 200px;
     }
   }
@@ -123,7 +123,7 @@ const Styles = styled.div`
       width: 100%;
     }
     @media (max-width: 600px) {
-      margin: 40px 0;
+      margin: 40px 0 80px 0;
     }
 
     @media (max-width: 340px) {
