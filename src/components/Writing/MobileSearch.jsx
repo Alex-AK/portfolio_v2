@@ -3,18 +3,23 @@ import styled from "styled-components";
 
 // components
 import Button from "../General/Button";
+import DisplayCount from "./DisplayCount";
 
-const SearchInput = ({ input, setInput, clearSearch }) => {
+const SearchInput = ({ input, setInput, clearSearch, resultLength }) => {
   return (
     <Styles>
-      <input
-        placeholder="Search Writing"
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-      />
-      <Button clearSearch={clearSearch} title="clear" extra_small non_link>
-        Clear
-      </Button>
+      <div>
+        <input
+          placeholder="Search Writing"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+        <Button clearSearch={clearSearch} title="clear" extra_small non_link>
+          Clear
+        </Button>
+      </div>
+
+      <DisplayCount resultLength={resultLength} />
     </Styles>
   );
 };
@@ -23,13 +28,17 @@ export default SearchInput;
 
 const Styles = styled.div`
   position: fixed;
-  display: flex;
   top: 100px;
-  justify-content: center;
   width: 100%;
   padding-bottom: 10px;
   background: #fcfcfa;
   z-index: 5;
+  text-align: center;
+
+  div {
+    display: flex;
+    justify-content: center;
+  }
 
   input {
     border: none;

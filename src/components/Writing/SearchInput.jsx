@@ -22,7 +22,6 @@ export default SearchInput;
 
 const Styles = styled.div`
   display: flex;
-  margin-bottom: 15px;
 
   img {
     width: 18px;

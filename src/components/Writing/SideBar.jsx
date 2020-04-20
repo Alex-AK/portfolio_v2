@@ -5,12 +5,19 @@ import styled from "styled-components";
 // components
 import NewsletterForm from "./NewsletterForm";
 import SearchInput from "./SearchInput";
+import DisplayCount from "./DisplayCount";
 
-const SideBar = ({ input, applyFilter, setInput, clearSearch }) => {
+const SideBar = ({
+  input,
+  applyFilter,
+  setInput,
+  clearSearch,
+  resultLength,
+}) => {
   return (
     <Styles>
       <div className="fixed-sidebar">
-        <label htmlFor="search input" className="section-title top-title">
+        <label htmlFor="search input" className="section-title">
           Search Writing
         </label>
         <SearchInput
@@ -18,6 +25,8 @@ const SideBar = ({ input, applyFilter, setInput, clearSearch }) => {
           clearSearch={clearSearch}
           setInput={setInput}
         />
+        <DisplayCount resultLength={resultLength} />
+
         <label htmlFor="newsletter input" className="section-title">
           Weekly Newsletter
         </label>
@@ -57,7 +66,7 @@ const Styles = styled.div`
     }
 
     .section-title {
-      margin: 20px 0 10px 0;
+      margin: 30px 0 10px 0;
       font-size: 15px;
       font-weight: 500;
 

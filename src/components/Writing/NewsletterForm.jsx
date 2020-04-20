@@ -134,9 +134,4 @@ const Styles = styled.div`
   input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 30px white inset !important;
   }
-
-  .sub_text {
-    font-size: 10px;
-    margin-top: -1px;
-  }
 `;

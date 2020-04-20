@@ -26,6 +26,7 @@ const Writing = ({ window_width, location }) => {
       .then(({ items }) => {
         setPosts(items);
         setIsLoading(false);
+        setResultLength(items.length);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -66,6 +67,14 @@ const Writing = ({ window_width, location }) => {
     window.scroll(0, 0);
   };
 
+  const [resultLength, setResultLength] = useState(0);
+
+  useEffect(() => {
+    setResultLength(result.length);
+
+    if (input.length === 0) setResultLength(posts.length);
+  }, [result, input, posts]);
+
   return (
     <>
       <PageTitle title="writing" />
@@ -78,12 +87,15 @@ const Writing = ({ window_width, location }) => {
             applyFilter={applyFilter}
             clearSearch={clearSearch}
             setInput={setInput}
+            resultLength={resultLength}
           />
         ) : (
           <MobileSearch
             input={input}
+            setInput={setInput}
             applyFilter={applyFilter}
             clearSearch={clearSearch}
+            resultLength={resultLength}
           />
         )}
         {isLoading ? (
@@ -100,4 +112,9 @@ export default Writing;
 
 const Styles = styled.div`
   display: flex;
+
+  .sub_text {
+    font-size: 11px;
+    margin-top: -1px;
+  }
 `;
