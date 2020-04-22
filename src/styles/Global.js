@@ -27,7 +27,6 @@ export const Global = css`
   h1 {
     font-size: 36px;
     margin-bottom: 20px;
-    text-transform: uppercase;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
 
     @media (max-width: 800px) {
