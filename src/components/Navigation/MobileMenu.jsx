@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 // components
@@ -7,17 +8,19 @@ import NavigationLink from "./NavigationLink";
 const MobileMenu = ({ navigation, menuOpen, setMenu }) => {
   return (
     <Styles>
+      <Link to="/" onClick={() => setMenu(!menuOpen)}>
+        <p>Home</p>
+      </Link>
+
       {navigation.map((link_text) => {
         return (
-          <div className="mobile-links">
-            <NavigationLink
-              key={link_text}
-              text={link_text}
-              isMobile
-              menuOpen={menuOpen}
-              setMenu={setMenu}
-            />
-          </div>
+          <NavigationLink
+            key={link_text}
+            text={link_text}
+            isMobile
+            menuOpen={menuOpen}
+            setMenu={setMenu}
+          />
         );
       })}
     </Styles>
@@ -37,28 +40,27 @@ const Styles = styled.div`
   top: 0;
   background: #fcfcfa;
 
-  .mobile-links {
-    margin-bottom: 15px;
+  text-align: center;
 
-    .active {
+  .active {
+    border-bottom: 3px solid #f4e4d4;
+    padding-bottom: 5px;
+  }
+
+  a {
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom: 0;
+    padding: 0 3px 8px 3px;
+    font-size: 14px;
+
+    &:hover {
       border-bottom: 3px solid #f4e4d4;
       padding-bottom: 5px;
-    }
-
-    a {
-      font-weight: 500;
-      text-transform: uppercase;
-    }
-
-    p {
-      margin-bottom: 0;
-      padding: 0 3px 8px 3px;
-      font-size: 14px;
-
-      &:hover {
-        border-bottom: 3px solid #f4e4d4;
-        padding-bottom: 5px;
-      }
     }
   }
 `;

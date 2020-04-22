@@ -72,7 +72,7 @@ const NewsletterForm = ({ setInput }) => {
         className="sub_text"
         onClick={() => setInput("Newsletter Context & Privacy.")}
       >
-        Newsletter <span className="hyperlink">Context and Privacy.</span>
+        Newsletter<span className="hyperlink">Context and Privacy.</span>
       </p>
     </Styles>
   );
