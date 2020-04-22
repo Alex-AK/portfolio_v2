@@ -15,8 +15,11 @@ const Contact = ({ contact_page }) => {
         <h3>
           I offer software and web development services as well as free initial
           consultations. If you're looking for support on a new or existing
-          project, reach me directly at{" "}
-          <a href="mailto:hello@alex-ak.com" className="hyperlink">
+          project, reach me directly at
+          <a
+            href="mailto:hello@alex-ak.com"
+            className="hyperlink no-right-margin"
+          >
             hello@alex-ak.com
           </a>
           .
@@ -35,6 +38,6 @@ const Styles = styled.div`
   align-items: center;
 
   @media (max-width: 800px) {
-    margin: 0 3%;
+    margin: 0 5%;
   }
 `;

@@ -29,22 +29,32 @@ const Home = ({ window_width }) => {
         <div>
           <h1>{landing.title}</h1>
           <h3>
-            {landing.sub_title} Take a look at my{" "}
+            {landing.sub_title} I'm currently developing and solving problems
+            for a
+            <a
+              href="https://brainsquall.co"
+              className="hyperlink"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Seattle startup.
+            </a>
+            Take a look at my
             <Link to="/projects" className="hyperlink">
               projects
-            </Link>{" "}
-            or{" "}
+            </Link>
+            or
             <Link to="/writing" className="hyperlink">
               writing.
-            </Link>{" "}
-            If you'd like to work with me{" "}
+            </Link>
+            If you'd like to work with me
             <Link to="/contact" className="hyperlink">
               reach out.
-            </Link>{" "}
+            </Link>
           </h3>
 
           <h3>
-            <Link to="/contact" className="hyperlink">
+            <Link to="/contact" className="hyperlink no-left-margin">
               Looking for mentorship?
             </Link>
           </h3>
@@ -72,7 +82,7 @@ const Styles = styled.div`
 
   @media (max-width: 1000px) {
     flex-direction: column;
-    margin: 0 3%;
+    margin: 0 5%;
   }
 
   @media (max-width: 450px) {

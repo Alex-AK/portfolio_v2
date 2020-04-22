@@ -105,12 +105,7 @@ export const renderTestimonial = (testimonial) => {
 
 export const renderEnd = (inspired) => (
   <div className="end">
-    <p>
-      Written by{" "}
-      <Link to="/about" className="hyperlink">
-        Alex King
-      </Link>
-    </p>
+    <p>Written by Alex King</p>
 
     {inspired && renderInspired(inspired)}
   </div>
@@ -119,7 +114,7 @@ export const renderEnd = (inspired) => (
 const renderInspired = (inspired) => {
   return (
     <p>
-      Inspired by{" "}
+      Inspired by
       <a
         href={inspired.url}
         className="hyperlink"

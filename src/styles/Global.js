@@ -84,11 +84,22 @@ export const Global = css`
   .hyperlink {
     border-bottom: 2.5px solid #f4e4d4;
     padding-bottom: 1px;
+    transition: background-color 0.3s linear;
     cursor: pointer;
+    margin: 0 7px;
 
-    &:hover {
-      border-bottom: none;
+    :hover {
+      border-bottom: 2.5px solid #f4e4d4;
+      background: #f4e4d4;
     }
+  }
+
+  .no-right-margin {
+    margin-right: 0;
+  }
+
+  .no-left-margin {
+    margin-left: 0;
   }
 
   ul {
