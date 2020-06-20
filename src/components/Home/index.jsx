@@ -28,9 +28,8 @@ const Home = ({ window_width }) => {
 
         <div>
           <h1>{landing.title}</h1>
-          <h3>
-            {landing.sub_title} I'm currently developing and solving problems
-            for a
+          <h4>
+            {landing.sub_title} Currently developing and solving problems for a
             <a
               href="https://brainsquall.co"
               className="hyperlink"
@@ -51,13 +50,13 @@ const Home = ({ window_width }) => {
             <Link to="/contact" className="hyperlink">
               reach out.
             </Link>
-          </h3>
+          </h4>
 
-          <h3>
+          <h4 className="extra-top-margin">
             <Link to="/contact" className="hyperlink no-left-margin">
               Looking for mentorship?
             </Link>
-          </h3>
+          </h4>
 
           <div className={window_width <= 400 ? "buttons small" : "buttons"}>
             {navigation.map((button) => {
@@ -115,12 +114,6 @@ const Styles = styled.div`
     @media (max-width: 1200px) {
       display: none;
     }
-  }
-
-  p {
-    margin-top: 20px;
-    font-size: 13px;
-    font-weight: 500;
   }
 
   .buttons {

@@ -5,6 +5,9 @@ import styled from "styled-components";
 import More from "../General/More";
 import Divider from "../General/Divider";
 
+// theme
+import { colors } from "../../styles/Global";
+
 // helper function imports
 import {
   renderIntroduction,
@@ -60,7 +63,6 @@ const Styles = styled.div`
 
   h4 {
     margin: 30px 0 15px 0;
-    font-weight: 500;
   }
 
   .introduction {
@@ -112,7 +114,7 @@ const Styles = styled.div`
   }
   .caption {
     text-align: center;
-    font-size: 13px;
+    font-size: 1.3rem;
     margin-bottom: 20px;
   }
 
@@ -122,7 +124,7 @@ const Styles = styled.div`
     padding: 10px;
     border-top: 1px solid lightgrey;
     border-bottom: 1px solid lightgrey;
-    font-size: 14px;
+    font-size: 1.4rem;
   }
 
   .contributors-technology {
@@ -143,7 +145,6 @@ const Styles = styled.div`
   }
 
   .end {
-    font-weight: 500;
     margin: 40px 0 -30px 100px;
     text-align: right;
 
@@ -151,24 +152,21 @@ const Styles = styled.div`
       margin: 20px 0 -30px 0;
     }
 
-    a {
-      font-size: 11px;
-      text-transform: capitalize;
-    }
-
+    a,
     p {
-      font-size: 11px;
+      font-size: 1.3rem;
     }
   }
 
   a {
     /* for markdown anchor tag styling */
     /* this simply replicates the .hyperlink class */
-    border-bottom: 2.5px solid #f4e4d4;
+    border-bottom: 2.5px solid ${colors.hover};
     padding-bottom: 1px;
     cursor: pointer;
 
     &:hover {
+      background: ${colors.hover};
       border-bottom: none;
     }
   }

@@ -1,11 +1,9 @@
 import React from "react";
 import Markdown from "markdown-to-jsx";
 
-import { Link } from "react-router-dom";
-
 export const renderIntroduction = (title, mainImage, intro, content) => (
   <>
-    <h3 className="post-title heavy">{title}</h3>
+    <h3 className="post-title">{title}</h3>
     <div className="introduction">
       <div className="landing-image">
         {mainImage && (
@@ -47,11 +45,11 @@ export const mapImages = (images) => (
 export const mapFeatures = (features) => (
   <>
     <h4>Features</h4>
-    {features.map((feature) => (
-      <ul key={feature}>
-        <li>{feature}</li>
-      </ul>
-    ))}
+    <ul>
+      {features.map((feature) => (
+        <li key={feature}>{feature}</li>
+      ))}
+    </ul>
   </>
 );
 

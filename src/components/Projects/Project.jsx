@@ -7,7 +7,7 @@ import Images from "./Images";
 
 const Project = ({ project }) => {
   const { title, intro, content, images, links } = project;
-  const { p_1, p_2, p_3, p_4 } = content;
+  const { p_1, p_2, p_3, p_4, p_5 } = content;
 
   return (
     <Styles>
@@ -19,6 +19,7 @@ const Project = ({ project }) => {
         p_2={p_2}
         p_3={p_3}
         p_4={p_4}
+        p_5={p_5}
         links={links}
       />
     </Styles>

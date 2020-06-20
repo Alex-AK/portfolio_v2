@@ -114,7 +114,7 @@ const Styles = styled.div`
   display: flex;
 
   .sub_text {
-    font-size: 11px;
+    font-size: 1.1rem;
     margin-top: -1px;
   }
 `;

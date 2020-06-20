@@ -5,9 +5,12 @@ import styled from "styled-components";
 // components
 import NavigationLink from "./NavigationLink";
 
+// theme
+import { colors } from "../../styles/Global";
+
 const MobileMenu = ({ navigation, menuOpen, setMenu }) => {
   return (
-    <Styles>
+    <Styles className="links">
       <Link to="/" onClick={() => setMenu(!menuOpen)}>
         <p>Home</p>
       </Link>
@@ -30,37 +33,24 @@ const MobileMenu = ({ navigation, menuOpen, setMenu }) => {
 export default MobileMenu;
 
 const Styles = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  height: 100vh;
   position: absolute;
   top: 0;
-  background: #fcfcfa;
 
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  .active {
-    border-bottom: 3px solid #f4e4d4;
-    padding-bottom: 5px;
-  }
+  width: 100%;
+  height: 100vh;
+
+  background: ${colors.background};
 
   a {
-    font-weight: 500;
-    text-transform: uppercase;
     margin-bottom: 20px;
   }
 
   p {
     margin-bottom: 0;
-    padding: 0 3px 8px 3px;
-    font-size: 14px;
-
-    &:hover {
-      border-bottom: 3px solid #f4e4d4;
-      padding-bottom: 5px;
-    }
   }
 `;
