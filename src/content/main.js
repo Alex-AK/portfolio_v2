@@ -17,9 +17,73 @@ const content = {
   landing: {
     title: "Hi, I'm Alex.",
     sub_title:
-      "I am a Seattle based software engineer with a love for coffee, pleasant user experience, and intentionality.",
+      "I'm a Seattle based software engineer with a love for coffee, pleasant user experience, and intentionality.",
   },
   projects: [
+    {
+      images: {
+        // desktop: training_bot_desktop,
+        // mobile: training_bot_mobile,
+      },
+      title: "BrainSquall",
+      intro:
+        "A web application that combines a mind map, outline, and table to gather, organize, and share complex ideas.",
+      content: {
+        p_1:
+          "Established and maintain engineering guidelines, technical documentation, and development workflow including version control, continuous integration, pipeline configuration, and code review practices.",
+        p_2:
+          "Delivered a PostgreSQL version-controlled database with secure production level RESTful API using Node, based on product requirements.",
+        p_3:
+          "Maintain approximately 80% server and client automated test coverage with Jest and React Testing Library.",
+        p_4:
+          "Architect and contribute to rapidly expanding client-side React feature set with modular context state management.",
+      },
+      links: {
+        live_site: "https://brainsquall.co",
+      },
+    },
+    {
+      images: {
+        // desktop: training_bot_desktop,
+        // mobile: training_bot_mobile,
+      },
+      title: "Kingston Co.",
+      intro:
+        "A custom built performant e-commerce platform for men's high fashion products.",
+      content: {
+        p_1:
+          "Designed and implemented database schema with production level RESTful API endpoints for a complex item and SKU based inventory management system.",
+        p_2:
+          "Developed checkout flow with Stripe API integration, dynamic tax calculation, and server side price verification.",
+        p_3:
+          "Custom built item reservation system with automatic reservation expiration and database sync to maintain data continuity.",
+        p_4:
+          "Built address management system with input validation and error handling.",
+      },
+      links: {
+        live_site: "https://kingstonco.netlify.app",
+      },
+    },
+    {
+      images: {
+        // desktop: training_bot_desktop,
+        // mobile: training_bot_mobile,
+      },
+      title: "TrioHub",
+      intro:
+        "A rental organization web and mobile application - track potential rentals, collaborate with housemates, and secure your next home with ease.",
+      content: {
+        p_1:
+          "Established application architecture and guidelines with an emphasis on expandability and maintainability for small engineering team.",
+        p_2:
+          "Established application styled guide, UI wireframes and high fidelity mockups, and UX flows for onboarding and main use cases using Figma.",
+        p_3:
+          "Implemented drag and drop functionality with a custom positioning algorithm for a performant and accessible drag and drop experience.",
+      },
+      links: {
+        live_site: "https://triohub.io",
+      },
+    },
     {
       images: {
         desktop: training_bot_desktop,
@@ -62,6 +126,8 @@ const content = {
         // live_site: "https://linebyhand.com",
       },
     },
+  ],
+  archived: [
     {
       title: "Mentor Me",
       intro:
