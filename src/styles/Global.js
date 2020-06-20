@@ -34,7 +34,6 @@ export const Global = css`
   a {
     color: inherit;
     text-decoration: none;
-    text-transform: capitalize;
     margin-bottom: 10px;
     padding: 0 3px 8px 3px;
     cursor: pointer;
@@ -45,6 +44,10 @@ export const Global = css`
   }
 
   .links {
+    a {
+      text-transform: capitalize;
+    }
+
     a:hover {
       border-bottom: 3px solid ${colors.hover};
       padding-bottom: 5px;
