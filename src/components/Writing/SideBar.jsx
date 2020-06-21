@@ -34,10 +34,10 @@ const SideBar = ({
         <h3 className="section-title">Filter Writing By Category</h3>
         <h5 onClick={() => applyFilter("Case Study")}>Project Case Studies</h5>
         <h5 onClick={() => applyFilter("Client Projects")}>Client Projects</h5>
-        <h5 onClick={() => applyFilter("Open Source")}>Personal Projects</h5>
+        {/* <h5 onClick={() => applyFilter("Open Source")}>Open Source</h5>
         <h5 onClick={() => applyFilter("Personal Writing")}>
           Personal Writing
-        </h5>
+        </h5> */}
         {/*
         <h5 onClick={() => applyFilter('Top 10 Articles')}>Top 10 Articles</h5>
         <h5 onClick={() => applyFilter('Book Summaries')}>Book Summaries</h5> */}
