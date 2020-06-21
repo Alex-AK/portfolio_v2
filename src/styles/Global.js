@@ -105,7 +105,7 @@ export const Global = css`
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 1.4;
-    max-width: 600px;
+    max-width: 630px;
     margin-bottom: 10px;
 
     @media (max-width: 800px) {
