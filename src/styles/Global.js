@@ -113,7 +113,8 @@ export const Global = css`
     }
   }
 
-  p {
+  p,
+  span {
     font-size: 1.5rem;
     margin-bottom: 8px;
     line-height: 1.5;

@@ -106,6 +106,10 @@ const Styles = styled.div`
     }
   }
 
+  p span {
+    font-size: 1.1rem;
+  }
+
   .submit_button {
     border-top: 1px solid #d3d3d3;
     border-right: 1px solid #d3d3d3;

@@ -24,10 +24,10 @@ const Projects = ({ window_width }) => {
 
       <Styles>
         {projects.map((project) => (
-          <>
-            <Project key={project.title} project={project} />
+          <div key={project.title}>
+            <Project project={project} />
             <Divider />
-          </>
+          </div>
         ))}
       </Styles>
     </>

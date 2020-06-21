@@ -10,7 +10,7 @@ import { colors } from "../../styles/Global";
 
 const MobileMenu = ({ navigation, menuOpen, setMenu }) => {
   return (
-    <Styles className="links">
+    <Styles>
       <Link to="/" onClick={() => setMenu(!menuOpen)}>
         <p>Home</p>
       </Link>
