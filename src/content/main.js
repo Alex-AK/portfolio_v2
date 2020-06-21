@@ -4,6 +4,9 @@ import training_bot_desktop from "../assets/project_desktop/training_bot_desktop
 import mentor_me_desktop from "../assets/project_desktop/mentor_me_desktop.jpg";
 import good_time_journal_desktop from "../assets/project_desktop/good_time_journal_desktop.jpg";
 import smith_and_jones_desktop from "../assets/project_desktop/smith_and_jones_desktop.jpg";
+import kingston_desktop from "../assets/project_desktop/kingston_desktop.jpg";
+import triohub_desktop from "../assets/project_desktop/triohub_desktop.jpg";
+import brainsquall_desktop from "../assets/project_desktop/brainsquall_desktop.jpg";
 
 // import mobile images
 import training_bot_mobile from "../assets/project_mobile/training_bot_mobile.png";
@@ -11,15 +14,82 @@ import line_mobile from "../assets/project_mobile/line_mobile.png";
 import mentor_me_mobile from "../assets/project_mobile/mentor_me_mobile.png";
 import good_time_journal_mobile from "../assets/project_mobile/good_time_journal_mobile.png";
 import smith_and_jones_mobile from "../assets/project_mobile/smith_and_jones_mobile.png";
+import kingston_mobile from "../assets/project_mobile/kingston_mobile.png";
+import brainsquall_mobile from "../assets/project_mobile/brainsquall_mobile.png";
+import triohub_mobile from "../assets/project_mobile/triohub_mobile.png";
 
 const content = {
   navigation: ["projects", "writing", "contact"],
   landing: {
     title: "Hi, I'm Alex.",
     sub_title:
-      "I am a Seattle based software engineer with a love for coffee, pleasant user experience, and intentionality.",
+      "I'm a Seattle based software engineer with a love for coffee, pleasant user experience, and intentionality.",
   },
   projects: [
+    {
+      images: {
+        desktop: brainsquall_desktop,
+        mobile: brainsquall_mobile,
+      },
+      title: "BrainSquall",
+      intro:
+        "A web application that combines a mind map, outline, and table to gather, organize, and share complex ideas.",
+      content: {
+        p_1:
+          "Established and maintain engineering guidelines and development workflow including version control, continuous integration, pipeline config, and code review practices.",
+        p_2:
+          "Delivered a PostgreSQL version-controlled database with secure production level RESTful API using Node.",
+        p_3:
+          "Maintain approximately 80% server and client automated test coverage with Jest and React Testing Library.",
+        p_4:
+          "Architect and contribute to rapidly expanding client-side React feature set with modular context state management.",
+      },
+      links: {
+        live_site: "https://brainsquall.co",
+      },
+    },
+    {
+      images: {
+        desktop: kingston_desktop,
+        mobile: kingston_mobile,
+      },
+      title: "Kingston Co.",
+      intro:
+        "A custom developed performant e-commerce platform for men's high fashion products.",
+      content: {
+        p_1:
+          "Designed and implemented database schema with production level RESTful API endpoints for a complex item and SKU based inventory management system.",
+        p_2:
+          "Developed checkout flow with Stripe API integration, dynamic tax calculation, and server side price verification.",
+        p_3:
+          "Custom built item reservation system with automatic reservation expiration and database sync to maintain data continuity.",
+        p_4:
+          "Implemented address management system with input validation and error handling.",
+      },
+      links: {
+        live_site: "https://kingstonco.netlify.app",
+      },
+    },
+    {
+      images: {
+        desktop: triohub_desktop,
+        mobile: triohub_mobile,
+      },
+      title: "TrioHub",
+      intro:
+        "A rental organization web and mobile application allowing users track potential rentals, collaborate with housemates, and secure a home with ease.",
+      content: {
+        p_1:
+          "Established application architecture and guidelines with an emphasis on expandability and maintainability for small engineering team.",
+        p_2:
+          "Established application styled guide, UI wireframes and high fidelity mockups, and UX flows for onboarding and main use cases using Figma.",
+        p_3:
+          "Implemented drag and drop functionality with a custom positioning algorithm for a performant and accessible drag and drop experience.",
+      },
+      links: {
+        live_site: "https://triohub.io",
+      },
+    },
     {
       images: {
         desktop: training_bot_desktop,
@@ -27,7 +97,7 @@ const content = {
       },
       title: "Training Bot",
       intro:
-        "A full stack web application built in React allowing training managers to send employees automated text message and email notifications.",
+        "A web application allowing training managers to send employees automated text message and email notifications.",
       content: {
         p_1:
           "Built and deployed production level notification bot utilizing Node, MySQL, and AWS with custom written automation functions to manage notification data, interval timers, and notification triggers.",
@@ -62,6 +132,8 @@ const content = {
         // live_site: "https://linebyhand.com",
       },
     },
+  ],
+  archived: [
     {
       title: "Mentor Me",
       intro:

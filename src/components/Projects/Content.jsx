@@ -4,10 +4,10 @@ import styled from "styled-components";
 // components
 import More from "../General/More";
 
-const Content = ({ title, intro, p_1, p_2, p_3, p_4, links }) => {
+const Content = ({ title, intro, p_1, p_2, p_3, p_4, p_5, links }) => {
   return (
     <Styles>
-      <h3 className="heavy">{title}</h3>
+      <h3>{title}</h3>
 
       <p>{intro}</p>
 
@@ -16,6 +16,7 @@ const Content = ({ title, intro, p_1, p_2, p_3, p_4, links }) => {
         <li>{p_2}</li>
         {p_3 && <li>{p_3}</li>}
         {p_4 && <li>{p_4}</li>}
+        {p_5 && <li>{p_5}</li>}
       </ul>
 
       <More links={links} title={title} />
@@ -30,6 +31,7 @@ const Styles = styled.div`
   justify-content: center;
   align-content: center;
   flex-direction: column;
+
   width: 50%;
   max-width: 600px;
   margin: 60px 40px 0 50px;

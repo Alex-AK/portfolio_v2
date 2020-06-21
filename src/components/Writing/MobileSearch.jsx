@@ -41,17 +41,10 @@ const Styles = styled.div`
   }
 
   input {
-    border: none;
-    background: #fcfcfa;
-    border-top: 1px solid #d3d3d3;
-    border-left: 1px solid #d3d3d3;
-    border-bottom: 1px solid #d3d3d3;
-    border-radius: 4px 0 0 4px;
     margin: 0 -2px 5px 0;
     padding: 5px;
     height: 25px;
     width: 80%;
-    font-size: 13px;
 
     &:focus {
       outline: none;

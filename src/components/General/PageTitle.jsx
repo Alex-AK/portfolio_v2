@@ -28,6 +28,8 @@ const Styles = styled.div`
     z-index: 1;
     overflow: hidden;
 
+    text-transform: capitalize;
+
     @media (max-width: 600px) {
       top: 40px;
     }

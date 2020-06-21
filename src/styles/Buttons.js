@@ -35,9 +35,9 @@ export const Buttons = css`
     span {
       position: absolute;
       margin: auto 0;
-      text-transform: uppercase;
+      text-transform: capitalize;
       letter-spacing: 2px;
-      font-size: 13px;
+      font-size: 1.5rem;
       color: #282828;
     }
 
@@ -70,7 +70,7 @@ export const Buttons = css`
     }
 
     span {
-      font-size: 10px;
+      font-size: 1.2rem;
       letter-spacing: 1.5px;
     }
   }
@@ -83,6 +83,7 @@ export const Buttons = css`
       width: 60px;
       box-shadow: none;
       border: 1px solid #d3d3d3;
+
       .o1 {
         fill: transparent;
       }
@@ -90,7 +91,7 @@ export const Buttons = css`
     }
 
     span {
-      font-size: 10px;
+      font-size: 1.2rem;
       letter-spacing: 1.5px;
     }
   }

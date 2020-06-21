@@ -49,17 +49,17 @@ const Styles = styled.div`
   .mobile {
     width: 150px;
     position: absolute;
-    margin: 20px 0 0 180px;
+    margin: 20px 0 0 320px;
 
     @media (max-width: 1000px) {
       transform: scale(0.9);
     }
     @media (max-width: 800px) {
-      margin: 15px 0 0 170px;
+      margin: 15px 0 0 300px;
     }
     @media (max-width: 600px) {
       transform: scale(0.7);
-      margin: 15px 0 0 130px;
+      margin: 15px 0 0 250px;
     }
   }
 `;

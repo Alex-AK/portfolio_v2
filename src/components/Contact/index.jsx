@@ -12,7 +12,7 @@ const Contact = ({ contact_page }) => {
     >
       <div>
         <h1>Contact Me.</h1>
-        <h3>
+        <h4>
           I offer software and web development services as well as free initial
           consultations. If you're looking for support on a new or existing
           project, reach me directly at
@@ -23,8 +23,10 @@ const Contact = ({ contact_page }) => {
             hello@alex-ak.com
           </a>
           .
-        </h3>
-        <h3>I look forward to speaking with you.</h3>
+        </h4>
+        <h4 className="extra-top-margin">
+          I look forward to speaking with you.
+        </h4>
       </div>
     </Styles>
   );

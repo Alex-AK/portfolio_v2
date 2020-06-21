@@ -92,17 +92,10 @@ const Styles = styled.div`
   }
 
   input {
-    border: none;
-    background: #fcfcfa;
-    border-top: 1px solid #d3d3d3;
-    border-left: 1px solid #d3d3d3;
-    border-bottom: 1px solid #d3d3d3;
-    border-radius: 4px 0 0 4px;
     margin: 0 0 5px 0;
     padding: 5px;
     height: 26px;
     width: 190px;
-    font-size: 13px;
 
     @media (max-width: 800px) {
       width: 152px;
@@ -113,6 +106,10 @@ const Styles = styled.div`
     }
   }
 
+  p span {
+    font-size: 1.1rem;
+  }
+
   .submit_button {
     border-top: 1px solid #d3d3d3;
     border-right: 1px solid #d3d3d3;
@@ -120,7 +117,7 @@ const Styles = styled.div`
     font-size: 10px;
     letter-spacing: 1px;
     border-radius: 0 4px 4px 0;
-    text-transform: uppercase;
+    text-transform: capitalize;
 
     &:hover {
       background: #f9eee5;

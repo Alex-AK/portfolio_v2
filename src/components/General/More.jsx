@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+// theme
+import { colors } from "../../styles/Global";
+
 const More = ({ title, links }) => {
   const { github, live_site } = links;
 
@@ -51,6 +54,9 @@ const Styles = styled.div`
 
   a {
     border-bottom: none !important;
+    :hover {
+      background: ${colors.background} !important;
+    }
   }
 
   @media (max-width: 800px) {

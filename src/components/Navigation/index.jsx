@@ -10,6 +10,9 @@ import NavigationLink from "./NavigationLink";
 // assets
 import content from "../../content/main";
 
+// theme
+import { colors } from "../../styles/Global";
+
 const Navigation = ({ window_width }) => {
   const { navigation } = content;
 
@@ -46,16 +49,20 @@ const Navigation = ({ window_width }) => {
 export default Navigation;
 
 const Styles = styled.div`
+  position: sticky;
+  top: 0;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   height: 70px;
   margin: 0 auto;
-  position: sticky;
-  top: 0;
-  background: #fcfcfa;
+
   opacity: 0.98;
   z-index: 6;
+
+  background: ${colors.background};
 
   @media (max-width: 600px) {
     height: 60px;
@@ -64,6 +71,7 @@ const Styles = styled.div`
   .links {
     display: flex;
     justify-content: space-between;
+
     width: 35%;
     max-width: 700px;
     margin-right: 20px;
@@ -76,24 +84,8 @@ const Styles = styled.div`
       display: none;
     }
 
-    .active {
-      border-bottom: 3px solid #f4e4d4;
-      padding-bottom: 5px;
-    }
-    a {
-      padding: 0 3px 8px 3px;
-      font-weight: 500;
-      text-transform: uppercase;
-
-      &:hover {
-        border-bottom: 3px solid #f4e4d4;
-        padding-bottom: 5px;
-      }
-    }
-
     p {
       margin-bottom: 0;
-      font-size: 14px;
     }
   }
 `;

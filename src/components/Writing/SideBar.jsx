@@ -31,13 +31,15 @@ const SideBar = ({
           Weekly Newsletter
         </label>
         <NewsletterForm setInput={setInput} />
-        <h4 className="section-title">Filter Writing By Category</h4>
+        <h3 className="section-title">Filter Writing By Category</h3>
         <h5 onClick={() => applyFilter("Case Study")}>Project Case Studies</h5>
         <h5 onClick={() => applyFilter("Client Projects")}>Client Projects</h5>
+        <h5 onClick={() => applyFilter("Open Source")}>Personal Projects</h5>
+        <h5 onClick={() => applyFilter("Personal Writing")}>
+          Personal Writing
+        </h5>
         {/*
-        <h5 onClick={() => applyFilter('Personal Projects')}>Personal Projects</h5>
         <h5 onClick={() => applyFilter('Top 10 Articles')}>Top 10 Articles</h5>
-        <h5 onClick={() => applyFilter('Personal Writing')}>Personal Writing</h5>
         <h5 onClick={() => applyFilter('Book Summaries')}>Book Summaries</h5> */}
       </div>
     </Styles>
@@ -67,8 +69,7 @@ const Styles = styled.div`
 
     .section-title {
       margin: 30px 0 10px 0;
-      font-size: 15px;
-      font-weight: 500;
+      font-size: 1.5rem;
 
       &:first-child {
         margin-top: 0;
@@ -76,7 +77,7 @@ const Styles = styled.div`
     }
 
     h5 {
-      font-size: 14px;
+      font-size: 1.4rem;
       margin: 0 0 7px 0;
       &:hover {
         cursor: pointer;
