@@ -49,7 +49,11 @@ const Styles = styled.div`
   .mobile {
     width: 150px;
     position: absolute;
-    margin: 20px 0 0 320px;
+    margin: 20px 0 0 180px;
+
+    @-moz-document url-prefix() {
+      margin: 20px 0 0 360px;
+    }
 
     @media (max-width: 1000px) {
       transform: scale(0.9);
